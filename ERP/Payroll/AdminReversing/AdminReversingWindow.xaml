@@ -1,0 +1,11 @@
+﻿<Window x:Class="ERP.Payroll.AdminReversing.AdminReversingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AdminReversingWindow" Height="300" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Button Content="Reverse Bonus And&#xA;  Other Payments" HorizontalAlignment="Left" Margin="83,30,0,0" VerticalAlignment="Top" Width="125" Height="42" Click="Reverse_Bonus_Other_Payments"/>
+        <Button Content="Reverse External&#xA;  Bank Loans" HorizontalAlignment="Left" Margin="83,89,0,0" VerticalAlignment="Top" Width="125" Height="42" Click="Reverse_External_Bank_Loans"/>
+        <Button Content="Reverse Internal&#xA;        Loans" HorizontalAlignment="Left" Margin="83,151,0,0" VerticalAlignment="Top" Width="125" Height="42" Click="Reverse_Internal_Loans"/>
+
+    </Grid>
+</Window>

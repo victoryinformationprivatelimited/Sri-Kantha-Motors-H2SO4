@@ -1,0 +1,18 @@
+﻿<Window x:Class="ERP.Reports.Documents.HR_Report.User_Controls.AppointmentLetterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AppointmentLetterWindow" Height="300" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Employee No" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label Content="Employee Name" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label Content="Appointment Date" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Width="111"/>
+        <TextBox Text="{Binding CurrentEmployees.emp_id}" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="141,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <TextBox Text="{Binding CurrentEmployees.first_name}" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="141,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <DatePicker SelectedDate="{Binding AppointmentDate}" HorizontalAlignment="Left" Margin="141,180,0,0" VerticalAlignment="Top" Width="177"/>
+        <Button Command="{Binding ButtonSearchEmployee}" Content="Search Employee" HorizontalAlignment="Left" Margin="217,10,0,0" VerticalAlignment="Top" Width="101" Height="27"/>
+        <Button Command="{Binding Print}" Content="Print" HorizontalAlignment="Left" Margin="243,223,0,0" VerticalAlignment="Top" Width="75" Height="26"/>
+        <Label Content="Employee NIC" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Width="98"/>
+        <TextBox Text="{Binding CurrentEmployees.nic}" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="141,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+
+    </Grid>
+</Window>

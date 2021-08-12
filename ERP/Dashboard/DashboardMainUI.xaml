@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="ERP.Dashboard.DashboardMainUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <Grid x:Name="DashboardWindow" Background="#FF232831">
+        <Grid Margin="-2,0,1578,0">
+            <Rectangle x:Name="sidePanel" Fill="#FF232831" Stroke="Black" StrokeThickness="0.3"/>
+            <Rectangle x:Name="sidePanelTop" Fill="#FF232831" Margin="0,0,0,934" Stroke="Black" StrokeThickness="0.2"/>
+            <Button x:Name="employeeBtn" Style="{DynamicResource defaultButton}" Content="Employees" HorizontalAlignment="Left" Margin="0,120,-344,0" VerticalAlignment="Top" Width="344" Height="65" Click="employeeBtn_Click" MouseEnter="employeeBtn_MouseEnter" MouseLeave="employeeBtn_MouseLeave"/>
+            <Button x:Name="attendanceBtn" Style="{DynamicResource defaultButton}" Content="Attendance" HorizontalAlignment="Left" Margin="5,250,-349,0" VerticalAlignment="Top" Width="344" Height="65" Click="attendanceBtn_Click" MouseEnter="attendanceBtn_MouseEnter" MouseLeave="attendanceBtn_MouseLeave"/>
+            <Button x:Name="payrollBtn" Style="{DynamicResource defaultButton}" Content="Payroll" HorizontalAlignment="Left" Margin="0,185,-344,0" VerticalAlignment="Top" Width="344" Height="65" Click="payrollBtn_Click" MouseEnter="payrollBtn_MouseEnter" MouseLeave="payrollBtn_MouseLeave"/>
+
+        </Grid>
+        <Grid x:Name="MDIParent" Background="White" Margin="342,0,0,0">
+
+        </Grid>
+    </Grid>
+    <UserControl.Resources>
+        <Style x:Key="defaultButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Background" Value="#FF232831"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Opacity" Value="0.8" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="Border" BorderThickness="0.6" BorderBrush="White" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation From="#FF232831" To="LightBlue" Duration="0:0:0.5" Storyboard.TargetName="Border" Storyboard.TargetProperty="Background.Color"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation From="LightBlue" To="#FF232831" Duration="0:0:0.5" Storyboard.TargetName="Border" Storyboard.TargetProperty="Background.Color"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+    </UserControl.Resources>
+</UserControl>

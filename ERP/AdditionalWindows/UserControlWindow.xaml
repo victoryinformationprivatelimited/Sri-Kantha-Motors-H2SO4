@@ -1,0 +1,13 @@
+﻿<Window x:Class="ERP.AdditionalWindows.UserControlWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ERP H2SO4" Height="300" Width="300" ResizeMode="NoResize" Icon="/ERP;component/IconS2SO4.ico" WindowStartupLocation="CenterScreen" MouseLeave="Window_MouseLeave_1" ShowInTaskbar="False" Background="{x:Null}" Foreground="{x:Null}" WindowStyle="None" AllowsTransparency="True" >
+    <Grid MouseLeave="Grid_MouseLeave_2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Name="userGrid" MouseLeave="userGrid_MouseLeave"/>
+        <WrapPanel Name="Wrp"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<Window x:Class="ERP.Reports.Documents.PayrollReport.PayrollReportUserControl.CostCenterWiseReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CostCenterWiseReportWindow" Height="300" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Payment Period" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="period_name" IsEditable="True" HorizontalAlignment="Left" Margin="118,25,0,0" VerticalAlignment="Top" Width="157"/>
+        <CheckBox IsChecked="{Binding Executive}" Content="Executive Employees" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top"/>
+        <Button Command="{Binding btnPrint}" Content="Print" HorizontalAlignment="Left" Margin="80,188,0,0" VerticalAlignment="Top" Width="146" Height="30"/>
+
+    </Grid>
+</Window>

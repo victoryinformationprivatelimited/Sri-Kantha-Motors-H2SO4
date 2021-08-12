@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f3918721-181a-4e7b-a9fd-279f23e384da" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16630/ERPService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ERPService.xsd" MetadataType="Schema" ID="0aedb574-77d0-4d05-b200-f73c40cdd7b6" SourceId="1" SourceUrl="http://localhost:16630/ERPService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ERPService1.disco" MetadataType="Disco" ID="521b31aa-9bab-45b6-8c7f-e1bc0872ec8e" SourceId="1" SourceUrl="http://localhost:16630/ERPService.svc?disco" />
+    <MetadataFile FileName="ERPService1.wsdl" MetadataType="Wsdl" ID="2629432f-da7e-4e9c-92ed-52084e170346" SourceId="1" SourceUrl="http://localhost:16630/ERPService.svc?wsdl" />
+    <MetadataFile FileName="ERPService1.xsd" MetadataType="Schema" ID="493f839b-a74e-406a-9679-face993075e7" SourceId="1" SourceUrl="http://localhost:16630/ERPService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ERPService2.xsd" MetadataType="Schema" ID="da7b5e6d-f484-42ba-bd51-0330079916f6" SourceId="1" SourceUrl="http://localhost:16630/ERPService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ERPService3.xsd" MetadataType="Schema" ID="5e27efe4-fded-4811-b746-2cd5a5076352" SourceId="1" SourceUrl="http://localhost:16630/ERPService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ERPService4.xsd" MetadataType="Schema" ID="c5c892d4-2398-4435-a79a-91960179c485" SourceId="1" SourceUrl="http://localhost:16630/ERPService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ERPService5.xsd" MetadataType="Schema" ID="bea61254-5df1-4a25-ba75-8bcfe6eff07c" SourceId="1" SourceUrl="http://localhost:16630/ERPService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

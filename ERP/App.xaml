@@ -1,0 +1,341 @@
+﻿<Application
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"             
+             StartupUri="ERPSplash.xaml">
+    <Application.Resources>
+        <Style x:Key="CheckBoxStyle16" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="attendence_enter">
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.55"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.55"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="label">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="label">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="attendence_enter_Copy1">
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.55"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.55"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="label">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="label">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid">
+                            <Rectangle x:Name="rectangle" Width="Auto" StrokeThickness="4" Stroke="#FFDFDFDF" RadiusX="8" RadiusY="8" Margin="4.062,3.5,0,0" Height="Auto">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF6C747D" Offset="0"/>
+                                        <GradientStop Color="#FF303740" Offset="1"/>
+                                        <GradientStop Color="#FF525A64" Offset="0.479"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle Stroke="#FF333333" RadiusX="6" RadiusY="6" Margin="7.474,6.625,3.418,3.356" Height="Auto"/>
+                            <Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" Margin="0,21,-11,10" Height="Auto" HorizontalAlignment="Stretch" FontSize="10.667" FontWeight="Bold" Foreground="White" Content="Late Deduction&#xD;&#xA;      Report" RenderTransformOrigin="0.5,0.5">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                                <Label.Effect>
+                                    <DropShadowEffect Color="#FF767676" Direction="265" ShadowDepth="2"/>
+                                </Label.Effect>
+                            </Label>
+                            <Image x:Name="image" Width="Auto" VerticalAlignment="Stretch" Source="/ERP;component/Images/Reports/Main_buttons_Icons/Payroll/Total_payroll_Amount.png" Margin="22.173,17.356,21.743,17.69" Height="Auto" HorizontalAlignment="Stretch" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="attendence_enter_Copy1_BeginStoryboard" Storyboard="{StaticResource attendence_enter_Copy1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="attendence_enter_BeginStoryboard" Storyboard="{StaticResource attendence_enter}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CheckBoxStyle23" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="attendence_enter">
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.55"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.55"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="label">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="label">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="attendence_enter_Copy1">
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.55"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.55"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="label">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="label">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid">
+                            <Rectangle x:Name="rectangle" Width="Auto" StrokeThickness="4" Stroke="#FFDFDFDF" RadiusX="8" RadiusY="8" Margin="4.062,3.5,0,0" Height="Auto">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF6C747D" Offset="0"/>
+                                        <GradientStop Color="#FF303740" Offset="1"/>
+                                        <GradientStop Color="#FF525A64" Offset="0.479"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle Stroke="#FF333333" RadiusX="6" RadiusY="6" Margin="7.474,6.625,3.418,3.356" Height="Auto"/>
+                            <Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" Margin="0,21,-7,10" Height="Auto" HorizontalAlignment="Stretch" FontSize="10.667" FontWeight="Bold" Foreground="White" Content="Daily Absentism &#xA;       Report" RenderTransformOrigin="0.5,0.5">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                                <Label.Effect>
+                                    <DropShadowEffect Color="#FF767676" Direction="265" ShadowDepth="2"/>
+                                </Label.Effect>
+                            </Label>
+                            <Image x:Name="image" Width="Auto" VerticalAlignment="Stretch" Source="/ERP;component/Images/Reports/Main_buttons_Icons/Payroll/Total_payroll_Amount.png" Margin="22.173,17.356,21.743,17.69" Height="Auto" HorizontalAlignment="Stretch" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="attendence_enter_Copy1_BeginStoryboard" Storyboard="{StaticResource attendence_enter_Copy1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="attendence_enter_BeginStoryboard" Storyboard="{StaticResource attendence_enter}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CheckBoxStyle18" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter_Copy1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+                                    <SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="0,0,-3,-2.333">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="57*"/>
+                                <ColumnDefinition Width="145*"/>
+                                <ColumnDefinition Width="8*"/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+                            <Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF303740" Offset="1"/>
+                                        <GradientStop Color="#FF525A64" Offset="0.533"/>
+                                        <GradientStop Color="#FF6C747D"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/Leave/approve-Leave.png"/>
+                            <Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="5,22,10,19" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Holiday Detail&#xA;"/>
+                            <Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CheckBoxStyle56" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter_Copy1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                                    <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+                                    <SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="0,0,-3,-2.333">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="57*"/>
+                                <ColumnDefinition Width="145*"/>
+                                <ColumnDefinition Width="8*"/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+                            <Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF303740" Offset="1"/>
+                                        <GradientStop Color="#FF525A64" Offset="0.533"/>
+                                        <GradientStop Color="#FF6C747D"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="10.2,7,4.4,11.733" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Assign Employee &#xA;Locations" Grid.ColumnSpan="2"/>
+                            <Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                            <Image Margin="10,15.668,7.136,17.333" Source="/ERP;component/Images/Payroll/Employee_Compnay_variables.png" Stretch="Fill" Width="40" Height="40"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,210 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:ERP="clr-namespace:ERP" x:Class="ERP.AttendanceModule.AttendanceMasters.EmployeeMaxOTWindow"
+        xmlns:local="clr-namespace:ERP.AttendanceModule.AttendanceMasters"
+        Title="EmployeeMaxOTWindow" Height="543" Width="985" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <local:SecondsToTimeConverter x:Key="secToTime"/>
+        <Style x:Key="ImageStyle2" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.495"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="-2.497,-3.17,-2.497,-1.335">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Opacity="0" Stroke="White" Margin="-2.995,-3.083,-2.995,-3.006" Fill="{x:Null}" Width="Auto" Height="Auto"/>
+                            <Image x:Name="image" Margin="3,0,2.994,1.505" Source="/ERP;component/AttendanceModule/Resources/Images/appbar.close.png" Stretch="Fill" Width="Auto" Height="21" Style="{DynamicResource ImageStyle2}" OpacityMask="#FF010000" Opacity="0.5" VerticalAlignment="Bottom"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Error Template to change the default behaviour-->
+        <ControlTemplate x:Key="ErrorTemplate">
+            <DockPanel LastChildFill="True">
+                <Border BorderBrush="Red" BorderThickness="1">
+                    <AdornedElementPlaceholder/>
+                </Border>
+            </DockPanel>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="468*"/>
+            <ColumnDefinition Width="517*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle x:Name="maxOtTitleBar" MouseLeftButtonDown="maxOtTitleBar_MouseLeftButtonDown"  Height="31" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF18233A" Offset="0"/>
+                    <GradientStop Color="#FF18233A" Offset="1"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.518"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="maxOtTitle" TextWrapping="Wrap"  Text="Max OverTime" Foreground="White" FontSize="14.667" FontFamily="Segoe UI Symbol" FontWeight="Bold" HorizontalAlignment="Left" Width="101" Height="22" VerticalAlignment="Top" Margin="10,4,0,0" MouseLeftButtonDown="maxOtTitle_MouseLeftButtonDown"/>
+        <Button x:Name="maxOtCloseBtn"  Content="Button" Margin="0,5,8,0" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5" Height="19" VerticalAlignment="Top" HorizontalAlignment="Right" Width="18" Click="maxOtCloseBtn_Click" Grid.Column="1" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <ERP:CustomDataGrid ItemsSource="{Binding EmployeeAssignedShifts}" SelectedItemsList="{Binding SelectMaxOtList, Mode=TwoWay}" HorizontalAlignment="Left" Margin="246,250,0,0" VerticalAlignment="Top" Height="168" Width="721" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False">
+            <ERP:CustomDataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding date, StringFormat=yyyy-MM-dd}"  Header="Date" Width="*"/>
+                <DataGridTextColumn Binding="{Binding date.Date.DayOfWeek}"  Header="Day" Width="*"/>
+                <DataGridTextColumn Binding="{Binding dtl_Shift_Master.shift_detail_name}"  Header="Shift" Width="*"/>
+                <DataGridTextColumn Binding="{Binding trns_EmployeeMaxOTDetails.morning_ot_limit, Converter={StaticResource secToTime}}"  Header="Morning OT Limit" Width="*"/>
+                <DataGridTextColumn Binding="{Binding trns_EmployeeMaxOTDetails.evening_ot_limit,Converter={StaticResource secToTime}}"  Header="Evening OT Limit" Width="*"/>
+            </ERP:CustomDataGrid.Columns>
+            <ERP:CustomDataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding dtl_Shift_Master.is_roster}" Value="true">
+                            <Setter Property="Background" Value="#5EF2B5"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ERP:CustomDataGrid.RowStyle>
+        </ERP:CustomDataGrid>
+        <DatePicker SelectedDate="{Binding FromDate}" HorizontalAlignment="Left" Margin="77.676,87.883,0,0" VerticalAlignment="Top" Width="145.307"/>
+        <DatePicker SelectedDate="{Binding ToDate}" IsEnabled="{Binding IsToDateEnabled}" HorizontalAlignment="Left" Margin="77.676,119.385,0,0" VerticalAlignment="Top" Width="145.307"/>
+        <ComboBox ItemsSource="{Binding AttendanceGroups}" SelectedItem="{Binding CurrentAttendanceGroup}" DisplayMemberPath="attendance_group_name" SelectedValuePath="attendance_group_id" Margin="233.375,118.843,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="151" Grid.Column="1"/>
+        <Button Content="+" FontWeight="Bold" Command="{Binding GetButton}" HorizontalAlignment="Left" Margin="399.895,118.843,0,0" VerticalAlignment="Top" Width="29.07" Height="21.96" Grid.Column="1"/>
+        <Label Content="Attendance Group" HorizontalAlignment="Left" Margin="233.375,87.883,0,0" VerticalAlignment="Top" Width="108.994" Foreground="Black" Background="White" Grid.Column="1"/>
+        <Button Content="..." Command="{Binding SelectEmployeeButton}" HorizontalAlignment="Left" Margin="469.667,118.843,0,0" VerticalAlignment="Top" Width="29.07" Height="21.96" Padding="1,-5,1,3" Grid.Column="1"/>
+        <ListBox Background="Transparent" ItemsSource="{Binding SelectedAttendanceGroups}" SelectedItem="{Binding RemoveAttendanceGroup}" Margin="233.375,154.483,0,312.117"  HorizontalContentAlignment="Stretch" HorizontalAlignment="Left" Height="Auto" Width="195.59" Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Background="#9ABBF5">
+                        <StackPanel Margin="4" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Margin="0,0,20,0" Foreground="#12397A" FontSize="12" FontWeight="Bold" Text="{Binding attendance_group_name}"/>
+                            <Button Background="Transparent" x:Name="removeGrpBtn" Click="removeGrpBtn_Click">
+                                <Image  Source="/ERP;component/AttendanceModule/Resources/Images/appbar.close.png" Width="10" Height="10"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="From" HorizontalAlignment="Left" Margin="27.393,86.883,0,0" VerticalAlignment="Top" Height="22.95"/>
+        <RadioButton Content="Continuous Days" IsChecked="{Binding IsRangeDateSelect}" GroupName="dateOption" HorizontalAlignment="Left" Margin="156.817,44.55,0,0" VerticalAlignment="Top" Height="20.627" Foreground="Black"/>
+        <RadioButton Content="Multiple Days" GroupName="dateOption" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20.628" Foreground="Black" Margin="27.393,44.549,0,0" Width="98.424"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="27.393,116.843,0,0" VerticalAlignment="Top" Width="27.317" Height="22.95"/>
+        <ListBox ItemsSource="{Binding SelectedDates}" SelectedItem="{Binding CurrentSelectedDate}" Background="Transparent" Margin="27,203,0,10"  HorizontalContentAlignment="Stretch" HorizontalAlignment="Left" Height="Auto" Width="196" KeyDown="ListBox_KeyDown">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Background="#ED98B4" >
+                        <StackPanel Margin="4" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Margin="0,0,20,0" Foreground="#6B1B36" FontSize="12" FontWeight="Bold" Text="{Binding Date, StringFormat=yyyy-MM-dd}" />
+                            <Button Background="Transparent" x:Name="removeDateBtn" Click="removeDateBtn_Click">
+                                <Image  Source="/ERP;component/AttendanceModule/Resources/Images/appbar.close.png" Width="10" Height="10"/>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Morning OT Limit" Margin="246,436,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="103"/>
+        <Label Content="Evening OT Limit" HorizontalAlignment="Left" Margin="60,439,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <xctk:MaskedTextBox Mask="00:00" HorizontalAlignment="Left" Margin="354,439,0,0" TextWrapping="Wrap" Text="{Binding MorningOtLimit, Mode=TwoWay, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="142" Height="23" Grid.ColumnSpan="2"/>
+        <xctk:MaskedTextBox Mask="00:00" HorizontalAlignment="Left" Margin="167,439,0,0" TextWrapping="Wrap" Text="{Binding EveningOtLimit, Mode=TwoWay, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="142" Height="23" Grid.Column="1"/>
+        <Button Command="{Binding SaveButton}" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="201,504,0,0" VerticalAlignment="Top" Width="137" Height="29"/>
+        <Button Content="Delete" Command="{Binding DeleteButton}" Grid.Column="1" HorizontalAlignment="Left" Margin="362,504,0,0" VerticalAlignment="Top" Width="137" Height="29"/>
+        <Button Content="Set Dates" HorizontalAlignment="Left" Height="22" Margin="27,163,0,0" VerticalAlignment="Top" Width="99"/>
+
+        <ERP:CustomDataGrid ItemsSource="{Binding SelectedEmployees}" SelectedItem="{Binding CurrentSelectedEmployee}" SelectedItemsList="{Binding SelectEmpList, Mode=TwoWay}" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Margin="246,86.883,0,0" VerticalAlignment="Top" Height="144.117" Width="423" Grid.ColumnSpan="2">
+            <ERP:CustomDataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding emp_id}" Header="Emp ID" Width="*" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding first_name}" Header="Name" Width="*" IsReadOnly="True" />
+                <DataGridCheckBoxColumn Binding="{Binding is_active}" Width="50"/>
+            </ERP:CustomDataGrid.Columns>
+            <ERP:CustomDataGrid.InputBindings>
+                <KeyBinding Key="Delete" Command="{Binding RemoveEmployeeKey}"/>
+            </ERP:CustomDataGrid.InputBindings>
+        </ERP:CustomDataGrid>
+        <CheckBox IsChecked="{Binding IsCheckAll}" HorizontalAlignment="Left" Margin="168.27,91.883,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Content="Set Dates" Command="{Binding SetDateButton}" HorizontalAlignment="Left" Height="22" Margin="27,163,0,0" VerticalAlignment="Top" Width="196"/>
+        <Button Content="Assign Max OT" Command="{Binding SetMaxOtButton}" HorizontalAlignment="Left" Height="23" Margin="362,439,0,0" VerticalAlignment="Top" Width="137" Grid.Column="1"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="ERP.MasterDetailUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ERP"        
+             BorderBrush="#FF2C2727" BorderThickness="3">
+    <UserControl.Resources>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF529BB9"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF529BB9"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF2B5668"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Fill="#FF2B5668" RadiusY="1" RadiusX="1" Stroke="#FF1F1F1F"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="12.065,9.323,12.065,11.323"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter1_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter1_BeginStoryboard1" Storyboard="{StaticResource OnMouseEnter1}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="OnMouseEnter1">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="button">
+                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF787878"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+            <BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid Background="#FF3C3F49" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Height="47" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="268.091" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF121317"/>
+                    <GradientStop Color="#7F084759" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Label" HorizontalAlignment="Left" Height="11" Margin="10,0,0,0" VerticalAlignment="Top" Width="64"/>
+        <Label Content="Master Details" HorizontalAlignment="Left" Width="176" Foreground="#FFB6C3C0" FontWeight="Bold" FontSize="20" Margin="0,5,0,0" Height="37" VerticalAlignment="Top" FlowDirection="RightToLeft">
+            <Label.Effect>
+                <DropShadowEffect Color="White" Direction="6" Opacity="0.8" ShadowDepth="0.5"/>
+            </Label.Effect>
+        </Label>
+        <Image HorizontalAlignment="Right" Margin="0,1,121,0" Width="45" Source="/ERP;component/Images/1366795330_Black-User.png" Height="45" VerticalAlignment="Top"/>
+        <Grid Name="DetailMdi" Margin="2,89,1,0"/>
+        <Rectangle Fill="#FF404040" RadiusY="1" RadiusX="1" Stroke="#FF1F1F1F" Margin="0,46,0,0" Height="43" VerticalAlignment="Top"/>
+        <Grid x:Name="grid" HorizontalAlignment="Left" Width="109" Margin="3,50,0,12">
+            <Button x:Name="button" Content="Emplyee Benifits" Style="{DynamicResource ButtonStyle1}" Foreground="#FFFDFDFD" Click="Button_Click_1" FontSize="10.667" Margin="1,0,0,0" Height="35" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</UserControl>

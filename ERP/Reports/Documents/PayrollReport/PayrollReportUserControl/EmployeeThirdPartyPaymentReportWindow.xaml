@@ -1,0 +1,17 @@
+﻿<Window x:Class="ERP.Reports.Documents.PayrollReport.PayrollReportUserControl.EmployeeThirdPartyPaymentReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EmployeeThirdPartyPaymentReportWindow" Height="300" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Payment Category" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Width="123"/>
+        <ComboBox ItemsSource="{Binding ThirdPartyPaymentCategories}" SelectedItem="{Binding CurrentThirdPartyPaymentCategories}" DisplayMemberPath="category_name" HorizontalAlignment="Left" Margin="138,38,0,0" VerticalAlignment="Top" Width="303"/>
+        <Label Content="From Date" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" Width="71"/>
+        <DatePicker SelectedDate="{Binding FromDate}" HorizontalAlignment="Left" Margin="86,84,0,0" VerticalAlignment="Top" Width="133"/>
+        <Label Content="To Date" HorizontalAlignment="Left" Margin="232,82,0,0" VerticalAlignment="Top" Width="71"/>
+        <DatePicker SelectedDate="{Binding ToDate}" HorizontalAlignment="Left" Margin="308,84,0,0" VerticalAlignment="Top" Width="133"/>
+        <RadioButton IsChecked="{Binding Report}" GroupName="ReportType" Content="Reprot" HorizontalAlignment="Left" Margin="182,138,0,0" VerticalAlignment="Top"/>
+        <RadioButton IsChecked="{Binding Slip}" GroupName="ReportType" Content="Slip" HorizontalAlignment="Left" Margin="279,138,0,0" VerticalAlignment="Top"/>
+        <Button Command="{Binding PrintButton}" Content="Print" HorizontalAlignment="Left" Margin="209,196,0,0" VerticalAlignment="Top" Width="75" Height="35"/>
+
+    </Grid>
+</Window>

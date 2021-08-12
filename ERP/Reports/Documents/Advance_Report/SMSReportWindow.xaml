@@ -1,0 +1,13 @@
+﻿<Window x:Class="ERP.Reports.Documents.Advance_Report.SMSReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SMSReportWindow" Height="300" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="To Date" HorizontalAlignment="Left" Margin="27,70,0,0" VerticalAlignment="Top"/>
+        <Label Content="From Date" HorizontalAlignment="Left" Margin="243,70,0,0" VerticalAlignment="Top"/>
+        <DatePicker SelectedDate="{Binding ToDate}" HorizontalAlignment="Left" Margin="89,72,0,0" VerticalAlignment="Top" Width="149"/>
+        <DatePicker SelectedDate="{Binding FromDate}" HorizontalAlignment="Left" Margin="319,72,0,0" VerticalAlignment="Top" Width="149"/>
+        <Button Command="{Binding PrintButton}" Content="Print" HorizontalAlignment="Left" Margin="208,173,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
+
+    </Grid>
+</Window>

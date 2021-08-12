@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="ERP.HR.VisitorInfo.VisitInformation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="718" Height="715.5">
+    
+    <Grid Background="White">
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="38" Stroke="Black" VerticalAlignment="Top" Width="708" d:IsHidden="True"/>
+        <ScrollViewer HorizontalAlignment="Left" Margin="0,38,0,0" Width="718">
+            <Grid Height="679" Width="720">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox HorizontalAlignment="Left" Height="22" Margin="178,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Employee Name" HorizontalAlignment="Left" Margin="63,153,0,0" VerticalAlignment="Top" Width="105"/>
+                <DataGrid HorizontalAlignment="Left" Margin="28,17,0,0" VerticalAlignment="Top" Width="651" Height="98"/>
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

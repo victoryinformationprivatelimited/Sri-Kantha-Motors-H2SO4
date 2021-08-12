@@ -1,0 +1,18 @@
+﻿<Window x:Class="ERP.Payroll.SendSMS.BonuOtherSendSMSWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BonuOtherSendSMSWindow" Height="400" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Bonus/Other Payment" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="Bonus_Period_Name" IsEditable="True" HorizontalAlignment="Left" Margin="157,33,0,0" VerticalAlignment="Top" Width="185"/>
+        <DataGrid ItemsSource="{Binding EmployeeOtherPayments}" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Height="239" Width="463">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Employee No" Width="*" Binding="{Binding emp_id}"/>
+                <DataGridTextColumn Header="Employee Name" Width="*" Binding="{Binding epf_name}"/>
+                <DataGridTextColumn Header="Employee Telephone" Width="*" Binding="{Binding mobile_number1}"/>
+                <DataGridTextColumn Header="Payment Amount" Width="*" Binding="{Binding PayedBonusAmount}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Command="{Binding btnSend}" Content="Send" HorizontalAlignment="Left" Margin="398,321,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+    </Grid>
+</Window>

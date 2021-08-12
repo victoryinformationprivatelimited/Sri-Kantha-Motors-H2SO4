@@ -1,0 +1,646 @@
+﻿<UserControl x:Class="ERP.Leave.CalenderUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="367" Width="881">
+    <Grid Margin="0,0,-146,0" HorizontalAlignment="Left" Width="1027" Height="484" VerticalAlignment="Top">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="50*"/>
+    		<RowDefinition Height="44*"/>
+    		<RowDefinition Height="43*"/>
+    		<RowDefinition Height="43*"/>
+    		<RowDefinition Height="43*"/>
+    		<RowDefinition Height="44*"/>
+    		<RowDefinition Height="44*"/>
+    		<RowDefinition Height="41*"/>
+    		<RowDefinition Height="133*"/>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="131*"/>
+    		<ColumnDefinition Width="123*"/>
+    		<ColumnDefinition Width="122*"/>
+    		<ColumnDefinition Width="122*"/>
+    		<ColumnDefinition Width="121*"/>
+    		<ColumnDefinition Width="121*"/>
+    		<ColumnDefinition Width="123*"/>
+    		<ColumnDefinition Width="164*"/>
+    	</Grid.ColumnDefinitions>
+        <Rectangle Fill="#FFF5F5F8" Margin="-2,-2,0,0" Stroke="Black" HorizontalAlignment="Left" Width="890" Height="368" VerticalAlignment="Top" Grid.ColumnSpan="8" Grid.RowSpan="9"/>
+        <Rectangle Fill="#FF95A7D8" HorizontalAlignment="Left" Stroke="#FF213D8B" Width="117.333" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.667,8.312,0,1.585" Height="40" Grid.Column="1"/>
+        <Rectangle Fill="#FF95A7D8" HorizontalAlignment="Left" Stroke="#FF213D8B" Width="117.333" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2,8.312,0,1.585" Height="40" Grid.Column="2"/>
+        <Rectangle Fill="#FF95A7D8" HorizontalAlignment="Left" Stroke="#FF213D8B" Width="117.333" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.833,8.312,0,1.585" Height="40" Grid.Column="3"/>
+        <Rectangle Fill="#FF95A7D8" HorizontalAlignment="Left" Stroke="#FF213D8B" Width="117.333" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.8,8.312,0,1.585" Height="40" Grid.Column="4"/>
+        <Rectangle Fill="#FF95A7D8" HorizontalAlignment="Left" Stroke="#FF213D8B" Width="117.333" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.551,8.312,0,1.585" Height="40" Grid.Column="5"/>
+        <Rectangle Fill="#FF8ABB89" HorizontalAlignment="Left" Stroke="#FF269324" Width="117.333" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.301,8.312,0,1.585" Height="40" Grid.Column="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="29.669,13.996,0,0" TextWrapping="Wrap" Text="Monday" VerticalAlignment="Top" FontSize="16" Height="28" Width="63" Foreground="White" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="29.337,13.996,0,0" TextWrapping="Wrap" Text="Tuesday" VerticalAlignment="Top" FontSize="16" Height="28" Width="63" Foreground="White" Grid.Column="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19.495,13.996,0,0" TextWrapping="Wrap" Text="Wednesday" VerticalAlignment="Top" FontSize="16" Width="84.001" Height="28" Foreground="White" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="27.801,13.996,0,0" TextWrapping="Wrap" Text="Thursday" FontSize="16" Width="67" Height="28" VerticalAlignment="Top" Foreground="White" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38.551,13.996,0,0" TextWrapping="Wrap" Text="Friday" FontSize="16" Width="45" Height="28" VerticalAlignment="Top" Foreground="White" Grid.Column="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="29.301,13.996,0,7.379" TextWrapping="Wrap" Text="Saturday" FontSize="16" Width="64.5" Grid.Column="6" Foreground="White"/>
+        <Rectangle Stroke="{Binding NewCalender.date_02.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.892,2.477,2.774,1.431" Width="117.333" Height="40" Grid.Column="1" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_02.date}" HorizontalAlignment="Left" Margin="12.167,7.496,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.667,5.496,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_02.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="1" Grid.Row="1"/>
+        <Rectangle Stroke="{Binding NewCalender.date_04.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.999,2.477,1.668,1.431" Width="117.333" Height="40" Grid.Column="3" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_04.date}" HorizontalAlignment="Left" Margin="12.5,7.512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="3" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.834,5.496,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_04.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="3" Grid.Row="1"/>
+        <Rectangle Stroke="{Binding NewCalender.date_05.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.966,2.493,0.701,1.415" Width="117.333" Height="40" Grid.Column="4" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_05.date}" HorizontalAlignment="Left" Margin="11.801,7.512,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="4" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.301,5.496,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_05.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="4" Grid.Row="1"/>
+        <Rectangle Stroke="{Binding NewCalender.date_06.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.842,2.477,1.825,1.431" Width="117.333" Height="40" Grid.Column="5" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_06.date}" HorizontalAlignment="Left" Margin="10.051,7.512,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="5" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.468,5.496,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_06.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="5" Grid.Row="1"/>
+        <Rectangle Stroke="{Binding NewCalender.date_07.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.884,2.493,2.783,1.415" Width="117.333" Height="40" Grid.Column="6" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8ABB89" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_07.date}" HorizontalAlignment="Left" Margin="9.967,7.512,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="6" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.63,5.496,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_07.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="6" Grid.Row="1"/>
+        <Rectangle Stroke="{Binding NewCalender.date_11.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.999,1.143,1.668,1.768" Width="117.333" Height="40" Grid.Column="3" Grid.Row="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_11.date}" HorizontalAlignment="Left" Margin="12.5,7.139,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="3" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.834,4.889,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_10.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="3" Grid.Row="2"/>
+        <Rectangle Stroke="{Binding NewCalender.date_12.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.966,1.808,0.701,1.103" Width="117.333" Height="40" Grid.Column="4" Grid.Row="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_12.date}" HorizontalAlignment="Left" Margin="11.801,7.139,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="4" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.301,7.139,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_12.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="4" Grid.Row="2"/>
+        <Rectangle Stroke="{Binding NewCalender.date_13.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.842,1.808,1.825,1.103" Width="117.333" Height="40" Grid.Column="5" Grid.Row="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_13.date}" HorizontalAlignment="Left" Margin="10.051,6.889,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="5" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.468,6.127,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_13.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="5" Grid.Row="2"/>
+        <Rectangle Stroke="{Binding NewCalender.date_14.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.884,1.558,2.783,1.353" Width="117.333" Height="40" Grid.Column="6" Grid.Row="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8ABB89" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_14.date}" HorizontalAlignment="Left" Margin="9.967,7.139,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="6" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.63,6.127,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_14.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="6" Grid.Row="2"/>
+        <Rectangle Stroke="{Binding NewCalender.date_18.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.999,1.736,1.668,1.174" Width="117.333" Height="40" Grid.Column="3" Grid.Row="3">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_18.date}" HorizontalAlignment="Left" Margin="12.5,6.943,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="3" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.834,4.776,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_18.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="3" Grid.Row="3"/>
+        <Rectangle Stroke="{Binding NewCalender.date_19.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.966,1.736,0.701,1.174" Width="117.333" Height="40" Grid.Column="4" Grid.Row="3">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_19.date}" Margin="11.967,6.943,84.033,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="4" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.301,6.943,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_19.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="4" Grid.Row="3"/>
+        <Rectangle Stroke="{Binding NewCalender.date_20.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.842,1.833,1.825,1.077" Width="117.333" Height="40" Grid.Column="5" Grid.Row="3">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_20.date}" HorizontalAlignment="Left" Margin="10.051,6.943,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="5" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.468,6.693,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_20.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="5" Grid.Row="3"/>
+        <Rectangle Stroke="{Binding NewCalender.date_21.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.884,1.833,2.783,1.077" Width="117.333" Height="40" Grid.Column="6" Grid.Row="3">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8ABB89" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_21.date}" HorizontalAlignment="Left" Margin="9.967,6.943,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="6" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.63,6.776,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_21.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="6" Grid.Row="3"/>
+        <Rectangle Stroke="{Binding NewCalender.date_24.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.585,1.516,2.082,1.394" Width="117.333" Height="40" Grid.Column="2" Grid.Row="4">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_24.date}" HorizontalAlignment="Left" Margin="12.001,6.859,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="2" Grid.Row="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.501,6.859,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_24.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="2" Grid.Row="4"/>
+        <Rectangle Stroke="{Binding NewCalender.date_25.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.999,1.624,1.668,1.286" Width="117.333" Height="40" Grid.Column="3" Grid.Row="4">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_25.date}" HorizontalAlignment="Left" Margin="12.335,6.859,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="3" Grid.Row="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.834,5.621,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_25.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="3" Grid.Row="4"/>
+        <Rectangle Stroke="{Binding NewCalender.date_26.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.966,1.516,0.701,1.394" Width="117.333" Height="40" Grid.Column="4" Grid.Row="4">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_26.date}" HorizontalAlignment="Left" Margin="11.801,6.859,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="4" Grid.Row="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.301,6.859,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_26.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="4" Grid.Row="4"/>
+        <Rectangle Stroke="{Binding NewCalender.date_27.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.842,1.624,1.825,1.286" Width="117.333" Height="40" Grid.Column="5" Grid.Row="4">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_27.date}" HorizontalAlignment="Left" Margin="10.051,6.859,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="5" Grid.Row="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.468,6.859,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_27.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="5" Grid.Row="4"/>
+        <Rectangle Stroke="{Binding NewCalender.date_28.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.884,1.624,2.783,1.286" Width="117.333" Height="40" Grid.Column="6" Grid.Row="4">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8ABB89" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_28.date}" HorizontalAlignment="Left" Margin="9.967,6.859,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="6" Grid.Row="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.63,6.609,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_28.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="6" Grid.Row="4"/>
+        <Rectangle Stroke="{Binding NewCalender.date_31.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.917,1.392,2.75,3.528" Width="117.333" Grid.Column="2" Grid.Row="5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_31.date}" HorizontalAlignment="Left" Margin="12.001,6.734,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="2" Grid.Row="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.501,6.734,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_31.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="2" Grid.Row="5"/>
+        <Rectangle Stroke="{Binding NewCalender.date_32.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.999,1.517,1.668,2.391" Width="117.333" Height="40" Grid.Column="3" Grid.Row="5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC1C1C1" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_32.date}" HorizontalAlignment="Left" Margin="12.335,6.734,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="3" Grid.Row="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.834,5.413,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_32.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="3" Grid.Row="5"/>
+        <Rectangle Stroke="{Binding NewCalender.date_33.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.966,1.541,0.701,2.367" Width="117.333" Height="40" Grid.Column="4" Grid.Row="5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_33.date}" HorizontalAlignment="Left" Margin="11.801,6.734,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="4" Grid.Row="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.301,5.413,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_33.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="4" Grid.Row="5"/>
+        <Rectangle Stroke="{Binding NewCalender.date_34.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.842,1.541,1.825,2.367" Width="117.333" Height="40" Grid.Column="5" Grid.Row="5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_34.date}" HorizontalAlignment="Left" Margin="10.051,6.734,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="5" Grid.Row="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.468,6.734,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_34.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="5" Grid.Row="5"/>
+        <Rectangle Stroke="{Binding NewCalender.date_35.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.884,1.541,2.783,2.367" Width="117.333" Height="40" Grid.Column="6" Grid.Row="5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8ABB89" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_35.date}" HorizontalAlignment="Left" Margin="9.967,6.734,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="6" Grid.Row="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.63,6.734,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_35.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="6" Grid.Row="5"/>
+        <Rectangle Fill="#FFE08F8F" HorizontalAlignment="Left" Stroke="#FF837171" Width="117.333" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="11.667,8.312,0,1.585" Height="40"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41.999,13.996,0,0" TextWrapping="Wrap" Text="Sunday" FontSize="16" Width="58" Height="28" VerticalAlignment="Top" Foreground="White"/>
+        <Rectangle Stroke="{Binding NewCalender.date_01.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="11.667,2.477,2.333,1.431" Height="40" IsEnabled="False" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE08F8F" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_01.date}" HorizontalAlignment="Left" Margin="21.667,7.496,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Row="1"/>
+        <TextBlock Text="{Binding NewCalender.date_01.Status}" HorizontalAlignment="Left" Margin="58.667,7.496,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Row="1"/>
+        <Rectangle Stroke="{Binding NewCalender.date_38.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.917,1.197,2.75,0" Height="40.666" VerticalAlignment="Top" Width="117.333" Grid.Column="2" Grid.Row="6">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_38.date}" HorizontalAlignment="Left" Margin="7.001,7.193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="2" Grid.Row="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.501,5.193,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_38.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="2" Grid.Row="6"/>
+        <Rectangle Stroke="{Binding NewCalender.date_39.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.999,1.197,1.668,0" Height="40" VerticalAlignment="Top" Width="117.333" Grid.Column="3" Grid.Row="6">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_39.date}" HorizontalAlignment="Left" Margin="12.5,7.193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="3" Grid.Row="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.834,5.193,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_39.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="3" Grid.Row="6"/>
+        <Rectangle Stroke="{Binding NewCalender.date_40.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.966,1.197,0.701,0" Height="40" VerticalAlignment="Top" Width="117.333" Grid.Column="4" Grid.Row="6">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_40.date}" HorizontalAlignment="Left" Margin="11.801,7.193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="4" Grid.Row="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.301,5.193,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_40.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="4" Grid.Row="6"/>
+        <Rectangle Stroke="{Binding NewCalender.date_41.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="1.842,1.197,1.825,0" Height="40" VerticalAlignment="Top" Width="117.333" Grid.Column="5" Grid.Row="6">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF95A7D8" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_41.date}" HorizontalAlignment="Left" Margin="10.051,7.193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="5" Grid.Row="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.468,5.193,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_41.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="5" Grid.Row="6"/>
+        <Rectangle Stroke="{Binding NewCalender.date_42.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.884,1.863,2.783,0" Height="40" VerticalAlignment="Top" Width="117.333" Grid.Column="6" Grid.Row="6">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8ABB89" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.402"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_42.date}" HorizontalAlignment="Left" Margin="9.967,7.193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="6" Grid.Row="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53.63,7.193,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_42.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="6" Grid.Row="6"/>
+        <Rectangle HorizontalAlignment="Left" Height="32" Stroke="#FF818181" VerticalAlignment="Top" Width="881.163" Fill="#FFDEDEDE" Margin="-0.163,7.681,0,0" Grid.ColumnSpan="8" Grid.Row="7"/>
+        <Rectangle HorizontalAlignment="Left" Height="24" Margin="19,10.681,0,0" RadiusY="5" RadiusX="5" Stroke="Black" VerticalAlignment="Top" Width="32" Fill="White" Grid.Row="7"/>
+        <TextBlock Margin="57,14.68,103,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="To Day" Grid.ColumnSpan="2" Grid.Row="7"/>
+        <Ellipse Visibility="{Binding NewCalender.date_01.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="14.667,28.484,0,0" Fill="#FFFCFFCA" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_01.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="25.667,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_01.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="35.667,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_01.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="45.667,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="1"/>
+        <Ellipse Visibility="{Binding NewCalender.date_02.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.167,26.484,0,0" Fill="#FFFCFFCA" Grid.Column="1" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_02.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.167,26.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_02.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.167,26.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_02.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.167,26.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="1"/>
+        <Ellipse Visibility="{Binding NewCalender.date_04.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.335,28.484,0,0" Fill="#FFFCFFCA" Grid.Column="3" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_04.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="18.335,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_04.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="28.335,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_04.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="38.335,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="1"/>
+        <Ellipse Visibility="{Binding NewCalender.date_05.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.801,28.484,0,0" Fill="#FFFCFFCA" Grid.Column="4" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_05.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="18.801,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_05.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="28.801,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_05.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="38.801,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="1"/>
+        <Ellipse Visibility="{Binding NewCalender.date_06.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="6.721,28.484,0,0" Fill="#FFFCFFCA" Grid.Column="5" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_06.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="17.721,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_06.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="27.721,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_06.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="37.721,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="1"/>
+        <Ellipse Visibility="{Binding NewCalender.date_07.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.636,28.484,0,0" Fill="#FFFCFFCA" Grid.Column="6" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_07.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="18.636,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_07.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="28.636,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_07.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="38.636,28.484,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="1"/>
+        <Ellipse Visibility="{Binding NewCalender.date_14.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.636,26.127,0,0" Fill="#FFFCFFCA" Grid.Column="6" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_14.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.636,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_14.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.636,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_14.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.636,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="2"/>
+        <Ellipse Visibility="{Binding NewCalender.date_13.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="6.721,26.127,0,0" Fill="#FFFCFFCA" Grid.Column="5" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_13.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="17.721,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_13.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="27.721,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_13.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="37.721,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="2"/>
+        <Ellipse Visibility="{Binding NewCalender.date_12.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.801,25.877,0,0" Fill="#FFFCFFCA" Grid.Column="4" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_12.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="18.801,25.877,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_12.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="28.801,25.877,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_12.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="38.801,25.877,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="2"/>
+        <Ellipse Visibility="{Binding NewCalender.date_11.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.335,26.127,0,0" Fill="#FFFCFFCA" Grid.Column="3" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_11.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="18.335,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_11.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="28.335,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_11.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="38.335,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="2"/>
+        <Ellipse Visibility="{Binding NewCalender.date_18.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.335,26.943,0,0" Fill="#FFFCFFCA" Grid.Column="3" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_18.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="18.335,26.943,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_18.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="28.335,26.943,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_18.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="38.335,26.943,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="3"/>
+        <Ellipse Visibility="{Binding NewCalender.date_19.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.801,25.764,0,0" Fill="#FFFCFFCA" Grid.Column="4" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_19.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.801,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_19.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.801,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_19.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.801,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="3"/>
+        <Ellipse Visibility="{Binding NewCalender.date_20.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="6.721,25.764,0,0" Fill="#FFFCFFCA" Grid.Column="5" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_20.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="17.721,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_20.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="27.721,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_20.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="37.721,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="3"/>
+        <Ellipse Visibility="{Binding NewCalender.date_21.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.636,25.764,0,0" Fill="#FFFCFFCA" Grid.Column="6" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_21.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.636,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_21.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.636,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_21.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.636,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="3"/>
+        <Ellipse Visibility="{Binding NewCalender.date_42.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.636,26.181,0,0" Fill="#FFFCFFCA" Grid.Column="6" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_42.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.636,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_42.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.636,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_42.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.636,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="6"/>
+        <Ellipse Visibility="{Binding NewCalender.date_41.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="6.721,26.181,0,0" Fill="#FFFCFFCA" Grid.Column="5" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_41.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="17.721,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_41.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="27.721,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_41.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="37.721,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="6"/>
+        <Ellipse Visibility="{Binding NewCalender.date_40.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.801,26.181,0,0" Fill="#FFFCFFCA" Grid.Column="4" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_40.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.801,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_40.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.801,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_40.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.801,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="6"/>
+        <Ellipse Visibility="{Binding NewCalender.date_39.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.335,26.181,0,0" Fill="#FFFCFFCA" Grid.Column="3" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_39.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.335,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_39.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.335,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_39.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.335,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="6"/>
+        <Ellipse Visibility="{Binding NewCalender.date_38.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.001,26.181,0,0" Fill="#FFFCFFCA" Grid.Column="2" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_38.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.001,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_38.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.001,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_38.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.001,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="6"/>
+        <Ellipse Visibility="{Binding NewCalender.date_24.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.001,26.609,0,0" Fill="#FFFCFFCA" Grid.Column="2" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_24.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="18.001,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_24.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="28.001,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_24.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="38.001,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="4"/>
+        <Ellipse Visibility="{Binding NewCalender.date_25.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.335,26.859,0,0" Fill="#FFFCFFCA" Grid.Column="3" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_25.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.335,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_25.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.335,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_25.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.335,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="4"/>
+        <Ellipse Visibility="{Binding NewCalender.date_26.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.801,26.859,0,0" Fill="#FFFCFFCA" Grid.Column="4" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_26.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="18.801,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_26.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="28.801,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_26.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="38.801,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="4"/>
+        <Ellipse Visibility="{Binding NewCalender.date_27.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="6.721,26.609,0,0" Fill="#FFFCFFCA" Grid.Column="5" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_27.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="17.721,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_27.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="27.721,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_27.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="37.721,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="4"/>
+        <Ellipse Visibility="{Binding NewCalender.date_28.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.636,26.859,0,0" Fill="#FFFCFFCA" Grid.Column="6" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_28.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.636,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_28.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.636,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_28.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.636,26.859,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="4"/>
+        <Ellipse Visibility="{Binding NewCalender.date_35.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.636,27.722,0,0" Fill="#FFFCFFCA" Grid.Column="6" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_35.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.636,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_35.BankProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.636,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_35.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.636,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="6" Grid.Row="5"/>
+        <Ellipse Visibility="{Binding NewCalender.date_34.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="6.721,27.722,0,0" Fill="#FFFCFFCA" Grid.Column="5" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_34.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="17.721,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_34.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="27.721,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_34.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="37.721,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="5" Grid.Row="5"/>
+        <Ellipse Visibility="{Binding NewCalender.date_33.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.801,27.722,0,0" Fill="#FFFCFFCA" Grid.Column="4" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_33.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.801,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_33.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.801,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_33.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.801,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="4" Grid.Row="5"/>
+        <Ellipse Visibility="{Binding NewCalender.date_32.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.335,27.722,0,0" Fill="#FFFCFFCA" Grid.Column="3" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_32.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.335,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_32.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.335,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_32.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.335,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="3" Grid.Row="5"/>
+        <Ellipse Visibility="{Binding NewCalender.date_31.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.001,26.401,0,0" Fill="#FFFCFFCA" Grid.Column="2" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_31.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.001,26.401,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_31.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.001,26.401,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_31.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.001,26.401,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="5"/>
+        <Rectangle HorizontalAlignment="Left" Height="22" Margin="25.667,12.681,0,0" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="32" Fill="#FFFFCFCB" Stroke="Black" Grid.Column="1" Grid.Row="7"/>
+        <Rectangle HorizontalAlignment="Left" Height="22" Margin="47.667,12.681,0,0" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="32" Fill="#FFCAFFC9" Stroke="Black" Grid.Column="2" Grid.Row="7"/>
+        <Rectangle HorizontalAlignment="Left" Height="22" Margin="71.167,12.681,0,0" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="32" Fill="#FFD4CAFF" Stroke="Black" Grid.Column="3" Grid.Row="7"/>
+        <Ellipse Fill="#FFFCFFCA" HorizontalAlignment="Left" Height="22" Margin="93.801,12.681,0,0" VerticalAlignment="Top" Width="22" Stroke="Black" Grid.Column="4" Grid.Row="7"/>
+        <TextBlock Margin="60.667,14.68,89.5,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Public Holiday" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7"/>
+        <TextBlock Margin="81.667,15.68,57,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Mercantile Holiday" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="7"/>
+        <TextBlock Margin="105.167,15.68,33.25,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Bank Holiday" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="7"/>
+        <TextBlock Margin="119.801,15.68,17.25,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Poya Day" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="7"/>
+        <Rectangle Stroke="{Binding NewCalender.date_08.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="11,1.808,2.333,1.103" Height="40" IsEnabled="False" Grid.Row="2">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FFE08F8F" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_08.date}" HorizontalAlignment="Left" Margin="21,7.139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Row="2"/>
+        <TextBlock Text="{Binding NewCalender.date_08.Status}" HorizontalAlignment="Left" Margin="58,7.139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="61.667" FontSize="8" Grid.Row="2"/>
+        <Ellipse Visibility="{Binding NewCalender.date_08.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="14,28.127,0,0" Fill="#FFFCFFCA" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_08.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="25,28.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_08.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="35,28.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_08.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="45,28.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="2"/>
+        <Rectangle Stroke="{Binding NewCalender.date_15.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="11.667,1.736,2.333,1.174" Height="40" IsEnabled="False" Grid.Row="3">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FFE08F8F" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_15.date}" HorizontalAlignment="Left" Margin="21.667,6.943,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Row="3"/>
+        <TextBlock Text="{Binding NewCalender.date_15.Status}" HorizontalAlignment="Left" Margin="58.667,6.943,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Row="3"/>
+        <Ellipse Visibility="{Binding NewCalender.date_15.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="14.667,27.931,0,0" Fill="#FFFCFFCA" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_15.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="25.667,27.931,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_15.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="35.667,27.931,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_15.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="45.667,27.931,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="3"/>
+        <Rectangle Stroke="{Binding NewCalender.date_22.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="11,1.527,2.333,1.383" Height="40" IsEnabled="False" Grid.Row="4">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FFE08F8F" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_22.date}" HorizontalAlignment="Left" Margin="21,6.859,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Row="4"/>
+        <TextBlock Text="{Binding NewCalender.date_22.Status}" HorizontalAlignment="Left" Margin="58,6.859,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="61.667" FontSize="8" Grid.Row="4"/>
+        <Ellipse Visibility="{Binding NewCalender.date_22.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="14,27.847,0,0" Fill="#FFFCFFCA" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_22.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="25,27.847,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_22.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="35,27.847,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_22.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="45,27.847,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="4"/>
+        <Rectangle Stroke="{Binding NewCalender.date_29.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="11,1.528,2.333,2.38" Height="40" IsEnabled="False" Grid.Row="5">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FFE08F8F" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_29.date}" HorizontalAlignment="Left" Margin="21,6.734,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Row="5"/>
+        <TextBlock Text="{Binding NewCalender.date_29.Status}" HorizontalAlignment="Left" Margin="58,6.734,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="61.667" FontSize="8" Grid.Row="5"/>
+        <Ellipse Visibility="{Binding NewCalender.date_29.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="14,27.722,0,0" Fill="#FFFCFFCA" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_36.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="25,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_36.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="35,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_36.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="45,27.722,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="5"/>
+        <Rectangle Stroke="{Binding NewCalender.date_36.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="10,2.129,3.333,1.78" Height="40" IsEnabled="False" Grid.Row="6">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FFE08F8F" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_36.date}" HorizontalAlignment="Left" Margin="20,7.193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Row="6"/>
+        <TextBlock Text="{Binding NewCalender.date_36.Status}" HorizontalAlignment="Left" Margin="57,7.193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="61.667" FontSize="8" Grid.Row="6"/>
+        <Ellipse Visibility="{Binding NewCalender.date_36.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="13,28.181,0,0" Fill="#FFFCFFCA" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_29.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="8" Margin="24,28.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_29.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="8" Margin="34,28.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_29.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="8" Margin="44,28.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Row="6"/>
+        <Rectangle Stroke="{Binding NewCalender.date_09.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.892,1.143,2.774,1.768" Width="117.333" Height="40" Grid.Column="1" Grid.Row="2">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF95A7D8" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_09.date}" HorizontalAlignment="Left" Margin="12.167,5.139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.667,6.127,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_09.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="1" Grid.Row="2"/>
+        <Ellipse Visibility="{Binding NewCalender.date_09.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.167,26.127,0,0" Fill="#FFFCFFCA" Grid.Column="1" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_09.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.167,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_09.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.167,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_09.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.167,26.127,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="2"/>
+        <Rectangle Stroke="{Binding NewCalender.date_16.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.892,1.833,2.774,1.077" Width="117.333" Height="40" Grid.Column="1" Grid.Row="3">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF95A7D8" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_16.date}" HorizontalAlignment="Left" Margin="12.167,5.705,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="1" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.667,6.693,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_16.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="1" Grid.Row="3"/>
+        <Ellipse Visibility="{Binding NewCalender.date_16.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.167,26.693,0,0" Fill="#FFFCFFCA" Grid.Column="1" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_16.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.167,26.693,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_16.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.167,26.693,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_16.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.667,27.931,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="3"/>
+        <Rectangle Stroke="{Binding NewCalender.date_23.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.892,1.624,2.774,1.286" Width="117.333" Height="40" Grid.Column="1" Grid.Row="4">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF95A7D8" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_23.date}" HorizontalAlignment="Left" Margin="12.167,5.621,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="1" Grid.Row="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.667,6.609,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_23.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="1" Grid.Row="4"/>
+        <Ellipse Visibility="{Binding NewCalender.date_23.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.167,26.609,0,0" Fill="#FFFCFFCA" Grid.Column="1" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_23.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.167,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_23.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.167,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="4"/>
+        <Rectangle Visibility="{Binding NewCalender.date_23.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.167,26.609,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="4"/>
+        <Rectangle Stroke="{Binding NewCalender.date_30.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.892,1.541,2.774,2.367" Width="117.333" Height="40" Grid.Column="1" Grid.Row="5">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF95A7D8" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_30.date}" HorizontalAlignment="Left" Margin="12.167,5.413,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="1" Grid.Row="5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.667,6.401,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_30.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="1" Grid.Row="5"/>
+        <Ellipse Visibility="{Binding NewCalender.date_30.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.167,26.401,0,0" Fill="#FFFCFFCA" Grid.Column="1" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_30.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.167,26.401,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_30.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.167,26.401,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="5"/>
+        <Rectangle Visibility="{Binding NewCalender.date_30.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.167,26.401,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="5"/>
+        <Rectangle Stroke="{Binding NewCalender.date_37.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.892,1.463,2.774,2.446" Width="117.333" Height="40" Grid.Column="1" Grid.Row="6">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF95A7D8" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_37.date}" HorizontalAlignment="Left" Margin="12.167,5.193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="1" Grid.Row="6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.667,6.181,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_37.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="1" Grid.Row="6"/>
+        <Ellipse Visibility="{Binding NewCalender.date_37.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.167,26.181,0,0" Fill="#FFFCFFCA" Grid.Column="1" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_37.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.167,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_37.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.167,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="6"/>
+        <Rectangle Visibility="{Binding NewCalender.date_37.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.167,26.181,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="1" Grid.Row="6"/>
+        <Rectangle Stroke="{Binding NewCalender.date_03.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.918,2.493,1.749,1.415" Width="117.333" Height="40" Grid.Column="2" Grid.Row="1">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF95A7D8" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_03.date}" HorizontalAlignment="Left" Margin="12.001,7.512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="2" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.501,5.512,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_03.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="2" Grid.Row="1"/>
+        <Ellipse Visibility="{Binding NewCalender.date_03.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.001,26.5,0,0" Fill="#FFFCFFCA" Grid.Column="2" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_03.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.001,26.5,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_03.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.001,26.5,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="1"/>
+        <Rectangle Visibility="{Binding NewCalender.date_03.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.001,26.5,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="1"/>
+        <Rectangle Stroke="{Binding NewCalender.date_10.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.918,1.558,1.749,1.353" Width="117.333" Height="40" Grid.Column="2" Grid.Row="2">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF95A7D8" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_10.date}" HorizontalAlignment="Left" Margin="12.001,6.889,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="2" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.501,4.889,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_01.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="2" Grid.Row="2"/>
+        <Ellipse Visibility="{Binding NewCalender.date_10.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.001,25.877,0,0" Fill="#FFFCFFCA" Grid.Column="2" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_10.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.001,25.877,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_10.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.001,25.877,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="2"/>
+        <Rectangle Visibility="{Binding NewCalender.date_10.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.001,25.877,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="2"/>
+        <Rectangle Stroke="{Binding NewCalender.date_17.OutLineColor}" RadiusX="5" RadiusY="5" StrokeThickness="1" Margin="2.918,1.569,1.749,1.341" Width="117.333" Height="40" Grid.Column="2" Grid.Row="3">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF95A7D8" Offset="0"/>
+        			<GradientStop Color="White" Offset="0.402"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding NewCalender.date_17.date}" HorizontalAlignment="Left" Margin="12.001,6.776,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Height="15" Width="25" Grid.Column="2" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52.501,4.776,0,0" TextWrapping="Wrap" Text="{Binding NewCalender.date_17.Status}" VerticalAlignment="Top" Height="30" Width="61" FontSize="8" Grid.Column="2" Grid.Row="3"/>
+        <Ellipse Visibility="{Binding NewCalender.date_17.PoyaProp}" HorizontalAlignment="Left" Height="10" Stroke="Black" VerticalAlignment="Top" Width="10" Margin="7.001,25.764,0,0" Fill="#FFFCFFCA" Grid.Column="2" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_17.PublicProp}" Fill="#FFFFCFCB" HorizontalAlignment="Left" Height="10" Margin="18.001,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_17.MercantileProp}" Fill="#FFCAFFC9" HorizontalAlignment="Left" Height="10" Margin="28.001,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="3"/>
+        <Rectangle Visibility="{Binding NewCalender.date_17.BankProp}" Fill="#FFD4CAFF" HorizontalAlignment="Left" Height="10" Margin="38.001,25.764,0,0" RadiusY="1" RadiusX="1" Stroke="Black" VerticalAlignment="Top" Width="9" Grid.Column="2" Grid.Row="3"/>
+
+    </Grid>
+</UserControl>

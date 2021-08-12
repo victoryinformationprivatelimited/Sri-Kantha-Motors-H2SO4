@@ -1,0 +1,223 @@
+﻿<Window x:Class="ERP.Performance.Evaluation.AssignEvaluationCriteriaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ERP"
+        xmlns:Cnv ="clr-namespace:ERP.ValueConverters"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="AssignEvaluationCriteriaWindow" Height ="650.992" Width="1175.541" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="{x:Null}">
+    <Window.Resources>
+        <Cnv:MultipleBoolToStringConverterSubtask x:Key="BoolToStringsubtaskConverter"/>
+        <Style x:Key="ImageStyle2" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.495"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="-2.497,-3.17,-2.497,-1.335">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Opacity="0" Stroke="White" Margin="-2.995,-3.083,-2.995,-3.006" Fill="{x:Null}" Width="Auto" Height="Auto"/>
+                            <Image x:Name="image" Margin="2.662,2.339,3.247,2.254" Source="/ERP;component/Images/appbar.close.png" Stretch="Fill" Width="Auto" Height="Auto" Style="{DynamicResource ImageStyle2}" OpacityMask="#FF010000" Opacity="0.5"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <ResourceDictionary x:Key="BoolToStringsubtaskConverterParams">
+            <sys:String x:Key="1">Deleted</sys:String>
+            <sys:String x:Key="2">Active</sys:String>
+            <sys:String x:Key="3">Inactive</sys:String>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="13,14,0,16" HorizontalAlignment="Left" Width="1153">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FF2B3D5D" RadiusY="4" RadiusX="4" Stroke="#7E191818" StrokeThickness="16" Margin="-16,-16,0,0" Height="637" Width="1169" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <ComboBox ItemsSource="{Binding EvaluationCatrgories}" SelectedItem="{Binding CurrentEvaluationCategory}" DisplayMemberPath="evaluation_cat_name"  IsEditable="True" Margin="136,69,797,528"/>
+        <ComboBox ItemsSource="{Binding EvaluationPeriods}" SelectedItem="{Binding CurrentEvaluationPeriod}" DisplayMemberPath="evaluation_period_name" IsEditable="True" VerticalAlignment="Top" Height="24" Margin="517,69,421,0"/>
+        <Rectangle x:Name="assignEvalTitleBar"  Margin="0,0,10,589" MouseLeftButtonDown="assignEvalTitleBar_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF18233A" Offset="0"/>
+                    <GradientStop Color="#FF18233A" Offset="1"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.518"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="assignEvalTitle" Content="Assign Evaluation Criteria" Margin="40,2,0,591" HorizontalAlignment="Left" Width="174" FontSize="13.333" FontWeight="Bold" Foreground="White" MouseLeftButtonDown="assignEvalTitle_MouseLeftButtonDown">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="3" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <Image Source="/ERP;component/Images/Leave/form_icon/apply-leave.png" Stretch="Fill" Margin="5,1,1118,590"/>
+        <Label Content="Evaluation Category" Height="26" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Semibold" FontWeight="Bold" Margin="9,67,1024,0"/>
+        <Label Content="Evaluation Period" Margin="405,67,639,528" Foreground="White" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
+        <Button x:Name="assignEvalCloseBtn" Content="Button" Margin="1109,3,24,597" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5" Click="assignEvalCloseBtn_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Rectangle Margin="0,32,17,565">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF81818B" Offset="0"/>
+                    <GradientStop Color="#FF81818B" Offset="1"/>
+                    <GradientStop Color="#FFC4C4D3" Offset="0.56"/>
+                    <GradientStop Color="#FFC4C4D3" Offset="0.474"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <local:CustomDataGrid AlternatingRowBackground="LightSkyBlue" RowBackground="LightSteelBlue" LoadingRow="CustomDataGrid_LoadingRow_1" ItemsSource="{Binding EvaluationCriterias}" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Left" Margin="13,118,0,0" VerticalAlignment="Top" Height="273" Width="343" SelectedItemsList="{Binding CurrentEvaluationCriteria, Mode=TwoWay}">
+            <local:CustomDataGrid.Columns>
+                <DataGridTextColumn Header="Category Criterias" Binding="{Binding evaluation_criteria_name}"  Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </local:CustomDataGrid.Columns>
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="CornflowerBlue"/>
+            </DataGrid.Resources>
+        </local:CustomDataGrid>
+        <local:CustomDataGrid LoadingRow="CustomDataGrid_LoadingRow_2" RowBackground="LightSteelBlue" ItemsSource="{Binding SelectedEmployeeEvaluationDetails}" SelectedItemsList="{Binding CurrentSelectedEmployeeEvaluationDetails,Mode=TwoWay}" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Left" Margin="783,120,0,0" VerticalAlignment="Top" Height="271" Width="343">
+            <local:CustomDataGrid.Columns>
+                <DataGridTextColumn Header="Selected Criterias"  Width="285" Binding="{Binding evaluation_criteria_name}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Status" Width="*">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding Converter="{StaticResource BoolToStringsubtaskConverter}" ConverterParameter="{StaticResource BoolToStringsubtaskConverterParams}">
+                            <Binding Path="is_active" />
+                            <Binding Path="is_delete" />
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+            </local:CustomDataGrid.Columns>
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="CornflowerBlue"/>
+            </DataGrid.Resources>
+            <DataGrid.InputBindings>
+                <KeyBinding Gesture="CTRL+A" Command="{Binding BtnActInactCriteria}"/>
+                <KeyBinding Gesture="CTRL+D" Command="{Binding BtnDelUnDelCriteria}"/>
+            </DataGrid.InputBindings>
+        </local:CustomDataGrid>
+        <Button Command="{Binding BtnSelectEmployees}" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25" Height="24" Margin="367,244,0,0"/>
+        <Button Command="{Binding BtnDelete}" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="26" Margin="1040,436,0,0"/>
+        <local:CustomDataGrid ItemsSource="{Binding AssignedEvaluations}" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,470,0,0" VerticalAlignment="Top" Height="122" Width="1116" SelectedItem="{Binding CurrentAssignedEvaluation}">
+            <local:CustomDataGrid.Columns>
+                <DataGridTextColumn Header="Category Name"  Width="400" Binding="{Binding evaluation_cat_name}"/>
+                <DataGridTextColumn Header="Period Name"  Width="400" Binding="{Binding evaluation_period_name}"/>
+                <DataGridTextColumn Header="Number Of Evaluations"  Width="*" Binding="{Binding Number_Of_Evaluations}"/>
+            </local:CustomDataGrid.Columns>
+        </local:CustomDataGrid>
+        <Button Command="{Binding BtnSelectedCriterias}" Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25" Height="24" Margin="745,244,0,0"/>
+        <Button Command="{Binding BtnNew}" Content="New" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="26" Margin="783,436,0,0"/>
+        <Button Command="{Binding BtnSave}" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="26" Margin="914,436,0,0" RenderTransformOrigin="-0.977,0.423"/>
+        <Button Command="{Binding BtnGetEvaluations}" Content="Get Assigned Evaluations" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="26" Margin="13,434,0,0"/>
+        <local:CustomDataGrid ItemsSource="{Binding SelectedEmployeeEvaluations}" SelectedItemsList="{Binding CurrentSelectedEmployeeEvaluations, Mode=TwoWay}" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" RowBackground="LightSteelBlue"  HorizontalAlignment="Left" Margin="407,118,0,0" VerticalAlignment="Top" Height="273" Width="325">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="CornflowerBlue"/>
+            </DataGrid.Resources>
+            <local:CustomDataGrid.Columns>
+                <DataGridTextColumn Header="Emp ID"  Width="70" Binding="{Binding emp_id}"/>
+                <DataGridTextColumn Header="Employee Name"  Width="200" Binding="{Binding first_name}"/>
+                <DataGridTextColumn Header="Status" Width="*">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding Converter="{StaticResource BoolToStringsubtaskConverter}" ConverterParameter="{StaticResource BoolToStringsubtaskConverterParams}">
+                            <Binding Path="is_active" />
+                            <Binding Path="is_delete" />
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+            </local:CustomDataGrid.Columns>
+            <DataGrid.InputBindings>
+                <KeyBinding Gesture="CTRL+A" Command="{Binding BtnActInactEmployee}"/>
+                <KeyBinding Gesture="CTRL+D" Command="{Binding BtnDelUnDelEmployee}"/>
+            </DataGrid.InputBindings>
+        </local:CustomDataGrid>
+    </Grid>
+</Window>

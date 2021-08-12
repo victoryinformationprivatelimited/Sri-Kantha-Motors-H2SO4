@@ -1,0 +1,19 @@
+﻿<Window x:Class="ERP.Payroll.SendSMS.SendSMSWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SendSMSWindow" Height="400" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Payment Period" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,29,0,0"/>
+        <ComboBox IsEditable="True" ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="period_name" HorizontalAlignment="Left" Margin="118,33,0,0" VerticalAlignment="Top" Width="185"/>
+        <DataGrid ItemsSource="{Binding EmployeeSalary}" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Height="239" Width="463">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Employee No" Width="*" Binding="{Binding emp_id}"/>
+                <DataGridTextColumn Header="Employee Name" Width="*" Binding="{Binding epf_name}"/>
+                <DataGridTextColumn Header="Employee Telephone" Width="*" Binding="{Binding mobile_number1}"/>
+                <DataGridTextColumn Header="Salary" Width="*" Binding="{Binding total_salary}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Command="{Binding btnSend}" Content="Send" HorizontalAlignment="Left" Margin="398,321,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,212 @@
+﻿<UserControl x:Class="ERP.Attendance.Attendance_Process.ProsessStartMDI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="White" Height="319.457" Width="826">
+	<UserControl.Resources>
+		<Style x:Key="ButtonStyle22" TargetType="{x:Type Button}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+									<EasingColorKeyFrame KeyTime="0" Value="#FFBDBCBC"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF0097FF"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseLeave1">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+									<EasingColorKeyFrame KeyTime="0" Value="#FF017ACD"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FFBDBCBC"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter2">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+									<EasingColorKeyFrame KeyTime="0" Value="#FFBDBCBC"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF0D78C2"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseLeave2">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+									<EasingColorKeyFrame KeyTime="0" Value="#FF0D78C2"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFBDBCBC"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter3">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="#FF5F5F5F"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Black"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseLeave3">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="Black"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF5F5F5F"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="MouseOver"/>
+									<VisualState x:Name="Pressed"/>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="ValidationStates">
+									<VisualState x:Name="InvalidFocused"/>
+									<VisualState x:Name="InvalidUnfocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Rectangle x:Name="rectangle" Width="65" VerticalAlignment="Top" StrokeThickness="1" Stroke="#FFBDBCBC" RadiusX="0" RadiusY="0" Height="25" HorizontalAlignment="Left">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.506,0.305" StartPoint="0.501,1.026">
+										<GradientStop Color="White" Offset="0"/>
+										<GradientStop Color="#FFE4E4E4" Offset="0.992"/>
+										<GradientStop Color="#FFEAE7E7"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Rectangle Width="61.398" VerticalAlignment="Stretch" StrokeThickness="2" Stroke="{x:Null}" RadiusX="2" RadiusY="2" Opacity="0.75" Margin="1.668,2.085,0,14.668" Height="Auto" HorizontalAlignment="Left" Fill="#FFFFF8F8"/>
+							<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							<Label x:Name="label" Content="New" HorizontalAlignment="Left" VerticalAlignment="Top" Width="37.5" Margin="13.666,0,0,0" Foreground="#FF5F5F5F"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+							</EventTrigger>
+							<Trigger Property="IsFocused" Value="True"/>
+							<Trigger Property="IsDefaulted" Value="True"/>
+							<Trigger Property="IsMouseOver" Value="True"/>
+							<Trigger Property="IsPressed" Value="True"/>
+							<Trigger Property="IsEnabled" Value="False"/>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ButtonStyle19" TargetType="{x:Type Button}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+									<EasingColorKeyFrame KeyTime="0" Value="#FFBDBCBC"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF0097FF"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseLeave1">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+									<EasingColorKeyFrame KeyTime="0" Value="#FF017ACD"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FFBDBCBC"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter2">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+									<EasingColorKeyFrame KeyTime="0" Value="#FFBDBCBC"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF0D78C2"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseLeave2">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+									<EasingColorKeyFrame KeyTime="0" Value="#FF0D78C2"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFBDBCBC"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter3">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="#FF5F5F5F"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Black"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseLeave3">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="Black"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF5F5F5F"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="MouseOver"/>
+									<VisualState x:Name="Pressed"/>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="ValidationStates">
+									<VisualState x:Name="InvalidFocused"/>
+									<VisualState x:Name="InvalidUnfocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Rectangle x:Name="rectangle" Width="102.75" VerticalAlignment="Top" StrokeThickness="1" Stroke="#FFBDBCBC" RadiusX="0" RadiusY="0" Height="25" HorizontalAlignment="Left" Margin="0.5,0,0,0">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.506,0.305" StartPoint="0.501,1.026">
+										<GradientStop Color="White" Offset="0"/>
+										<GradientStop Color="#FFE4E4E4" Offset="0.992"/>
+										<GradientStop Color="#FFEAE7E7"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Rectangle Width="98.898" VerticalAlignment="Stretch" StrokeThickness="2" Stroke="{x:Null}" RadiusX="2" RadiusY="2" Opacity="0.75" Margin="1.668,2.085,0,14.668" Height="Auto" HorizontalAlignment="Left" Fill="#FFFFF8F8"/>
+							<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                            <Label x:Name="label" Content="{Binding Path=ProcessStatus}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto" Margin="4.75,-0.665,4.242,0" Foreground="#FF5F5F5F" Height="25.665" FontSize="12"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+							</EventTrigger>
+							<Trigger Property="IsFocused" Value="True"/>
+							<Trigger Property="IsDefaulted" Value="True"/>
+							<Trigger Property="IsMouseOver" Value="True"/>
+							<Trigger Property="IsPressed" Value="True"/>
+							<Trigger Property="IsEnabled" Value="False"/>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</UserControl.Resources>
+    <Grid>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="309*"/>
+    		<RowDefinition Height="10*"/>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="11*"/>
+    		<ColumnDefinition Width="687*"/>
+    		<ColumnDefinition Width="10*"/>
+    		<ColumnDefinition Width="107*"/>
+    		<ColumnDefinition Width="11*"/>
+    	</Grid.ColumnDefinitions>
+        <Grid Name="ProcessMDI" HorizontalAlignment="Left" Height="253.443" Margin="0,56,0,0" VerticalAlignment="Top" Width="803.088" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Button Command="{Binding btnProcessStart}" Content="{Binding ProcessStatus}" HorizontalAlignment="Left" Margin="579,15,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click_1" Height="20" Grid.Column="1"/>
+        <Button IsEnabled="{Binding ProcessStopButton}" Content="{Binding ProcessStopStatus}" HorizontalAlignment="Left" Margin="0,15,0,0" VerticalAlignment="Top" Width="94" Height="20" Click="Button_Click_2" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</UserControl>

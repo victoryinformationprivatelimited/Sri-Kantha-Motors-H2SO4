@@ -1,0 +1,150 @@
+﻿<Window x:Class="ERP.Payroll.Employee_Bonus.BonusPeriodWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BonusPeriodWindow" Height="475.642" Width="730.247" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None" Foreground="{x:Null}" HorizontalAlignment="Center" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <Style x:Key="ImageStyle2" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.495"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="-2.497,-3.17,-2.497,-1.335">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Opacity="0" Stroke="White" Margin="-2.995,-3.083,-2.995,-3.006" Fill="{x:Null}" Width="Auto" Height="Auto"/>
+                            <Image x:Name="image" Margin="2.662,2.339,3.247,2.254" Source="/ERP;component/Images/appbar.close.png" Stretch="Fill" Width="Auto" Height="Auto" Style="{DynamicResource ImageStyle2}" OpacityMask="#FF010000" Opacity="0.5"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="White" Margin="40,27">
+        <Rectangle Fill="#FF2B3D5D" HorizontalAlignment="Left" Height="454" Margin="-17,-16" RadiusY="4" RadiusX="4" Stroke="#7E191818" StrokeThickness="16" VerticalAlignment="Top" Width="685"/>
+
+        <Rectangle Margin="0,6,0,367" Height="49">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF6A6A6A" Offset="0"/>
+                    <GradientStop Color="#FF6A6A6A" Offset="0.989"/>
+                    <GradientStop Color="#FF82818F" Offset="0.521"/>
+                    <GradientStop Color="#FF82818F" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Margin="0,-1,0,381" Height="42">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF18233A" Offset="0"/>
+                    <GradientStop Color="#FF18233A" Offset="1"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.518"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding BonusPeriod}" SelectedItem="{Binding CurrentBonusPeriod}" HorizontalAlignment="Left" Margin="12,227,0,0" VerticalAlignment="Top" Height="133" Width="623">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="B/P Name" Width="*" Binding="{Binding Bonus_Period_Name}"/>
+                <DataGridTextColumn Header="B/P Start Date" Width="*" Binding="{Binding Bonus_Period_Start_Date}"/>
+                <DataGridTextColumn Header="B/P End Date" Width="*" Binding="{Binding Bonus_Period_End_Date}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Bonus Period Name" HorizontalAlignment="Left" Margin="18,65,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Bonus Period Start Date" HorizontalAlignment="Left" Margin="18,96,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Bonus Period End Date" HorizontalAlignment="Left" Margin="18,133,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox TabIndex="1" HorizontalAlignment="Left" Height="23" Margin="161,65,0,0" TextWrapping="Wrap" Text="{Binding CurrentBonusPeriod.Bonus_Period_Name}" VerticalAlignment="Top" Width="217"/>
+        <DatePicker TabIndex="2" SelectedDate="{Binding CurrentBonusPeriod.Bonus_Period_Start_Date}" HorizontalAlignment="Left" Margin="161,98,0,0" VerticalAlignment="Top" Width="217"/>
+        <DatePicker TabIndex="3" SelectedDate="{Binding CurrentBonusPeriod.Bonus_Period_End_Date}" HorizontalAlignment="Left" Margin="161,133,0,0" VerticalAlignment="Top" Width="217" RenderTransformOrigin="2.771,0.501"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="22,164,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox TabIndex="4" HorizontalAlignment="Left" Height="43" Margin="161,164,0,0" TextWrapping="Wrap" Text="{Binding CurrentBonusPeriod.Bonus_Period_Description}" VerticalAlignment="Top" Width="217"/>
+        <Label Content="Asign Bonus Period" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="/ERP;component/Fonts/#Segoe UI Semibold"/>
+        <Button TabIndex="5" Command="{Binding NewButton}" Content="New" HorizontalAlignment="Left" Margin="388,373,0,0" VerticalAlignment="Top" Width="75" Height="34"/>
+        <Button TabIndex="6" Command="{Binding SaveButton}" Content="Save" HorizontalAlignment="Left" Margin="472,373,0,0" VerticalAlignment="Top" Width="75" Height="34"/>
+        <Button TabIndex="7" Command="{Binding DeleteButton}" Content="Delete" HorizontalAlignment="Left" Margin="556,373,0,0" VerticalAlignment="Top" Width="75" Height="34"/>
+        <Button x:Name="button2" Content="Button" Margin="620,8,6,390" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5" Click="button2_Click" Height="24" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Bonus Payment Type" HorizontalAlignment="Left" Margin="417,65,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <ComboBox ItemsSource="{Binding OtherPayments}" SelectedItem="{Binding CurrentEmployeeOtherPayment}" DisplayMemberPath="other_payment_name" HorizontalAlignment="Left" Margin="417,90,0,0" VerticalAlignment="Top" Width="218"/>
+
+    </Grid>
+</Window>

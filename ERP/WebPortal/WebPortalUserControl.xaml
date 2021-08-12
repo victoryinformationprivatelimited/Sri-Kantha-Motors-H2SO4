@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="ERP.WebPortal.WebPortalUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="1300" Height="900">
+    <Grid Background="#FF232831" Margin="0,0,-1000,-600">
+        <Label Content="Web Portal" Foreground="#FFE4E6EC" FontSize="72" Margin="546,197,1366,0" FlowDirection="RightToLeft" Height="114" VerticalAlignment="Top" FontWeight="Bold" Opacity="0.1" HorizontalAlignment="Center">
+            <Label.Effect>
+                <BlurEffect Radius="1.5" RenderingBias="Quality"/>
+            </Label.Effect>
+        </Label>
+        <Image Height="183" Margin="336,197,1768,0" VerticalAlignment="Top" Opacity="0.1" Stretch="Fill" Source="/ERP;component/Images/Portal.png" HorizontalAlignment="Center" Width="196" />
+
+        <Label HorizontalAlignment="Left" Height="11" Margin="1,0,0,0" VerticalAlignment="Top" Width="64"/>
+        <WrapPanel x:Name="Mdiwrappanel" Height="282" Margin="1,0,8,0" VerticalAlignment="Top"/>
+        <WrapPanel x:Name="Mdi" Margin="10,44,8,0" Height="824" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center"/>
+
+    </Grid>
+</UserControl>

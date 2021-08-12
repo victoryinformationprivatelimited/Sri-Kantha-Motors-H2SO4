@@ -1,0 +1,273 @@
+﻿<UserControl x:Class="ERP.Training.TrainingDetailUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="663" Width="1226.75" Foreground="{x:Null}">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        <Style x:Key="BorderStyle3" TargetType="{x:Type Border}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FEAEAEAE" Offset="1"/>
+                        <GradientStop Color="#FE5B5B5B" Offset="0"/>
+                        <GradientStop Color="#FE868686" Offset="0"/>
+                        <GradientStop Color="#FE888888" Offset="0"/>
+                        <GradientStop Color="#FE9D9D9D" Offset="0"/>
+                        <GradientStop Color="#FEA5A5A5" Offset="0"/>
+                        <GradientStop Color="#FEA9A9A9" Offset="0"/>
+                        <GradientStop Color="#FEABABAB" Offset="0"/>
+                        <GradientStop Color="#FEACACAC" Offset="0"/>
+                        <GradientStop Color="#FEACACAC" Offset="0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#FFDDF3D2"/>
+            <Setter Property="CornerRadius" Value="2"/>
+        </Style>
+        <Style x:Key="TextBoxStyle5" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnGotFocus1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="border">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF68839A"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FF86C7FF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnLostFocus1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="border">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF86C7FF"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.1" Value="White"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True" Style="{DynamicResource BorderStyle3}" BorderBrush="#FF68839A" CornerRadius="2" Background="White" Padding="2">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" BorderBrush="White" Margin="0" HorizontalAlignment="Left" Width="128.868"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="FocusManager.LostFocus" SourceName="PART_ContentHost">
+                                <BeginStoryboard x:Name="OnLostFocus1_BeginStoryboard" Storyboard="{StaticResource OnLostFocus1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="FocusManager.GotFocus" SourceName="border">
+                                <BeginStoryboard Storyboard="{StaticResource OnGotFocus1}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <local:ConvertTextToImage  xmlns:local="clr-namespace:ERP.Masters" x:Key="convert"/>
+        <Style x:Key="{ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="Border" Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SnapsToDevicePixels="True"/>
+                            <Polygon x:Name="Arrow" Fill="Black" HorizontalAlignment="Right" Margin="8,8,3,3" Opacity="0.15" Points="0,10 10,10 10,0" Stretch="Uniform" VerticalAlignment="Bottom"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Stroke" TargetName="Border" Value="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Fill" TargetName="Border" Value="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Visibility" TargetName="Arrow" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DataGridStyle1" TargetType="{x:Type DataGrid}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="#FF688CAF"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGrid}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="DG_ScrollViewer" Focusable="false" Foreground="#FF513838">
+                                <ScrollViewer.Template>
+                                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Button Command="{x:Static DataGrid.SelectAllCommand}" Focusable="false" Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}}" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.All}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Width="{Binding CellsPanelHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                            <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter" Grid.Column="1" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Foreground="#FF2B5668"/>
+                                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" CanContentScroll="{TemplateBinding CanContentScroll}" Grid.ColumnSpan="2" Grid.Row="1"/>
+                                            <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Column="2" Maximum="{TemplateBinding ScrollableHeight}" Orientation="Vertical" Grid.Row="1" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportHeight}"/>
+                                            <Grid Grid.Column="1" Grid.Row="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Column="1" Maximum="{TemplateBinding ScrollableWidth}" Orientation="Horizontal" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportWidth}"/>
+                                            </Grid>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ScrollViewer.Template>
+                                <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsGrouping" Value="true"/>
+                        <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="447,119,170,75" Height="411" VerticalAlignment="Center" HorizontalAlignment="Center" Width="609.75">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FF233555" Margin="-301.93,-120.071,-37.848,-53.564" RadiusY="4" RadiusX="4" Stroke="#7E191818" StrokeThickness="16" Height="584.635" VerticalAlignment="Top" HorizontalAlignment="Left" Width="949.528"/>
+
+        <DataGrid HorizontalAlignment="Left" Margin="348,236,0,0" VerticalAlignment="Top" Height="86" Width="213"/>
+        <Grid Margin="3,0,-13,0">
+            <TabControl x:Name="tabcontroll" Margin="0,-24,10,48" BorderBrush="#FF4D85C3" Style="{DynamicResource TabControlStyle1}" >
+                <TabItem x:Name="basictab" Header="Training" Margin="-2.5,-3,0.5,1" Background="#FF98B9DE" Style="{DynamicResource TabItemStyle2}" Foreground="White" FontFamily="Segoe UI Semibold" BorderBrush="#FF6296D2">
+                    <AdornerDecorator>
+                        <Grid Margin="10,10,-11,-16" Background="#FFF5F5F8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Training Programs" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="159,14,0,0" VerticalAlignment="Top" Width="120"/>
+                            <Label Content="Venue" HorizontalAlignment="Left" Margin="28,51,0,0" VerticalAlignment="Top"/>
+                            <TextBox HorizontalAlignment="Left" Height="23" Margin="159,54,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                            <Label Content="Description" HorizontalAlignment="Left" Margin="37,95,0,0" VerticalAlignment="Top"/>
+                            <TextBox HorizontalAlignment="Left" Height="51" Margin="159,95,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="263"/>
+                            <Label Content="From" HorizontalAlignment="Left" Margin="37,178,0,0" VerticalAlignment="Top"/>
+                            <DatePicker HorizontalAlignment="Left" Margin="150,180,0,0" VerticalAlignment="Top"/>
+                            <Label Content="To" HorizontalAlignment="Left" Margin="48,220,0,0" VerticalAlignment="Top"/>
+                            <DatePicker HorizontalAlignment="Left" Margin="150,221,0,0" VerticalAlignment="Top"/>
+
+                        </Grid>
+                    </AdornerDecorator>
+                </TabItem>
+                <TabItem x:Name="detailtab" Header="Trainer" Margin="-2,-5,1,1" Background="#FF98B9DE" BorderBrush="#FF6296D2" Foreground="White" Style="{DynamicResource TabItemStyle3}" FontFamily="Segoe UI Semibold">
+                    <AdornerDecorator>
+                        <Grid HorizontalAlignment="Left" Height="423" VerticalAlignment="Top" Width="614" Background="#FFA29B9B">
+                            <Label Content="Trainer" HorizontalAlignment="Left" Margin="33,29,0,0" VerticalAlignment="Top"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="85,33,0,0" VerticalAlignment="Top" Width="215"/>
+                            <DataGrid HorizontalAlignment="Left" Margin="85,90,0,0" VerticalAlignment="Top" Height="86" Width="213"/>
+                            <Button Content="+" HorizontalAlignment="Left" Margin="192,198,0,0" VerticalAlignment="Top" Width="75"/>
+                            <Button Content="-" HorizontalAlignment="Left" Margin="85,198,0,0" VerticalAlignment="Top" Width="75"/>
+                        </Grid>
+                    </AdornerDecorator>
+                </TabItem>
+                <TabItem x:Name="employeeDocuments" Header="Employee" Margin="-2,-5,2,1" Background="#FF98B9DE" BorderBrush="#FF6296D2" Foreground="White" Style="{DynamicResource TabItemStyle3}" FontFamily="Segoe UI Semibold">
+                    <AdornerDecorator>
+                        <Grid HorizontalAlignment="Left" Height="423" VerticalAlignment="Top" Width="604" Background="#FFD8C8C8" Margin="0,0,0,-64">
+                            <Label Content="Search Option" Margin="23,27,591,358" Foreground="White" FontStyle="Italic" FontFamily="Segoe UI Semibold"/>
+                        </Grid>
+                    </AdornerDecorator>
+                </TabItem>
+                <TabItem x:Name="medical" Header="Other Detail" Margin="-3,-5,5,1" Background="#FF98B9DE" BorderBrush="#FF6296D2" Foreground="White" Style="{DynamicResource TabItemStyle3}" FontFamily="Segoe UI Semibold"/>
+            </TabControl>
+        </Grid>
+        <Label Content="Search Option" Margin="-257,6,778,374" Foreground="White" FontStyle="Italic" FontFamily="Segoe UI Semibold"/>
+        <ComboBox ItemsSource="{Binding SelectionItems}" SelectedItem="{Binding SearchSelectedItem}" Margin="-158,8,621,380" SelectedIndex="0"/>
+        <TextBox x:Name="searchbox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Search, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="149" Style="{DynamicResource TextBoxStyle5}" BorderBrush="#7F000000"  SelectionBrush="#FF2B5668" Height="23" VerticalAlignment="Top" Margin="-158,41,0,0" />
+        <DataGrid 
+        	SnapsToDevicePixels="True" AlternatingRowBackground="LightSteelBlue" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding CurrentEmployee}" ItemsSource="{Binding AllEmployeesSorted, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="-267,75,621,0" BorderBrush="#FF2B5668" Style="{DynamicResource DataGridStyle1}" Height="318" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Image" Width="50"  IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Width="50" Height="50" Source="{Binding image, Converter={StaticResource convert}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn  Header="EMP ID" Binding="{Binding emp_id}" Width="60"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding first_name}" Width="120" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Search" Margin="-257,42,821,0" Height="26" VerticalAlignment="Top" Foreground="White" FontStyle="Italic" FontFamily="Segoe UI Semibold"/>
+        <Button Content="New" HorizontalAlignment="Left" Margin="316,379,0,0" VerticalAlignment="Top" Width="65" Height="25"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="416,379,0,0" VerticalAlignment="Top" Width="65" Height="25"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="514,379,0,0" VerticalAlignment="Top" Width="65" Height="25"/>
+        <Rectangle Height="38.003" VerticalAlignment="Top" Margin="-285.926,-103.337,-21.482,0">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+        			<GradientStop Color="#FF18233A" Offset="0"/>
+        			<GradientStop Color="#FF18233A" Offset="1"/>
+        			<GradientStop Color="#FF4C5691" Offset="0.518"/>
+        			<GradientStop Color="#FF4C5691" Offset="0.455"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Margin="-285.875,-64.569,-21.482,0" Height="11.925" VerticalAlignment="Top">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+        			<GradientStop Color="#FF81818B" Offset="0"/>
+        			<GradientStop Color="#FF81818B" Offset="1"/>
+        			<GradientStop Color="#FFC4C4D3" Offset="0.518"/>
+        			<GradientStop Color="#FFC4C4D3" Offset="0.455"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Training Detail" HorizontalAlignment="Left" Height="37.504" Margin="-257,-103.073,0,0" VerticalAlignment="Top" Width="170.522" FontFamily="Segoe UI Semibold" FontSize="18.667" Foreground="White"/>
+
+    </Grid>
+</UserControl>

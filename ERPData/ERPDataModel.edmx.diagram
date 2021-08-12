@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc8b5550880449869cb736a4bdb6807a" Name="Diagram1" ZoomLevel="68">
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeBenifilt" Width="2.25" PointX="6.375" PointY="126.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeCheque" Width="2.25" PointX="6.75" PointY="60.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeCompanyVariable" Width="2.25" PointX="3.75" PointY="56.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeDeduction" Width="2" PointX="6.5" PointY="125.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.mas_Cheque" Width="2.25" PointX="3.75" PointY="58.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.rpt_catagory" Width="2" PointX="4.375" PointY="129.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.rpt_permission" Width="2.625" PointX="3.75" PointY="127.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.rpt_report" Width="2.625" PointX="7.125" PointY="127.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.trn_EmployeeCompanyVariable" Width="2.125" PointX="15" PointY="51.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.trns_alter_EmployeePeriodQuantity" Width="1.875" PointX="9.125" PointY="93.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.usr_UserPermission" Width="2" PointX="6.75" PointY="58.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_BankBranch" Width="2.25" PointX="20.875" PointY="41.875" IsExpanded="true" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_BasicUnit" Width="2.25" PointX="1.125" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_ChequeCategory" Width="2.25" PointX="0.75" PointY="58.75" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_City" Width="2.25" PointX="1.5" PointY="42.875" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_CivilState" Width="2.25" PointX="1.5" PointY="40.625" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_Company" Width="2.25" PointX="6.75" PointY="64.25" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_EmployeesFund" Width="2.625" PointX="9.75" PointY="83.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_FlatSlap" Width="2.625" PointX="15" PointY="47.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_Grade" Width="2.25" PointX="9.75" PointY="63.125" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_module" Width="2.25" PointX="3.75" PointY="69.125" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_PaymentMethod" Width="2.25" PointX="3.75" PointY="63.125" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_Slap" Width="2.25" PointX="15" PointY="48.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_Town" Width="2.25" PointX="1.5" PointY="39.375" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.z_ViewModel" Width="2" PointX="6.75" PointY="68.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.ChequeDataView" Width="1.875" PointX="4.125" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.EmployeeBasic_View" Width="2.625" PointX="5.125" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.EmployeePeriodQantityView" Width="2.625" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.EmployeeQuantityVertify" Width="2.625" PointX="0.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.Report_Details_View" Width="1.875" PointX="5.125" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.Rpt_TrnsEmployeeBinifitsDeductionsView" Width="2.25" PointX="0.625" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.Rpt_TrnsPeriodBenifits" Width="1.875" PointX="5.625" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.Rpt_TrnsPeriodCompanyVariables" Width="2.25" PointX="12.125" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.Rpt_TrnsPeriodDeduction" Width="2.25" PointX="12.125" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.TrnsEmployeeCompanyVariableView" Width="2.25" PointX="12.125" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.TrnsEmployeePaymet" Width="2.25" PointX="12.125" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.UserPermissionsMasterView" Width="2.25" PointX="0.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.ViewModelUserPermission_View" Width="2.625" PointX="10.125" PointY="13.75" IsExpanded="false" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeCheque_mas_Cheque" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_mas_Cheque_z_BankBranch" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_mas_Cheque_z_chequeCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_rpt_report_rpt_catagory" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_rpt_report_rpt_permission" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_rpt_report_z_module" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_usr_UserPermission_z_module" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_z_UserPermission_z_module" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_z_Town_z_City" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_z_EmployeesFund_z_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="ERP.FK_z_ViewModel_z_module" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ERP.dtl_companyVariableCompanyRules" Width="2.625" PointX="12.125" PointY="93.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_CompanyVariable" Width="2" PointX="12.25" PointY="48.125" IsExpanded="false" />
+        <AssociationConnector Association="ERP.FK_companyVariableCompanyRules_z_CompanyVariable" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeCompanyVariable_z_CompanyVariable" />
+        <AssociationConnector Association="ERP.FK_trn_EmployeeCompanyVariable_z_CompanyVariable" />
+        <AssociationConnector Association="ERP.FK_z_CompanyVariable_z_Company" />
+        <AssociationConnector Association="ERP.FK_z_FlatSlap_z_CompanyVariable" />
+        <AssociationConnector Association="ERP.FK_z_slap_z_CompanyVariable" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ERP.dtl_historyBasicSalary" Width="2.25" PointX="15" PointY="56.5" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.CompanyRuleView" Width="1.875" PointX="15.125" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.CompanyVariableRulesView" Width="2.25" PointX="0.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.mas_Deduction" Width="2" PointX="3.75" PointY="125.25" IsExpanded="false" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeDeduction_mas_Deduction" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeDeduction_mas_Deduction1" />
+        <EntityTypeShape EntityType="ERP.EmployeeBinifitView" Width="1.875" PointX="15.125" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.mas_Benifit" Width="1.875" PointX="3.75" PointY="126.375" IsExpanded="false" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeBenifilt_mas_Benifit" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeBenifilt_mas_Benifit1" />
+        <EntityTypeShape EntityType="ERP.CompnyVaribleView" Width="2" PointX="15.125" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.NewEmployeeCompanyRuleDetail" Width="1.875" PointX="15.125" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.TownMasterView" Width="1.875" PointX="15.125" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.usr_UserLevel" Width="2.125" PointX="3.75" PointY="64.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.usr_UserPermissionViewModel" Width="1.875" PointX="3.75" PointY="124" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_LeaveCategory" Width="2.625" PointX="1.125" PointY="1.5" IsExpanded="false" FillColor="255, 192, 192" />
+        <EntityTypeShape EntityType="ERP.z_LeavePeriod" Width="2.625" PointX="1.125" PointY="4.5" IsExpanded="false" FillColor="255, 192, 192" />
+        <EntityTypeShape EntityType="ERP.z_LeaveType" Width="2.625" PointX="4.5" PointY="18.75" IsExpanded="false" FillColor="255, 192, 192" />
+        <EntityTypeShape EntityType="ERP.z_Bank" Width="2.25" PointX="18.125" PointY="41.375" IsExpanded="false" FillColor="192, 192, 255" />
+        <AssociationConnector Association="ERP.FK_z_BankBranch_z_Bank" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeBenifitPeriod" Width="2.25" PointX="9.125" PointY="72.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeDeductionPeriod" Width="1.875" PointX="9.125" PointY="70.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.NewDetailEmployeeCompanyRuleView" Width="1.875" PointX="10.375" PointY="25.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeRule" Width="2.625" PointX="15" PointY="70.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_Religen" Width="2.25" PointX="14.875" PointY="12.5" IsExpanded="false" FillColor="192, 192, 255" />
+        <EntityTypeShape EntityType="ERP.EmployeeRuleView" Width="2.625" PointX="18.125" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeAttendance" Width="2.125" PointX="18.125" PointY="2.75" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeOT" Width="2.125" PointX="6.625" PointY="85" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.dtl_Shift" Width="2.125" PointX="6.625" PointY="110.625" FillColor="Silver" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeDoubleOT" Width="2.25" PointX="18.125" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeOtPeriod" Width="2.625" PointX="18.125" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.Z_AttendanceDevice" Width="2.125" PointX="6.625" PointY="86.125" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.z_AttendanceInOutMode" Width="2.125" PointX="3.75" PointY="112.25" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.z_AttendanceVerifyMode" Width="2.125" PointX="3.75" PointY="114.625" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.z_BasicDay" Width="2.125" PointX="3.75" PointY="110" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.z_DeviceModel" Width="2.125" PointX="3.75" PointY="118" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.z_LeaveOption" Width="2.625" PointX="18.125" PointY="8.75" IsExpanded="false" FillColor="255, 192, 192" />
+        <EntityTypeShape EntityType="ERP.z_OTCategory" Width="2.125" PointX="3.75" PointY="115.75" FillColor="Silver" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_RosterMaster" Width="2.125" PointX="3.75" PointY="116.875" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.z_ShiftCategory" Width="2.125" PointX="3.75" PointY="111.125" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.AttendanceDeviceView" Width="1.875" PointX="17.125" PointY="17.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.Employee_Deduction_Benifit_Sumarry_Union" Width="2.625" PointX="20.125" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.EmployeeOTDetailLeaveView" Width="2.625" PointX="20.125" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERP.EmployeePaymentDetailView" Width="1.875" PointX="15.375" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.PayeTaxView" Width="2.25" PointX="17.125" PointY="19.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.Rpt_Deduction_Detail_View" Width="1.875" PointX="20.125" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.Rpt_DeductionForSingleReport" Width="2.25" PointX="1.125" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.rpt_LeaveEntitlementReportView" Width="1.875" PointX="21.125" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.RptUn_BenifitAll" Width="2.625" PointX="4.125" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.RptUn_CompanyRuleAll" Width="2.625" PointX="21.125" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.RptUn_DeductionAll" Width="1.875" PointX="20.125" PointY="20.75" IsExpanded="false" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeOT_z_BasicDay" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeOT_z_OTCategory" />
+        <AssociationConnector Association="ERP.FK_dtl_ShiftDetails_z_BasicDay" />
+        <AssociationConnector Association="ERP.FK_dtl_ShiftDetails_z_BasicDay1" />
+        <AssociationConnector Association="ERP.FK_dtl_ShiftDetails_z_BasicDay2" />
+        <AssociationConnector Association="ERP.FK_dtl_ShiftDetails_z_BasicDay3" />
+        <AssociationConnector Association="ERP.FK_dtl_ShiftDetails_z_ShiftCategory" />
+        <AssociationConnector Association="ERP.FK_Z_AttendanceDevice_z_DeviceModel" />
+        <EntityTypeShape EntityType="ERP.z_Holiday" Width="2.125" PointX="22.125" PointY="0.75" IsExpanded="false" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.dtl_AttendanceData" Width="2.125" PointX="22.125" PointY="6.75" IsExpanded="true" FillColor="Silver" />
+        <EntityTypeShape EntityType="ERP.trns_OTemployeeSumarryReport" Width="2.625" PointX="22.125" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.trns_DailyAttendanceProcess" Width="1.875" PointX="1.125" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.AttendanceManual_view" Width="1.875" PointX="4.125" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.EmployeeShiftDetailView" Width="2.25" PointX="7.125" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeAllowance" Width="2.25" PointX="3.75" PointY="60.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.mas_Allowance" Width="1.875" PointX="1.125" PointY="60.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.trn_EmployeeMonthlyAllowance" Width="2.25" PointX="15" PointY="58.125" IsExpanded="false" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeAllowance_mas_Allowance" />
+        <AssociationConnector Association="ERP.FK_trn_EmployeeMonthlyAllowance_dtl_EmployeeAllowance" />
+        <AssociationConnector Association="ERP.FK_trn_EmployeeMonthlyAllowance_mas_Allowance" />
+        <EntityTypeShape EntityType="ERP.EmployeeAllowanceView" Width="1.875" PointX="23.125" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.MonthlyAllowanceTransactionView" Width="2.25" PointX="23.125" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.EmployeeAttendanceView" Width="2.25" PointX="17.125" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_AttendanceCalculationRule" Width="2.125" PointX="20.125" PointY="22.75" FillColor="Silver" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_AttendanceAllowance" Width="2" PointX="23.125" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.dtl_RosterCalenderDetail" Width="2" PointX="12.25" PointY="81.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.dtl_RosterGroupDetail" Width="2" PointX="15" PointY="81.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_RosterCalenderHeader" Width="2" PointX="9.5" PointY="81.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_RosterDays" Width="2" PointX="4" PointY="35.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_RosterDetail" Width="2" PointX="6.75" PointY="50.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_RosterGroup" Width="2" PointX="3.75" PointY="113.5" IsExpanded="false" />
+        <AssociationConnector Association="ERP.FK_dtl_RosterCalenderDetail_z_RosterCalenderHeader" />
+        <AssociationConnector Association="ERP.FK_dtl_RosterGroupDetail_z_RosterGroup" />
+        <AssociationConnector Association="ERP.FK_z_RosterCalenderHeader_z_RosterDays" />
+        <AssociationConnector Association="ERP.FK_z_RosterCalenderHeader_z_RosterDays1" />
+        <AssociationConnector Association="ERP.FK_z_RosterCalenderHeader_z_RosterDays2" />
+        <AssociationConnector Association="ERP.FK_z_RosterCalenderHeader_z_RosterDays3" />
+        <AssociationConnector Association="ERP.FK_z_RosterCalenderHeader_z_RosterDetail" />
+        <AssociationConnector Association="ERP.FK_z_RosterCalenderHeader_z_RosterGroup" />
+        <AssociationConnector Association="ERP.FK_z_RosterDetail_z_RosterDays" />
+        <AssociationConnector Association="ERP.FK_z_RosterDetail_z_RosterDays1" />
+        <AssociationConnector Association="ERP.FK_z_RosterDetail_z_RosterDays2" />
+        <AssociationConnector Association="ERP.FK_z_RosterDetail_z_RosterDays3" />
+        <EntityTypeShape EntityType="ERP.EmployeeRosterDetailView" Width="2.375" PointX="24.125" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.EmployeesForRosterView" Width="2.375" PointX="24.125" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.Roster_RosterAttendanceData_View" Width="2.375" PointX="24.125" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.RosterCalenderDetailView" Width="2.375" PointX="25.125" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.RosterCalenderHeaderView" Width="2.375" PointX="1.125" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.RosterDetailView" Width="2.375" PointX="4.125" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_Calender" Width="2.375" PointX="25.125" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.trns_AuthorizedNoPays" Width="1.5" PointX="7.125" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.z_RosterCalculationRules" Width="1.5" PointX="7.125" PointY="10.75" />
+        <EntityTypeShape EntityType="ERP.Roster_AllRosterEmployeesHeader_View" Width="1.5" PointX="17.125" PointY="24.75" />
+        <EntityTypeShape EntityType="ERP.trns_ExtraOt" Width="1.5" PointX="10.125" PointY="22.75" />
+        <EntityTypeShape EntityType="ERP.Employee_Uniform_Order_View" Width="1.5" PointX="19.125" PointY="24.75" FillColor="Red" />
+        <EntityTypeShape EntityType="ERP.EmployeeUniformOrderQtyView" Width="1.5" PointX="21.125" PointY="24.75" FillColor="Red" />
+        <EntityTypeShape EntityType="ERP.z_Uniform" Width="1.5" PointX="4.5" PointY="32.125" FillColor="Red" />
+        <EntityTypeShape EntityType="ERP.dtl_Uniform" Width="1.5" PointX="6.75" PointY="28.875" FillColor="Red" />
+        <AssociationConnector Association="ERP.FK_dtl_Uniform_z_Uniform1" />
+        <EntityTypeShape EntityType="ERP.z_EmployeeUniformOrders" Width="1.5" PointX="6.75" PointY="32.75" FillColor="Red" />
+        <AssociationConnector Association="ERP.FK_z_EmployeeUniformOrders_z_Uniform" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeUniformOrder" Width="1.5" PointX="9" PointY="32.125" FillColor="Red" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeUniformOrder_dtl_Uniform" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeUniformOrder_z_EmployeeUniformOrders" />
+        <EntityTypeShape EntityType="ERP.AprrovedLoanPaymentView" Width="1.5" PointX="25.125" PointY="24.75" FillColor="Lime" />
+        <EntityTypeShape EntityType="ERP.z_LoanPayment" Width="1.5" PointX="9.75" PointY="58.875" FillColor="Lime" />
+        <EntityTypeShape EntityType="ERP.dtl_LoanPayment" Width="1.5" PointX="12" PointY="59.25" FillColor="Lime" />
+        <AssociationConnector Association="ERP.FK_dtl_LoanPayment_z_LoanPayment" />
+        <EntityTypeShape EntityType="ERP.dtl_ApprovedLoan" Width="1.5" PointX="9.75" PointY="46.75" FillColor="Lime" />
+        <EntityTypeShape EntityType="ERP.z_LoanCatergories" Width="1.5" PointX="3.75" PointY="119.25" FillColor="Lime" />
+        <EntityTypeShape EntityType="ERP.z_Loan" Width="1.5" PointX="10" PointY="85.875" FillColor="Lime" />
+        <AssociationConnector Association="ERP.FK_z_Loan_z_LoanCatergories" />
+        <EntityTypeShape EntityType="ERP.LoansView" PointX="0.5" PointY="26.75" Width="1.5" FillColor="Lime" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeLoans" Width="1.5" PointX="12.25" PointY="69.5" FillColor="Lime" />
+        <AssociationConnector Association="ERP.FK_dtl_ApprovedLoan_dtl_EmployeeLoans1" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeLoans_z_Loan" />
+        <AssociationConnector Association="ERP.FK_z_LoanPayment_dtl_EmployeeLoans" />
+        <EntityTypeShape EntityType="ERP.EmployeeLoansView" Width="1.5" PointX="27.125" PointY="23.75" FillColor="Lime" />
+        <EntityTypeShape EntityType="ERP.dtl_VisitDetails" Width="1.5" PointX="6" PointY="71" FillColor="255, 128, 0" />
+        <EntityTypeShape EntityType="ERP.z_Visitor" Width="1.5" PointX="3.75" PointY="88.375" FillColor="255, 128, 0" />
+        <AssociationConnector Association="ERP.FK_dtl_VisitDetails_z_Visitor" />
+        <EntityTypeShape EntityType="ERP.mas_WarningLetter" Width="1.5" PointX="10.5" PointY="27.375" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeWarning" Width="1.5" PointX="12.75" PointY="38.5" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeWarning_mas_WarningLetter" />
+        <EntityTypeShape EntityType="ERP.dtl_blood_type" Width="1.5" PointX="9.75" PointY="35.25" FillColor="Maroon" />
+        <EntityTypeShape EntityType="ERP.z_blood_type" Width="1.5" PointX="7.5" PointY="26.375" FillColor="Maroon" />
+        <AssociationConnector Association="ERP.FK_dtl_blood_type_z_blood_type" />
+        <EntityTypeShape EntityType="ERP.Appointment_Letter_View" Width="1.5" PointX="32.125" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.z_Notifications" Width="1.5" PointX="21.125" PointY="31.75" />
+        <EntityTypeShape EntityType="ERP.OldConfirmationDate" Width="1.5" PointX="33.125" PointY="32.75" />
+        <EntityTypeShape EntityType="ERP.z_Title" Width="1.5" PointX="2.25" PointY="37.125" />
+        <EntityTypeShape EntityType="ERP.GetIDCardDetailsView" Width="1.5" PointX="34.125" PointY="11.75" />
+        <EntityTypeShape EntityType="ERP.PaymentMethodView_Cash_" Width="1.5" PointX="13.125" PointY="34.75" />
+        <EntityTypeShape EntityType="ERP.dtl_member_status" Width="1.5" PointX="15" PointY="53" FillColor="255, 128, 128" />
+        <EntityTypeShape EntityType="ERP.EmployeeAttendTimeView" Width="1.5" PointX="35.125" PointY="16.75" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeManager" Width="1.5" PointX="11.125" PointY="40" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeApprovedAttendance" Width="1.5" PointX="6.75" PointY="37.25" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeAttendTime" Width="2.5" PointX="11.375" PointY="4.125" />
+        <EntityTypeShape EntityType="ERP.usr_UserEmployee" Width="1.5" PointX="3.75" PointY="53.5" />
+        <EntityTypeShape EntityType="ERP.EPFeReturnView" Width="1.5" PointX="35.125" PointY="26.75" />
+        <EntityTypeShape EntityType="ERP.z_Payment_Mode" Width="1.5" PointX="15.125" PointY="34.75" />
+        <EntityTypeShape EntityType="ERP.z_Zone_Code" Width="1.5" PointX="35.125" PointY="32.75" />
+        <EntityTypeShape EntityType="ERP.z_District_Office_Code" Width="1.5" PointX="36.125" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.z_EmailClientCredential" Width="1.5" PointX="36.125" PointY="3.75" />
+        <EntityTypeShape EntityType="ERP.z_MedicalPeriod" Width="1.5" PointX="5.25" PointY="13.375" />
+        <EntityTypeShape EntityType="ERP.EmployeeMedicalAllocationView" Width="1.5" PointX="36.125" PointY="6.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeMedicalSummaryView" Width="1.5" PointX="36.125" PointY="10.75" />
+        <EntityTypeShape EntityType="ERP.UserEmployeeSummaryView" Width="1.5" PointX="29.125" PointY="35.75" />
+        <EntityTypeShape EntityType="ERP.trn_EmployeeMedical" Width="1.5" PointX="15" PointY="38" />
+        <EntityTypeShape EntityType="ERP.z_MedicalCategory" Width="1.5" PointX="7.5" PointY="13.375" />
+        <AssociationConnector Association="ERP.fk_medcat1" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeMultiplePayments_z_BankBranch" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeLogin" Width="1.5" PointX="6.75" PointY="77.25" />
+        <EntityTypeShape EntityType="ERP.dtl_LateConfiguration" Width="1.5" PointX="33.625" PointY="36.25" />
+        <EntityTypeShape EntityType="ERP.dtl_NoPayConfiguration" Width="1.5" PointX="33.625" PointY="42.25" />
+        <EntityTypeShape EntityType="ERP.dtl_OtConfiguration" Width="1.5" PointX="33.625" PointY="39.125" />
+        <EntityTypeShape EntityType="ERP.z_EmployeeAct" Width="1.5" PointX="31.375" PointY="39.25" />
+        <AssociationConnector Association="ERP.FK_dtl_LateConfiguration_z_EmployeeAct" />
+        <AssociationConnector Association="ERP.FK_dtl_NoPayConfiguration_z_EmployeeAct" />
+        <AssociationConnector Association="ERP.FK_dtl_OtConfiguration_z_EmployeeAct" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeMultiplePayments" Width="1.5" PointX="18.75" PointY="50" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeBank" Width="2.125" PointX="17.75" PointY="42.25" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeBank_z_Bank" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeBank_z_BankBranch" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeMultiplePayments_dtl_EmployeeBank" />
+        <EntityTypeShape EntityType="ERP.EmployeeBankDetailsView" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.EmployeeBankBranchView" Width="1.5" PointX="21.375" PointY="34.75" />
+        <EntityTypeShape EntityType="ERP.dtl_MedicalCategoryAllocation" Width="1.5" PointX="17.75" PointY="37" />
+        <AssociationConnector Association="ERP.fk_empmed2" />
+        <AssociationConnector Association="ERP.fk_medcatalloc2" />
+        <EntityTypeShape EntityType="ERP.z_Datamigration_Configuration" Width="1.5" PointX="6.7337885362719136" PointY="18.539674871852469" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeAttendance" Width="1.5" PointX="9.125" PointY="169.5" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeAttendTime_trns_EmployeeAttendance" />
+        <EntityTypeShape EntityType="ERP.dtl_DefaultMaxOT" Width="1.5" PointX="12.375" PointY="17.75" />
+        <EntityTypeShape EntityType="ERP.dtl_MaxOtApprovedEmployees" Width="1.5" PointX="14.375" PointY="17.75" />
+        <EntityTypeShape EntityType="ERP.dtl_MaxOtAttendanceData" Width="1.5" PointX="12.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ERP.trns_RandomMaxOT" Width="1.5" PointX="14.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ERP.dtl_CoinAnalysisSummary" Width="1.5" PointX="14.375" PointY="24.75" />
+        <EntityTypeShape EntityType="ERP.z_CoinAndNotes" Width="1.5" PointX="21.375" PointY="28.75" />
+        <EntityTypeShape EntityType="ERP.BankNonBankPaymentsView" Width="1.5" PointX="36.375" PointY="35.75" />
+        <EntityTypeShape EntityType="ERP.CoinAnalysisView" Width="1.5" PointX="37.375" PointY="14.75" />
+        <EntityTypeShape EntityType="ERP.EPF_Employer_View" Width="1.5" PointX="37.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ERP.view_Max_Ot_Attendance_Data_View" Width="1.5" PointX="37.375" PointY="24.75" />
+        <EntityTypeShape EntityType="ERP.LeavePoolView" Width="1.5" PointX="3.375" PointY="14.125" />
+        <EntityTypeShape EntityType="ERP.EmployeeAprrovedAttendanceView" Width="1.5" PointX="8.1671559494767134" PointY="29.994282736440322" />
+        <EntityTypeShape EntityType="ERP.dtl_AttendanceBonus" Width="1.5" PointX="7.5582526100605048" PointY="4.94466024867476" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeBreakTime" Width="1.5" PointX="13.375" PointY="13.75" />
+        <EntityTypeShape EntityType="ERP.trns_LieuLeaves" Width="1.5" PointX="14.5" PointY="65.75" />
+        <AssociationConnector Association="ERP.FK_trns_LieuLeaves_dtl_Shift" />
+        <EntityTypeShape EntityType="ERP.LieuLeavesView" Width="1.5" PointX="37.375" PointY="30.75" />
+        <EntityTypeShape EntityType="ERP.dtl_TrainingDocument" Width="1.5" PointX="43.875" PointY="21.625" />
+        <EntityTypeShape EntityType="ERP.dtl_TraningEmployee" Width="1.5" PointX="43.875" PointY="30.625" />
+        <EntityTypeShape EntityType="ERP.mas_TrainingProgram" Width="1.5" PointX="41.625" PointY="22.875" />
+        <EntityTypeShape EntityType="ERP.z_Trainer" Width="1.5" PointX="43.875" PointY="24.625" />
+        <EntityTypeShape EntityType="ERP.z_TrainingCategory" Width="1.5" PointX="39.375" PointY="23.25" />
+        <EntityTypeShape EntityType="ERP.view_TrainingPrograms" Width="1.5" PointX="39.375" PointY="28.75" />
+        <AssociationConnector Association="ERP.FK_dtl_TrainingDocument_mas_TrainingProgram" />
+        <AssociationConnector Association="ERP.FK_dtl_TraningEmployee_mas_TrainingProgram" />
+        <AssociationConnector Association="ERP.FK_mas_TrainingProgram_z_TrainingCategory" />
+        <AssociationConnector Association="ERP.dtl_TraningTrainer" />
+        <EntityTypeShape EntityType="ERP.z_News" Width="1.5" PointX="28.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeEvents" Width="1.5" PointX="29.625" PointY="13.25" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeMeetings" Width="1.5" PointX="28.625" PointY="9.5" />
+        <EntityTypeShape EntityType="ERP.z_Events" Width="1.5" PointX="27.375" PointY="13" />
+        <EntityTypeShape EntityType="ERP.z_Meetings" Width="1.5" PointX="26.375" PointY="9" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeEvents_z_Events" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeMeetings_z_Meetings" />
+        <EntityTypeShape EntityType="ERP.EmployeeEventsView" Width="1.5" PointX="28.375" PointY="3.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeMeetingsView" Width="1.5" PointX="28.375" PointY="16.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeSearchView" Width="1.5" PointX="29.375" PointY="26.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeSumarryView" Width="1.875" PointX="21.375" PointY="40.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ERP.his_Category" Width="1.5" PointX="40.375" PointY="34.5" />
+        <EntityTypeShape EntityType="ERP.his_Sub_Category" Width="1.5" PointX="42.625" PointY="34.25" />
+        <AssociationConnector Association="ERP.FK_his_Sub_Category_his_Category" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeContractDates" Width="1.5" PointX="15.375" PointY="30.75" />
+        <EntityTypeShape EntityType="ERP.OnlineLeaveUserDetailsView" Width="1.5" PointX="30.375" PointY="16.75" />
+        <EntityTypeShape EntityType="ERP.z_EmployeeQualificationGrade" Width="1.5" PointX="17.75" PointY="30.75" />
+        <EntityTypeShape EntityType="ERP.z_ExtraCurricularActivities" Width="1.5" PointX="0.75" PointY="32.75" />
+        <EntityTypeShape EntityType="ERP.z_HealthType" Width="1.5" PointX="23.75" PointY="40.75" />
+        <EntityTypeShape EntityType="ERP.z_Life_Insurance" Width="1.5" PointX="41.75" PointY="16.75" />
+        <EntityTypeShape EntityType="ERP.z_Salary_Category_Type" Width="1.5" PointX="36.75" PointY="41.75" />
+        <EntityTypeShape EntityType="ERP.z_SchoolQualificationSubject" Width="1.5" PointX="44" PointY="12" />
+        <EntityTypeShape EntityType="ERP.z_SchoolQualificationType" Width="1.5" PointX="41.75" PointY="12.125" />
+        <EntityTypeShape EntityType="ERP.z_SkillType" Width="1.5" PointX="9" PointY="43" />
+        <EntityTypeShape EntityType="ERP.z_UnivercityDigreeNames" Width="1.5" PointX="45.25" PointY="40.125" />
+        <EntityTypeShape EntityType="ERP.z_UnivercityDigreeType" Width="1.5" PointX="43" PointY="40" />
+        <EntityTypeShape EntityType="ERP.z_UnivercityName" Width="1.5" PointX="40.75" PointY="40.25" />
+        <EntityTypeShape EntityType="ERP.z_UniversityGrade" Width="1.5" PointX="13.75" PointY="43.75" />
+        <AssociationConnector Association="ERP.FK_z_SchoolQualificationSubject_z_SchoolQualificationType" />
+        <AssociationConnector Association="ERP.FK_z_EmployeeUnivercityDgreeNames_z_EmployeeUnivercityDgreeType" />
+        <AssociationConnector Association="ERP.FK_z_EmployeeUnivercityDgreeType_z_EmployeeUnivercity1" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeGrativity" Width="1.5" PointX="15.375" PointY="60" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeWorkexperienceDetails" Width="1.5" PointX="9.5" PointY="129.625" />
+        <EntityTypeShape EntityType="ERP.z_InterestField" Width="1.5" PointX="44.375" PointY="17" />
+        <EntityTypeShape EntityType="ERP.z_SchoolGrade" Width="1.5" PointX="23.375" PointY="45" />
+        <EntityTypeShape EntityType="ERP.z_SocialMedia" Width="1.5" PointX="29.375" PointY="43" />
+        <EntityTypeShape EntityType="ERP.dtl_Employee_Health_and_Safety" Width="1.5" PointX="48.375" PointY="38.875" />
+        <EntityTypeShape EntityType="ERP.dtl_Employee_ProfessionalQualifications" Width="1.5" PointX="47.875" PointY="46.375" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeAwardsDetails" Width="1.5" PointX="9.5" PointY="134.625" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeExtraCurricularActivities" Width="1.5" PointX="18.5" PointY="53.125" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeFamilyDetails" Width="1.5" PointX="9.5" PointY="99.5" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeInterestDetails" Width="1.5" PointX="48" PointY="34.25" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeSkillType" Width="1.5" PointX="18.5" PointY="57.625" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeSocialMediaDetails" Width="1.5" PointX="32" PointY="46.625" />
+        <EntityTypeShape EntityType="ERP.dtl_WorkExperienceDetails" Width="1.5" PointX="9.5" PointY="104.75" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_Health_and_Safety_z_HealthType" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_Health_and_Safety_z_Life_Insurance" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_ProfessionalQualifications_z_EmployeeUnivercityDgreeNames" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_ProfessionalQualifications_z_UniversityGrade" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeExtraCurricularActivities_z_ExtraCurricularActivities" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeInterestDetails_z_InterestField" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeSkillType_z_SkillType" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeSocialMediaDetails_z_SocialMedia" />
+        <EntityTypeShape EntityType="ERP.EmployeeAwardsDetail" Width="1.5" PointX="0.75" PointY="44.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeExtraCurricularView" Width="1.5" PointX="2.75" PointY="44.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeFamilyView" Width="1.5" PointX="25.75" PointY="44.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeHealthTypeView" Width="1.5" PointX="36.75" PointY="44.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeSkillView" Width="1.5" PointX="43.75" PointY="44.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeSocialView" Width="1.5" PointX="46.75" PointY="12.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeWorkExperienceDetailsView" Width="1.5" PointX="46.75" PointY="20.75" />
+        <EntityTypeShape EntityType="ERP.dtl_Employee_ContactDetails" Width="1.5" PointX="9.125" PointY="139.375" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeAcadamicQualification" Width="1.5" PointX="46.25" PointY="28.5" />
+        <EntityTypeShape EntityType="ERP.EmployeeAcadamicView" Width="1.5" PointX="44.375" PointY="47.75" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeAcadamicQualification_z_SchoolGrade" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeAcadamicQualification_z_SchoolQualificationSubject" />
+        <EntityTypeShape EntityType="ERP.EmployeeInterstDetailsView" Width="1.5" PointX="45.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeDetailsContact" Width="1.5" PointX="28.375" PointY="47.75" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeOtherBasicDetails" Width="1.5" PointX="9.125" PointY="112.25" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeOtherOfficialDetails" Width="1.5" PointX="9.125" PointY="117.125" />
+        <EntityTypeShape EntityType="ERP.EmployeeOtherBasicdetail" Width="1.5" PointX="39.375" PointY="44.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeOtherOfficialDetail" Width="1.5" PointX="46.375" PointY="24.75" />
+        <EntityTypeShape EntityType="ERP.dtl_Employee_Blood_and_Health" Width="1.5" PointX="21.125" PointY="53.75" />
+        <EntityTypeShape EntityType="ERP.z_Blood_Group_Type" Width="1.5" PointX="18.875" PointY="62.125" />
+        <EntityTypeShape EntityType="ERP.EmployeeBloodGroupandHealthView" Width="1.5" PointX="47.375" PointY="7.75" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_Blood_and_Health_z_Blood_Group_Type" />
+        <EntityTypeShape EntityType="ERP.his_Employee" Width="1.5" PointX="11.305001634780783" PointY="8.0418961234585833" />
+        <AssociationConnector Association="ERP.FK_his_Employee_his_Sub_Category" />
+        <EntityTypeShape EntityType="ERP.EmployeeUniversityView" Width="1.5" PointX="0.26742603456015979" PointY="31.212802484264969" />
+        <EntityTypeShape EntityType="ERP.dtl_employee_correlate_task" Width="1.5" PointX="5.5643376100642321" PointY="19.01002871385311" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeMaximumLeaves" Width="1.5" PointX="24.5" PointY="49.375" />
+        <EntityTypeShape EntityType="ERP.trns_MigratedLeaveData" Width="1.5" PointX="9.5" PointY="19.125" />
+        <EntityTypeShape EntityType="ERP.z_SupervisorLevel" Width="1.5" PointX="8.25" PointY="146.75" />
+        <EntityTypeShape EntityType="ERP.Employee_Leave_Detail_Extended_View" Width="1.5" PointX="0.75" PointY="48.75" />
+        <EntityTypeShape EntityType="ERP.Employee_Leave_Detail_View" Width="1.5" PointX="2.75" PointY="48.75" />
+        <EntityTypeShape EntityType="ERP.Employee_Maximum_Leave_Details_View" Width="1.5" PointX="46.75" PointY="16.75" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeMaximumLeaves_z_LeaveType" />
+        <EntityTypeShape EntityType="ERP.Employee_Supervisor" Width="1.5" PointX="36.375" PointY="48.75" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeBasicSalary" Width="1.5" PointX="15" PointY="72.25" />
+        <EntityTypeShape EntityType="ERP.z_EmployeeBasicRuleName" Width="1.5" PointX="31.375" PointY="10.75" />
+        <EntityTypeShape EntityType="ERP.ViewBasicSalary" Width="1.5" PointX="48.375" PointY="30.75" />
+        <EntityTypeShape EntityType="ERP.dtl_Permission" Width="1.5" PointX="53.875" PointY="34.5" />
+        <EntityTypeShape EntityType="ERP.mas_Permission" Width="1.5" PointX="51.625" PointY="6.25" />
+        <EntityTypeShape EntityType="ERP.z_Permission_Group" Width="1.5" PointX="49.375" PointY="6.375" />
+        <EntityTypeShape EntityType="ERP.dtl_PermissionView" Width="1.5" PointX="38.375" PointY="48.75" />
+        <AssociationConnector Association="ERP.FK_dtl_Permission_mas_Permission" />
+        <AssociationConnector Association="ERP.FK_dtl_Permission_usr_UserLevel" />
+        <AssociationConnector Association="ERP.FK_mas_Permission_z_Permission_Group" />
+        <EntityTypeShape EntityType="ERP.mas_Employee" Width="1.5" PointX="3.75" PointY="68" />
+        <EntityTypeShape EntityType="ERP.z_Gender" Width="1.5" PointX="1.5" PointY="76.125" />
+        <AssociationConnector Association="ERP.FK_dtl_blood_type_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_Blood_and_Health_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_ContractDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_Health_and_Safety_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_ProfessionalQualifications_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeAcadamicQualification_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeAllowance_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeAwardsDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeBank_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeBenifilt_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeCheque_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeCompanyVariable_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeDeduction_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeExtraCurricularActivities_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeFamilyDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeInterestDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeLoans_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeLogin_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeManager_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeMaximumLeaves_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeOT_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeOT_mas_Employee1" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeOtherBasicDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeOtherOfficialDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeSkillType_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeSocialMediaDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeWarning_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeWorkexperienceDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.fk_medcatalloc3" />
+        <AssociationConnector Association="ERP.FK_dtl_TraningEmployee_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_WorkExperienceDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_his_Employee_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_VisitDetails_mas_Employee" />
+        <AssociationConnector Association="ERP.fk_empmed1" />
+        <AssociationConnector Association="ERP.FK_mas_Employee_z_City" />
+        <AssociationConnector Association="ERP.FK_mas_Employee_z_CivilStatus" />
+        <AssociationConnector Association="ERP.FK_mas_Employee_z_Gender" />
+        <AssociationConnector Association="ERP.FK_mas_Employee_z_Title" />
+        <AssociationConnector Association="ERP.FK_mas_Employee_z_Town" />
+        <AssociationConnector Association="ERP.FK_trns_alter_EmployeePeriodQuantity_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeApprovedAttendance_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeApprovedAttendance_mas_Employee1" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeMultiplePayments_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_trns_LieuLeaves_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_trns_MigratedLeaveData_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_usr_UserEmployee_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_z_EmployeeUniformOrders_mas_Employee" />
+        <EntityTypeShape EntityType="ERP.dtl_employee_Additional_details" Width="1.5" PointX="14" PointY="83.25" />
+        <EntityTypeShape EntityType="ERP.z_election_center" Width="1.5" PointX="11.75" PointY="108.375" />
+        <EntityTypeShape EntityType="ERP.z_electorial_division" Width="1.5" PointX="11.75" PointY="112.25" />
+        <EntityTypeShape EntityType="ERP.z_grama_niladhari_divition" Width="1.5" PointX="11.75" PointY="116.125" />
+        <EntityTypeShape EntityType="ERP.z_Nationality" Width="1.5" PointX="11.75" PointY="104.5" />
+        <EntityTypeShape EntityType="ERP.z_nearest_police_station" Width="1.5" PointX="11.75" PointY="65.625" />
+        <EntityTypeShape EntityType="ERP.z_race" Width="1.5" PointX="11.75" PointY="99.75" />
+        <AssociationConnector Association="ERP.FK_dtl_employee_Additional_details_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_employee_Additional_details_z_election_center" />
+        <AssociationConnector Association="ERP.FK_dtl_employee_Additional_details_z_electorial_division" />
+        <AssociationConnector Association="ERP.FK_dtl_employee_Additional_details_z_grama_niladhari_divition" />
+        <AssociationConnector Association="ERP.FK_dtl_employee_Additional_details_z_Nationality" />
+        <AssociationConnector Association="ERP.FK_dtl_employee_Additional_details_z_nearest_police_station" />
+        <AssociationConnector Association="ERP.FK_dtl_employee_Additional_details_z_race" />
+        <EntityTypeShape EntityType="ERP.rpt_EPFEReturnView" Width="1.5" PointX="5.375" PointY="40.75" />
+        <EntityTypeShape EntityType="ERP.trns_OT_Approvals" Width="1.5" PointX="49.375" PointY="10" />
+        <EntityTypeShape EntityType="ERP.trns_Supervisor_OT_Approval" Width="1.5" PointX="51.625" PointY="10.125" />
+        <EntityTypeShape EntityType="ERP.z_OTApprovalLevel" Width="1.5" PointX="10.5" PointY="146.625" />
+        <EntityTypeShape EntityType="ERP.Employee_OT_Approvals_View" Width="1.5" PointX="40.375" PointY="48.75" />
+        <EntityTypeShape EntityType="ERP.Employee_OT_View" Width="1.5" PointX="49.375" PointY="13.75" />
+        <AssociationConnector Association="ERP.FK_trns_Supervisor_OT_Approval_trns_OT_Approvals" />
+        <AssociationConnector Association="ERP.FK_z_OTApprovalLevel_z_SupervisorLevel" />
+        <EntityTypeShape EntityType="ERP.Supervisor_OT_Approvals_View" Width="1.5" PointX="49.375" PointY="17.75" />
+        <EntityTypeShape EntityType="ERP.trns_OT_RuleData" Width="1.5" PointX="51.625" PointY="49.25" />
+        <AssociationConnector Association="ERP.FK_trns_OT_RuleData_trns_OT_Approvals" />
+        <EntityTypeShape EntityType="ERP.trns_ExtBankLoan" Width="1.5" PointX="52.625" PointY="40.625" />
+        <EntityTypeShape EntityType="ERP.trns_LoanGuarantorsDetails" Width="1.5" PointX="53.625" PointY="15.5" />
+        <EntityTypeShape EntityType="ERP.payroll_CompanyVariable_View" Width="1.5" PointX="51.375" PointY="25.75" />
+        <EntityTypeShape EntityType="ERP.mas_ExtBankLoan" Width="1.5" PointX="50.375" PointY="53.125" />
+        <AssociationConnector Association="ERP.FK_trns_ExtBankLoan_mas_ExtBankLoan" />
+        <EntityTypeShape EntityType="ERP.EmployeeRuleDetailSummaryView" Width="1.5" PointX="26.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeOTApprovalLevels" Width="1.5" PointX="12.75" PointY="146.375" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeOTApprovalLevels_z_OTApprovalLevel" />
+        <EntityTypeShape EntityType="ERP.trns_SupervisorLeaveApprovals" Width="1.5" PointX="33.75" PointY="52.125" />
+        <EntityTypeShape EntityType="ERP.PendingLeavesForSupervisorApproval" Width="1.5" PointX="46.375" PointY="51.75" />
+        <EntityTypeShape EntityType="ERP.Employee_OT_ApprovalLevels_View" Width="1.5" PointX="24.375" PointY="52.75" />
+        <EntityTypeShape EntityType="ERP.Employee_OT_ApprovalLevels_Summary_View" Width="1.5" PointX="50.375" PointY="36.75" />
+        <EntityTypeShape EntityType="ERP.ProcessDetailsForExternalLoanView" Width="1.5" PointX="40.375" PointY="52.75" />
+        <EntityTypeShape EntityType="ERP.trns_InternalLoanPayment" Width="1.5" PointX="52.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.dtl_Evaluation" Width="1.5" PointX="11.25" PointY="76.875" />
+        <EntityTypeShape EntityType="ERP.dtl_EvaluationCriteria" Width="1.5" PointX="9" PointY="150" />
+        <EntityTypeShape EntityType="ERP.dtl_EvaluationRates" Width="1.5" PointX="9" PointY="155.25" />
+        <EntityTypeShape EntityType="ERP.mas_Evaluation" Width="1.5" PointX="9" PointY="74.625" />
+        <EntityTypeShape EntityType="ERP.z_EvaluationCategory" Width="1.5" PointX="6.75" PointY="92.375" />
+        <EntityTypeShape EntityType="ERP.z_EvaluationPeriod" Width="1.5" PointX="6.75" PointY="80.125" />
+        <EntityTypeShape EntityType="ERP.z_EvaluationRateGoup" Width="1.5" PointX="6.75" PointY="150.25" />
+        <EntityTypeShape EntityType="ERP.AssignedEvaluationsView" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeEvaluationDetailsView" Width="1.5" PointX="26.375" PointY="36.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeEvaluationsView" Width="1.5" PointX="38.375" PointY="0.75" />
+        <AssociationConnector Association="ERP.FK_dtl_Evaluation_dtl_EvaluationCriteria1" />
+        <AssociationConnector Association="ERP.FK_dtl_Evaluation_mas_Evaluation" />
+        <AssociationConnector Association="ERP.FK_dtl_EvaluationCriteria_dtl_EvaluationCriteria" />
+        <AssociationConnector Association="ERP.FK_dtl_EvaluationCriteria_z_EvaluationRateGoup" />
+        <AssociationConnector Association="ERP.FK_dtl_EvaluationRates_z_EvaluationRateGoup" />
+        <AssociationConnector Association="ERP.FK_mas_Evaluation_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_mas_Evaluation_z_EvaluationCategory1" />
+        <AssociationConnector Association="ERP.FK_mas_Evaluation_z_EvaluationPeriod" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeSubTasks" Width="1.5" PointX="14.25" PointY="150.5" />
+        <EntityTypeShape EntityType="ERP.dtl_SubTasks" Width="1.5" PointX="12" PointY="150.25" />
+        <EntityTypeShape EntityType="ERP.mas_Tasks" Width="1.5" PointX="9.75" PointY="159.5" />
+        <EntityTypeShape EntityType="ERP.mas_TaskSubCategory" Width="1.5" PointX="7.5" PointY="160.25" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeTaskProgress" Width="1.5" PointX="16.5" PointY="151.875" />
+        <EntityTypeShape EntityType="ERP.z_TaskCategory" Width="1.5" PointX="5.25" PointY="160.375" />
+        <EntityTypeShape EntityType="ERP.z_TaskPriority" Width="1.5" PointX="9.75" PointY="165.375" />
+        <EntityTypeShape EntityType="ERP.EmployeeSubTasksDetailForUserView" Width="1.5" PointX="38.375" PointY="4.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeSubTasksDetailView" Width="1.5" PointX="40.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeSubtasksProgressView" Width="1.5" PointX="28.375" PointY="38.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeSubTasksView" Width="1.5" PointX="42.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeSupervisorsByUserView" Width="1.5" PointX="13.375" PointY="27.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeTasksView" Width="1.5" PointX="42.375" PointY="5.75" />
+        <EntityTypeShape EntityType="ERP.TaskSubcategoriesView" Width="1.5" PointX="44.375" PointY="0.75" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeSubTasks_dtl_SubTasks" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeTaskProgress_dtl_EmployeeSubTasks" />
+        <AssociationConnector Association="ERP.FK_dtl_SubTasks_mas_Tasks" />
+        <AssociationConnector Association="ERP.FK_dtl_SubTasks_z_EvaluationRateGoup" />
+        <AssociationConnector Association="ERP.FK_dtl_SubTasks_z_TaskPriority" />
+        <AssociationConnector Association="ERP.FK_mas_Tasks_mas_TaskSubCategory" />
+        <AssociationConnector Association="ERP.FK_mas_TaskSubCategory_z_TaskCategory" />
+        <EntityTypeShape EntityType="ERP.z_CompanyBranches" Width="1.5" PointX="18.75" PointY="70.5" />
+        <EntityTypeShape EntityType="ERP.z_Department" Width="1.5" PointX="9.75" PointY="122.25" />
+        <EntityTypeShape EntityType="ERP.z_Section" Width="1.5" PointX="12" PointY="122.75" />
+        <EntityTypeShape EntityType="ERP.Company_Branch_View" Width="1.5" PointX="42.375" PointY="52.75" />
+        <AssociationConnector Association="ERP.FK_z_Department_z_Company" />
+        <AssociationConnector Association="ERP.FK_z_Section_z_Department" />
+        <EntityTypeShape EntityType="ERP.z_LoanRule" Width="1.5" PointX="12.25" PointY="94.5" />
+        <EntityTypeShape EntityType="ERP.LoanWithRulesView" Width="1.5" PointX="52.375" PointY="52.75" />
+        <AssociationConnector Association="ERP.FK_z_LoanRule_z_Loan" />
+        <EntityTypeShape EntityType="ERP.trns_LoanSupervisorWiseApproval" Width="1.5" PointX="53.625" PointY="18.5" />
+        <EntityTypeShape EntityType="ERP.mas_InternalLoanDetails" Width="1.5" PointX="51.625" PointY="12.75" />
+        <AssociationConnector Association="ERP.FK_trns_LoanGuarantorsDetails_mas_InternalLoanDetails" />
+        <AssociationConnector Association="ERP.FK_trns_LoanSupervisorWiseApproval_mas_InternalLoanDetails" />
+        <EntityTypeShape EntityType="ERP.EmployeeSupervisorWithModuleView" Width="1.5" PointX="48.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeInternalLoanWithSupervisorsView" Width="1.5" PointX="53.375" PointY="22.75" />
+        <EntityTypeShape EntityType="ERP.InternalLoanMainView" Width="1.5" PointX="28.375" PointY="53.75" />
+        <EntityTypeShape EntityType="ERP.dtl_LoanRules" Width="1.5" PointX="12.25" PointY="51.125" />
+        <EntityTypeShape EntityType="ERP.trns_ManualLoanPayment" Width="1.5" PointX="53.875" PointY="10.875" />
+        <AssociationConnector Association="ERP.FK_dtl_LoanRules_z_Loan" />
+        <AssociationConnector Association="ERP.FK_trns_ManualLoanPayment_mas_InternalLoanDetails" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeePeriodQunatity" Width="1.5" PointX="15.125" PointY="76.25" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeePeriodQunatity_mas_Employee" />
+        <EntityTypeShape EntityType="ERP.trns_LeavePool" Width="1.5" PointX="7.875" PointY="51.25" />
+        <AssociationConnector Association="ERP.FK_trns_LeavePool_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_trns_LeavePool_z_LeaveCategory" />
+        <AssociationConnector Association="ERP.FK_trns_LeavePool_z_LeaveType" />
+        <AssociationConnector Association="ERP.FK_trns_SupervisorLeaveApprovals_trns_LeavePool" />
+        <EntityTypeShape EntityType="ERP.mas_EmployeeBonus" Width="1.5" PointX="56.625" PointY="45.25" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeBonus" Width="1.5" PointX="56.625" PointY="50.75" />
+        <EntityTypeShape EntityType="ERP.z_BonusPayeeCalculation" Width="1.5" PointX="15.375" PointY="14.75" />
+        <EntityTypeShape EntityType="ERP.z_BonusPeriod" Width="1.5" PointX="54.375" PointY="47.75" />
+        <AssociationConnector Association="ERP.FK_mas_EmployeeBonus_z_BonusPeriod" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeBonus_z_BonusPeriod" />
+        <EntityTypeShape EntityType="ERP.AsignedEmployeesForBonusByBonusPeriodView" Width="1.5" PointX="30.375" PointY="51.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeBonusProcessView" Width="1.5" PointX="54.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.GetEmployeePaymentPeriodDateAndEmployeeWiseView" Width="1.5" PointX="53.375" PointY="28.75" />
+        <EntityTypeShape EntityType="ERP.PendingLeavesView" Width="1.5" PointX="48.375" PointY="24.75" />
+        <EntityTypeShape EntityType="ERP.BonusSlipTransferView" Width="1.5" PointX="55.375" PointY="22.75" />
+        <EntityTypeShape EntityType="ERP.ExternalBankLoanSlipView" Width="1.5" PointX="32.375" PointY="55.75" />
+        <EntityTypeShape EntityType="ERP.mas_EmployeeDeductionPayment" Width="1.5" PointX="23.875" PointY="63.625" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeDeductionPayment" Width="1.5" PointX="17.375" PointY="14.75" />
+        <AssociationConnector Association="ERP.FK_mas_EmployeeDeductionPayment_z_Bank" />
+        <AssociationConnector Association="ERP.FK_mas_EmployeeDeductionPayment_z_BankBranch" />
+        <AssociationConnector Association="ERP.FK_mas_EmployeeDeductionPayment_z_CompanyBranches" />
+        <EntityTypeShape EntityType="ERP.EmployeeDeductionPaymentView" Width="1.5" PointX="55.375" PointY="28.75" />
+        <EntityTypeShape EntityType="ERP.SlipTransferEmployeeDeductionView" Width="1.5" PointX="34.375" PointY="55.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeFundViiew" Width="1.5" PointX="54.375" PointY="55.75" />
+        <EntityTypeShape EntityType="ERP.Rpt_sp_EmployeeFundView" Width="1.5" PointX="56.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeOtherRulesData" Width="1.5" PointX="21.75" PointY="49.75" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeOtherRulesData" Width="1.5" PointX="0.75" PointY="54.75" />
+        <EntityTypeShape EntityType="ERP.ExcelUploadedSlipTransferView" Width="1.5" PointX="55.75" PointY="38.75" />
+        <EntityTypeShape EntityType="ERP.LeiuLeavePaymentViewForExcel" Width="1.5" PointX="56.375" PointY="12.75" />
+        <EntityTypeShape EntityType="ERP.dtl_trns_EmployeeThirdPartyPayments" Width="1.5" PointX="57" PointY="16.75" />
+        <EntityTypeShape EntityType="ERP.z_EmployeeThirdPartyPayments" Width="1.5" PointX="4" PointY="29.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeThirdPartyPaymentsSlipTransferView" Width="1.5" PointX="57" PointY="55.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeThirdPartyPaymentsView" Width="1.5" PointX="57" PointY="34.75" />
+        <EntityTypeShape EntityType="ERP.view_FixedRules" Width="1.5" PointX="57.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ERP.view_EmployeeWiseAssignedRulesForNonFixed" Width="1.5" PointX="58.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeRuleDetailsView" Width="1.5" PointX="58.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeWiseFixedRuleQuantity" Width="1.5" PointX="9.125" PointY="94.5" />
+        <EntityTypeShape EntityType="ERP.InternalLoanProcessForView" Width="1.5" PointX="36.375" PointY="53.75" />
+        <EntityTypeShape EntityType="ERP.view_EmployeesAssignedRules" Width="1.5" PointX="57.375" PointY="24.75" />
+        <EntityTypeShape EntityType="ERP.smssendview" Width="1.5" PointX="11.375" PointY="31.75" />
+        <EntityTypeShape EntityType="ERP.sendbonusotherpaymentsview" Width="1.5" PointX="50.375" PointY="44.75" />
+        <EntityTypeShape EntityType="ERP.z_CostCenter" Width="1.5" PointX="17.375" PointY="34.75" />
+        <EntityTypeShape EntityType="ERP.z_Division" Width="1.5" PointX="38.375" PointY="37.75" />
+        <EntityTypeShape EntityType="ERP.MigratePayrollDetailsView" Width="1.5" PointX="23.375" PointY="57.75" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeePayrollSumarry" Width="1.5" PointX="57.375" PointY="30.75" />
+        <EntityTypeShape EntityType="ERP.sendthirdpartypayment" Width="1.5" PointX="58.375" PointY="38.75" />
+        <EntityTypeShape EntityType="ERP.trns_ReverseLog" Width="1.5" PointX="50.375" PointY="22.75" />
+        <EntityTypeShape EntityType="ERP.MigrateOtherPaymentsDetailsView" Width="1.5" PointX="44.375" PointY="58.75" />
+        <EntityTypeShape EntityType="ERP.z_EmployeeOtherPayments" Width="1.5" PointX="25.375" PointY="6.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeAQDetailsView" Width="1.5" PointX="46.375" PointY="58.75" />
+        <EntityTypeShape EntityType="ERP.EmployeePQDetailsView" Width="1.5" PointX="59.375" PointY="22.75" />
+        <EntityTypeShape EntityType="ERP.z_SalaryScales" Width="1.5" PointX="7.375" PointY="40.75" />
+        <EntityTypeShape EntityType="ERP.EmployeeNopayView" Width="1.5" PointX="52.375" PointY="44.75" />
+        <EntityTypeShape EntityType="ERP.rpt_NopayReportData" Width="1.5" PointX="59.375" PointY="31.75" />
+        <EntityTypeShape EntityType="ERP.InternalLoanWithoutGurantorsView" Width="1.5" PointX="59.375" PointY="42.75" />
+        <EntityTypeShape EntityType="ERP.ExternalBankLoanView" Width="1.5" PointX="48.375" PointY="59.75" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeLeave" Width="1.5" PointX="25.875" PointY="57.25" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeLeave_mas_Employee" />
+        <EntityTypeShape EntityType="ERP.mas_LeaveDetail" Width="1.5" PointX="4.5" PointY="0.75" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeLeave_mas_LeaveDetail" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeMaximumLeaves_mas_LeaveDetail" />
+        <AssociationConnector Association="ERP.FK_mas_LeaveDetail_z_LeaveCategory" />
+        <AssociationConnector Association="ERP.FK_mas_LeaveDetail_z_LeavePeriod" />
+        <AssociationConnector Association="ERP.FK_trns_LeavePool_mas_LeaveDetail1" />
+        <AssociationConnector Association="ERP.FK_trns_MigratedLeaveData_mas_LeaveDetail" />
+        <EntityTypeShape EntityType="ERP.LeaveDetailMasterView" Width="1.5" PointX="23.375" PointY="18.75" />
+        <EntityTypeShape EntityType="ERP.usr_User" Width="1.5" PointX="1.5" PointY="82" />
+        <AssociationConnector Association="ERP.FK_dtl_ApprovedLoan_usr_User" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeAllowance_usr_User" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeCompanyVariable_usr_User" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeLoans_usr_User" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeOT_usr_User" />
+        <AssociationConnector Association="ERP.FK_dtl_RosterGroupDetail_usr_User" />
+        <AssociationConnector Association="ERP.FK_mas_Benifit_usr_User" />
+        <AssociationConnector Association="ERP.FK_mas_Cheque_usr_User" />
+        <AssociationConnector Association="ERP.FK_mas_Deduction_usr_User" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeBenifitPeriod_usr_User" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeDeductionPeriod_usr_User" />
+        <AssociationConnector Association="ERP.FK_trns_LieuLeaves_usr_User" />
+        <AssociationConnector Association="ERP.FK_dtl_VisitDetails_usr_User" />
+        <AssociationConnector Association="ERP.FK_usr_UserEmployee_usr_User" />
+        <AssociationConnector Association="ERP.FK_usr_UserLevel_usr_User" />
+        <AssociationConnector Association="ERP.FK_Z_AttendanceDevice_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_AttendanceInOutMode_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_AttendanceVerifyMode_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_BasicDay_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_DeviceModel_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_Loan_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_LoanCatergories_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_LoanPayment_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_OTCategory_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_RosterCalenderHeader_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_RosterDetail_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_RosterGroup_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_RosterMaster_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_ShiftCategory_usr_User" />
+        <AssociationConnector Association="ERP.FK_z_UserPermission_z_User" />
+        <AssociationConnector Association="ERP.FK_z_Visitor_usr_User" />
+        <EntityTypeShape EntityType="ERP.z_Location" Width="1.5" PointX="59.375" PointY="26.75" />
+        <EntityTypeShape EntityType="ERP.AssignedEmployeeLocationView" Width="1.5" PointX="59.375" PointY="49.75" />
+        <EntityTypeShape EntityType="ERP.dtl_employeeLocation" Width="1.5" PointX="61.625" PointY="49.875" />
+        <AssociationConnector Association="ERP.FK_dtl_employeeLocation_z_Location" />
+        <EntityTypeShape EntityType="ERP.dtl_EmployeeSupervisor" Width="1.5" PointX="14.5" PointY="103.125" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeSupervisor_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeSupervisor_z_module" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeSupervisor_z_SupervisorLevel" />
+        <EntityTypeShape EntityType="ERP.dtl_LoginDate" Width="1.5" PointX="40.375" PointY="37.75" />
+        <EntityTypeShape EntityType="ERP.z_NotificationDetail_Sent" Width="1.5" PointX="10.375" PointY="55.75" />
+        <EntityTypeShape EntityType="ERP.z_NotificationDetail" Width="1.5" PointX="60.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ERP.z_NotificationHeader" Width="1.5" PointX="60.375" PointY="3.75" />
+        <EntityTypeShape EntityType="ERP.GetBirthDaysWeek" Width="1.5" PointX="23.375" PointY="30.75" />
+        <EntityTypeShape EntityType="ERP.mas_CompanyRule" Width="1.5" PointX="3.75" PointY="101.5" />
+        <AssociationConnector Association="ERP.FK_companyVariableCompanyRules_mas_CompanyRule" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeRule_mas_CompanyRule" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeWiseFixedRuleQuantity_mas_CompanyRule" />
+        <AssociationConnector Association="ERP.FK_mas_CompanyRule_usr_User" />
+        <AssociationConnector Association="ERP.FK_mas_EmployeeDeductionPayment_mas_CompanyRule" />
+        <AssociationConnector Association="ERP.FK_trns_alter_EmployeePeriodQuantity_mas_CompanyRule" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeBenifitPeriod_mas_CompanyRule" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeDeductionPeriod_mas_CompanyRule" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeePeriodQunatity_mas_CompanyRule" />
+        <AssociationConnector Association="ERP.FK_trns_OT_RuleData_mas_CompanyRule" />
+        <EntityTypeShape EntityType="ERP.GetConfirmationDetail" Width="1.5" PointX="38.375" PointY="60.75" />
+        <EntityTypeShape EntityType="ERP.z_Period" Width="1.5" PointX="0.875" PointY="64.25" />
+        <AssociationConnector Association="ERP.FK_trn_EmployeeCompanyVariable_z_Period" />
+        <AssociationConnector Association="ERP.FK_trn_EmployeeMonthlyAllowance_z_Period" />
+        <AssociationConnector Association="ERP.FK_trns_alter_EmployeePeriodQuantity_z_Period" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeeMultiplePayments_z_Period" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeePeriodQunatity_z_Period" />
+        <AssociationConnector Association="ERP.FK_trns_LieuLeaves_z_Period" />
+        <AssociationConnector Association="ERP.FK_z_LoanPayment_z_Period" />
+        <EntityTypeShape EntityType="ERP.dtl_Employee" Width="1.5" PointX="21" PointY="72.375" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_usr_User" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_z_CompanyBranches" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_z_Grade" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_z_PaymentMethod" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeAllowance_dtl_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeBasicSalary_dtl_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeGrativity_dtl_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_employeeLocation_dtl_employeeLocation" />
+        <AssociationConnector Association="ERP.FK_dtl_EmployeeRule_dtl_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_historyBasicSalary_dtl_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_member_status_dtl_Employee" />
+        <AssociationConnector Association="ERP.FK_dtl_RosterGroupDetail_dtl_Employee" />
+        <AssociationConnector Association="ERP.FK_trn_EmployeeCompanyVariable_dtl_Employee" />
+        <AssociationConnector Association="ERP.FK_trn_EmployeeMonthlyAllowance_dtl_Employee" />
+        <EntityTypeShape EntityType="ERP.z_Designation" Width="1.5" PointX="50.375" PointY="31" />
+        <AssociationConnector Association="ERP.FK_dtl_Employee_z_Designation" />
+        <EntityTypeShape EntityType="ERP.EmployeeBasicDetailsView" Width="1.5" PointX="60.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ERP.Emp_Sp_Employee" Width="1.5" PointX="60.375" PointY="34.75" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeePayment" Width="1.5" PointX="17" PointY="84" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeePayment_mas_Employee" />
+        <AssociationConnector Association="ERP.FK_trns_EmployeePayment_usr_User" />
+        <EntityTypeShape EntityType="ERP.trns_EmployeeAttendanceSumarry" Width="1.5" PointX="31.375" PointY="19.75" />
+        <EntityTypeShape EntityType="ERP.SlipTransferView" Width="1.5" PointX="59.375" PointY="54.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

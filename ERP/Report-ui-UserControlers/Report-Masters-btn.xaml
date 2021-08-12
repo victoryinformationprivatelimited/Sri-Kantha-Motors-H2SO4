@@ -1,0 +1,1146 @@
+﻿<UserControl x:Class="ERP.Report_ui_UserControlers.Report_Masters_btn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="300" Width="1219" Height="231">
+	<UserControl.Resources>
+		<Style x:Key="CheckBoxStyle6" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/Leave/Leave_Category_logo.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="23.637,21.425,24.202,20.719" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Attendence"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle5" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/Leave/Leave_Period_logo.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="44.476,21.925,44.989,21.719" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Leave"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/Leave/Employee_Leave_details_logo.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="42.111,20.273,42.016,20.371" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Payroll"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle4" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/Leave/Leave_Amount_logo.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="46.802,21.925,46.829,21.719" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Asset"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle15" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1"/>
+							<Storyboard x:Key="OnMouseEnter2">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="ellipse1">
+									<EasingColorKeyFrame KeyTime="0" Value="#FF232831"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FF1979CA"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="ellipse1">
+									<SplineColorKeyFrame KeyTime="0" Value="#FF1979CA"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FF232831"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid">
+							<Ellipse x:Name="ellipse1" StrokeThickness="2" Stroke="#FFC1C1C1" RenderTransformOrigin="0.5,0.5" Margin="1.326,1.335,1,0.991" Fill="#FF232831">
+								<Ellipse.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform/>
+									</TransformGroup>
+								</Ellipse.RenderTransform>
+							</Ellipse>
+							<Image Width="Auto" VerticalAlignment="Stretch" Stretch="Fill" Source="/ERP;component/Images/Exand_icon/Expand_Img.png" RenderTransformOrigin="0.5,0.5" Margin="7.727,7.953,7.15,7.398" Height="Auto" HorizontalAlignment="Stretch">
+								<Image.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform AngleX="-0.487"/>
+										<RotateTransform Angle="0.893"/>
+										<TranslateTransform Y="-0.117"/>
+									</TransformGroup>
+								</Image.RenderTransform>
+							</Image>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle2" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/masters/section.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="11.637,21.425,11.561,20.719" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Section Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle3" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/masters/Town_Master.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="18.476,21.925,17,21.719" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Town Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle7" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/masters/Grader.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="17.111,20.273,16.981,20.371" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Grade Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle8" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="22.465,10.999,22.461,10.926" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Designation &#xD;&#xA;     Report" Grid.ColumnSpan="1"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							<Image Margin="9.891,16.104,7.245,16.896" Source="/ERP;component/Images/New_Button/New_Report_Master_Button/Designation.png" Stretch="Fill" Width="40" Height="40"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle9" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/masters/departments.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="20.802,10.482,20.981,9.5" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Department&#xD;&#xA;    Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle10" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/Leave/Leave_Amount_logo.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="20.802,10.482,20.981,9.5" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Department&#xA;    Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle11" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/masters/city_Master.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="23.799,19.14,23.984,20.175" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="City Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle12" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Image Width="40.158" Stretch="Uniform" Grid.Row="0" Margin="9.733,16.943,0,13.414" HorizontalAlignment="Left" Grid.Column="0" Source="/ERP;component/Images/Reports/Masters/basic_units.png"/>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="28.299,9.443,28.481,9" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Basic Unit&#xD;&#xA; Reports"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle13" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="11.637,21.425,11.561,20.719" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Section Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							<Image Grid.ColumnSpan="1" Margin="13.398,12.47,3.601,20.863" Source="/ERP;component/Images/New_Button/New_Report_Master_Button/Section_Report.png" Stretch="Fill" Width="40" Height="40"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle14" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="18.476,21.925,17,21.719" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Town Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							<Image Margin="10.413,14.462,6.586,18.87" Source="/ERP;component/Images/New_Button/New_Report_Master_Button/Town_Report.png" Stretch="Fill" Width="40" Height="40"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle17" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="17.111,20.273,16.981,20.371" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Grade Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							<Image Margin="11.383,14.045,5.752,18.955" Source="/ERP;component/Images/New_Button/New_Report_Master_Button/Grade_Report.png" Stretch="Fill" Width="40" Height="40"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle19" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="20.802,10.482,20.981,9.5" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="Department&#xA;    Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							<Image Margin="9.593,15.47,7.542,17.53" Source="/ERP;component/Images/New_Button/New_Report_Master_Button/Department_Report.png" Stretch="Fill" Width="40" Height="40"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle20" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="23.799,19.14,23.984,20.175" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="City Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="CheckBoxStyle21" TargetType="{x:Type CheckBox}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<ControlTemplate.Resources>
+							<Storyboard x:Key="OnMouseEnter1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<EasingColorKeyFrame KeyTime="0" Value="White"/>
+									<EasingColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFB370"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+							<Storyboard x:Key="OnMouseEnter_Copy1">
+								<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+									<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+									<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+								</DoubleAnimationUsingKeyFrames>
+								<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+									<SplineColorKeyFrame KeyTime="0" Value="#FFFFB370"/>
+									<SplineColorKeyFrame KeyTime="0:0:0.6" Value="White"/>
+								</ColorAnimationUsingKeyFrames>
+							</Storyboard>
+						</ControlTemplate.Resources>
+						<Grid x:Name="grid" Margin="0,0,-3,-2.333">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="57*"/>
+								<ColumnDefinition Width="145*"/>
+								<ColumnDefinition Width="8*"/>
+							</Grid.ColumnDefinitions>
+							<Rectangle x:Name="rectangle1" Width="206" VerticalAlignment="Top" StrokeThickness="3" Stroke="#FFBDBDBD" Grid.RowSpan="1" RadiusX="0" Grid.Row="0" RadiusY="0" Margin="0.022,1.015,0,0" Height="68.947" HorizontalAlignment="Left" Fill="#FFBDBDBD" Grid.Column="0" Grid.ColumnSpan="3"/>
+							<Rectangle x:Name="rectangle" Width="198.372" VerticalAlignment="Top" Stroke="#FF6B737D" Grid.RowSpan="1" RadiusX="5" Grid.Row="0" RadiusY="5" Margin="4.067,5.192,0,0" Height="60.726" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2">
+								<Rectangle.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF303740" Offset="1"/>
+										<GradientStop Color="#FF525A64" Offset="0.533"/>
+										<GradientStop Color="#FF6C747D"/>
+									</LinearGradientBrush>
+								</Rectangle.Fill>
+							</Rectangle>
+							<Label x:Name="label" Width="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Grid.Row="0" Margin="23.799,19.14,23.984,20.175" Height="Auto" HorizontalAlignment="Stretch" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1" Content="City Report"/>
+							<Rectangle Width="2.167" VerticalAlignment="Top" Grid.RowSpan="1" Grid.Row="0" Margin="54.891,5.192,0,0" Height="60.92" HorizontalAlignment="Left" Fill="#FF262B34" Grid.Column="0"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							<Image Margin="11.383,14.662,5.752,18.338" Source="/ERP;component/Images/New_Button/New_Master_Button/City_Master.png" Stretch="Fill" Width="40" Height="40"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+								<BeginStoryboard x:Name="OnMouseEnter_Copy1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter_Copy1}"/>
+							</EventTrigger>
+							<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+								<BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+							</EventTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</UserControl.Resources>
+    <Grid>
+    	<WrapPanel VerticalAlignment="Top" Height="212" Margin="0,19,0,0" HorizontalAlignment="Center">
+    		<CheckBox x:Name="Section_Check_box" Content="CheckBox" Height="71" Style="{DynamicResource CheckBoxStyle13}" Width="207" RenderTransformOrigin="-1.069,-2.101" Margin="15,20,0,0" Checked="Section_Check_box_Checked" Unchecked="Section_Check_box_Unchecked" />
+    		<CheckBox x:Name="Town_check_box" Content="CheckBox" Height="71" Style="{DynamicResource CheckBoxStyle14}" Width="207" RenderTransformOrigin="-1.069,-2.101" Checked="Town_check_box_Checked" Margin="15,20,0,0" Unchecked="Town_check_box_Unchecked" />
+    		<CheckBox x:Name="Grade_Check_Box" Content="CheckBox" Height="70.667" Style="{DynamicResource CheckBoxStyle17}" Width="207.5" RenderTransformOrigin="-1.069,-2.101" Checked="Grade_Check_Box_Checked" Margin="15,20,0,0" Unchecked="Grade_Check_Box_Unchecked" />
+    		<CheckBox x:Name="Designation_Check_Box" Content="CheckBox" Height="70.667" Style="{DynamicResource CheckBoxStyle8}" Width="207.5" RenderTransformOrigin="-1.069,-2.101" Checked="Designation_Check_Box_Checked" Margin="15,20,0,0" Unchecked="Designation_Check_Box_Unchecked" />
+    		<CheckBox x:Name="Departments_Check_Box" Content="CheckBox" Height="70.668" Style="{DynamicResource CheckBoxStyle19}" Width="207.5" RenderTransformOrigin="-1.069,-2.101" Checked="Departments_Check_Box_Checked" Margin="15,20,0,0" Unchecked="Departments_Check_Box_Unchecked" />
+    		<CheckBox x:Name="City_Check_Box" Content="CheckBox" Height="70.668" Style="{DynamicResource CheckBoxStyle21}" Width="207.5" RenderTransformOrigin="-1.069,-2.101" Checked="City_Check_Box_Checked" Margin="15,20,0,0" Unchecked="City_Check_Box_Unchecked" />
+    		<CheckBox x:Name="Basic_Unit_Box_Copy" Content="CheckBox" Height="70.668" Style="{DynamicResource CheckBoxStyle12}" Width="207.5" RenderTransformOrigin="-1.069,-2.101" Checked="Basic_Unit_Box_Copy_Checked" Margin="15,20,0,0" Unchecked="Basic_Unit_Box_Copy_Unchecked" />
+    	</WrapPanel>
+    	<CheckBox x:Name="Hr_Checkbox_two" Content="CheckBox" Height="30.75" Style="{DynamicResource CheckBoxStyle15}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0,5,7.418,0" HorizontalAlignment="Right" Width="30.75" Checked="Hr_Checkbox_two_Checked" Unchecked="Hr_Checkbox_two_Unchecked">
+    		<CheckBox.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform Angle="179.834"/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</CheckBox.RenderTransform>
+    	</CheckBox>
+    	<Rectangle Fill="#FFC1C1C1" Height="1" Margin="0,19,58.271,0" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" HorizontalAlignment="Right" Width="1109.896"/>
+    </Grid>
+</UserControl>

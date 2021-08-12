@@ -1,0 +1,799 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    xmlns:s="clr-namespace:System;assembly=mscorlib"
+	x:Class="ERP.AttendanceModule.AttendanceMasters.ShiftDetail"
+	x:Name="Window"
+	Title="Attendance"
+	Width="815" Height="540" Visibility="Visible" WindowStyle="None" Foreground="{x:Null}" Background="{x:Null}" ResizeMode="NoResize" AllowsTransparency="True" WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <Style x:Key="ImageStyle2" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.495"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="-2.497,-3.17,-2.497,-1.335">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Opacity="0" Stroke="White" Margin="-2.995,-3.083,-2.995,-3.006" Fill="{x:Null}" Width="Auto" Height="Auto"/>
+                            <Image x:Name="image" Margin="3,0,2.994,1.505" Source="../Resources/Images/appbar.close.png" Stretch="Fill" Width="Auto" Height="21" Style="{DynamicResource ImageStyle2}" OpacityMask="#FF010000" Opacity="0.5" VerticalAlignment="Bottom"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Error Template to change the default behaviour-->
+        <ControlTemplate x:Key="ErrorTemplate">
+            <DockPanel LastChildFill="True">
+                <Border BorderBrush="Red" BorderThickness="1">
+                    <AdornedElementPlaceholder />
+                </Border>
+            </DockPanel>
+        </ControlTemplate>
+
+        <!-- To display tooltip with the error-->
+        <Style TargetType="{x:Type xctk:MaskedTextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip" Value="{Binding (Validation.Errors)[0].ErrorContent, RelativeSource={x:Static RelativeSource.Self}}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Background="White" Height="480" VerticalAlignment="Center" HorizontalAlignment="Center" Width="700">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="147*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FF233555" Margin="-14,-12,-16,-22" RadiusY="4" RadiusX="4" Stroke="#7E191818" StrokeThickness="16" Grid.ColumnSpan="15" Grid.RowSpan="9"/>
+        <Rectangle x:Name="shiftDetailTaskTitleBar" MouseLeftButtonDown="shiftDetailTaskTitleBar_MouseLeftButtonDown" Height="31" VerticalAlignment="Top" Grid.ColumnSpan="14" Grid.Row="1" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF18233A" Offset="0"/>
+                    <GradientStop Color="#FF18233A" Offset="1"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.518"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Margin="0,31,0,15" Grid.ColumnSpan="14" Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF81818B" Offset="0"/>
+                    <GradientStop Color="#FF81818B" Offset="1"/>
+                    <GradientStop Color="#FFB2B2BD" Offset="0.655"/>
+                    <GradientStop Color="#FFC4C4D3" Offset="0.401"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="shiftDetailCloseBtn" Click="shiftDetailCloseBtn_Click" Content="Button" Margin="18,7,5,41" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.Column="12" Grid.ColumnSpan="2" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBlock x:Name="shiftDetailTitle" MouseLeftButtonDown="shiftDetailTitle_MouseLeftButtonDown" Margin="7,5,10,41" TextWrapping="Wrap" Text="Work Schedule Detail" Foreground="White" FontSize="14.667" FontFamily="Segoe UI Symbol" FontWeight="Bold" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" d:IsHidden="True"/>
+        <Label Content="Shift Category" Margin="1,1,7,1" FontSize="13.333" Foreground="White" Grid.Column="2" Grid.Row="2"/>
+        <TextBox Text="{Binding ShiftDetailName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" Margin="0,2,1,5" TextWrapping="Wrap" Grid.Column="4" Grid.Row="3"/>
+        <Label Content="Shift Detail Name" Margin="19,2,10,1" FontSize="13.333" Foreground="White" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3"/>
+        <TabControl Margin="1,4,3,21" Background="White" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="11" Grid.RowSpan="3">
+            <TabControl.Resources>
+                <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TabItem}">
+                                <Border x:Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                    <ContentPresenter x:Name="ContentSite"
+										VerticalAlignment="Center"
+										HorizontalAlignment="Center"
+										ContentSource="Header"
+										Margin="10,2"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
+
+            <TabItem Header="Basic Detail" >
+                <AdornerDecorator>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="29*"/>
+                            <ColumnDefinition Width="132*"/>
+                            <ColumnDefinition Width="142*"/>
+                            <ColumnDefinition Width="42*"/>
+                            <ColumnDefinition Width="91*"/>
+                            <ColumnDefinition Width="42*"/>
+                            <ColumnDefinition Width="121*"/>
+                            <ColumnDefinition Width="21*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="0*"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="Shift In Day" Margin="0,19,55,2" Foreground="Black" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"/>
+                        <Label Content="Shift Out Day" Margin="1,19,41,2" Foreground="Black" Grid.Row="2" Grid.Column="5" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                        <Label Content="Shift In Time" Margin="0,18,50,2" Foreground="Black" Grid.Row="4" Grid.Column="2" Grid.RowSpan="2"/>
+                        <Label Content="Shift Out Time" Margin="1,19,41,2" Foreground="Black" Grid.Row="4" Grid.Column="5" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                        <Label Content="Shift On Duration" Margin="0,19,0,2" Foreground="Black" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2"/>
+                        <Label Content="Shift Off Duration" Margin="1,19,0,2" Foreground="Black" Grid.Row="6" Grid.Column="5" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                        <ComboBox ItemsSource="{Binding ShiftDayRanges}" IsEnabled="False" SelectedItem="{Binding ShiftInDayRange}" DisplayMemberPath="day_description" SelectedValuePath="day_value" SelectedValue="{Binding ShiftInDayValue}" Height="23" Grid.Column="3" Margin="0,22,0,2" Grid.Row="2" Grid.RowSpan="2" />
+                        <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" HorizontalAlignment="Left" Margin="0,19,0,0" TextWrapping="Wrap" Text="{Binding ShiftInTime, Mode=TwoWay, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="142" Height="23" Grid.Column="3" Grid.Row="4" Grid.RowSpan="2"/>
+                        <ComboBox ItemsSource="{Binding ShiftDayRanges}" SelectedItem="{Binding ShiftOutDayRange}" DisplayMemberPath="day_description" SelectedValuePath="day_value" SelectedValue="{Binding ShiftOutDayValue}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" Height="23" Grid.Column="7" Margin="0,22,0,2" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+                        <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" HorizontalAlignment="Left" Margin="0,22,0,0" TextWrapping="Wrap" Text="{Binding ShiftOutTime, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="142" Height="23" Grid.Column="7" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="0,22,0,0" TextWrapping="Wrap" Text="{Binding ShiftOnTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsBoolConvert}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="142" Height="23" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding ShiftOffTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\},ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="23" Grid.Column="7" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                        <RadioButton IsChecked="{Binding IsDailyShift}" Content="Daily Shift" GroupName="shiftType" Grid.Column="1" HorizontalAlignment="Left" Margin="28,6,0,0" Grid.Row="10" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                        <RadioButton IsChecked="{Binding IsRosterShift}" Content="Roster" GroupName="shiftType" Grid.Column="2" HorizontalAlignment="Left" Margin="92,6,0,0" Grid.Row="10" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                        <CheckBox IsChecked="{Binding IsSplitShift}" Content="Split Shift" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="79" HorizontalContentAlignment="Center" Margin="0,27,0,0" Grid.Column="2" Grid.Row="10" Grid.RowSpan="2" />
+                        <CheckBox IsChecked="{Binding IsEntitleLeiuLeave}" Content="Entitle Leiu Leave" HorizontalAlignment="Left" Width="121" HorizontalContentAlignment="Center" Margin="43,21,0,6" Grid.Column="5" Grid.Row="8" Grid.ColumnSpan="3" Grid.RowSpan="2" />
+                        <CheckBox Visibility="Collapsed" IsChecked="{Binding IsNextDayOTPreDefined}" Content="Next Day OT&#xD;&#xA;Pre Defined" HorizontalAlignment="Left" VerticalAlignment="Top" Height="41" Width="110" HorizontalContentAlignment="Center" Margin="87,27,0,-13" Grid.Column="3" Grid.Row="10" Grid.ColumnSpan="3" Grid.RowSpan="3" />
+                        <RadioButton IsChecked="{Binding IsExecutive}" IsEnabled="{Binding IsEntitleLeiuLeave}" Content="Executive" GroupName="shiftCat" Grid.Column="5" HorizontalAlignment="Left" Margin="61,3,0,0" Grid.Row="9" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                        <RadioButton IsChecked="{Binding IsNonExecutive}" IsEnabled="{Binding IsEntitleLeiuLeave}" Content="Non-Executive" GroupName="shiftCat" Grid.Column="5" HorizontalAlignment="Left" Margin="61,16,0,0" Grid.Row="10" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <RadioButton IsChecked="{Binding IsSecurity}" IsEnabled="{Binding IsEntitleLeiuLeave}" Content="Security" GroupName="shiftCat" Grid.Column="5" HorizontalAlignment="Left" Margin="61,36,0,0" Grid.Row="10" VerticalAlignment="Top" Grid.RowSpan="2" Width="68" Grid.ColumnSpan="2"/>
+                        <CheckBox IsChecked="{Binding IsOTShift}" Content="OT Shift" HorizontalAlignment="Left" Width="81" HorizontalContentAlignment="Center" Margin="49,21,0,6" Grid.Column="7" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+                        <RadioButton IsChecked="{Binding IsSingleOT}" IsEnabled="{Binding IsOTShift}" Content="Single OT" GroupName="otType" Grid.Column="7" HorizontalAlignment="Left" Margin="67,3,0,0" Grid.Row="9" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                        <RadioButton IsChecked="{Binding IsMultipleOT}" IsEnabled="{Binding IsOTShift}" Content="Multiple OT" GroupName="otType" Grid.Column="7" HorizontalAlignment="Left" Margin="67,16,0,0" Grid.Row="10" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <CheckBox IsChecked="{Binding IsHalfDay}" Content="HalfDay Shift" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="110" HorizontalContentAlignment="Center" Margin="92,27,0,0" Grid.Column="2" Grid.Row="10" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                        <CheckBox IsChecked="{Binding IsOpenShift}"  Content="Open Shift" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="79" HorizontalContentAlignment="Center" Margin="3,0,0,0" Grid.Column="2" Grid.Row="2" />
+                        <CheckBox IsChecked="{Binding IsSpecShift}" Content="Special Shift" HorizontalAlignment="Left" Width="92" HorizontalContentAlignment="Center" Margin="1,21,0,6" Grid.Column="2" Grid.Row="8" Grid.RowSpan="2" />
+                        <CheckBox IsChecked="{Binding IsMorIncentive}" Content="Morning Incentive" HorizontalAlignment="Left" Width="119" HorizontalContentAlignment="Center" Margin="98,21,0,6" Grid.Column="2" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+            <TabItem Header="Late In Details" IsEnabled="{Binding IsBoolConvert}" >
+                <AdornerDecorator>
+                    <Grid Height="253.873" Width="650">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="0*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="162*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="230" Margin="25,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="538.667">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="15*"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="26*"/>
+                                <ColumnDefinition Width="128*"/>
+                                <ColumnDefinition Width="291*"/>
+                                <ColumnDefinition Width="54*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Late In Duration" HorizontalAlignment="Left" Height="26" Margin="0.621,2.17,0,0" VerticalAlignment="Top" Width="105" Grid.Row="5" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Grace Remain" HorizontalAlignment="Left" Height="26" Margin="1,1.336,0,0" VerticalAlignment="Top" Width="105" Grid.Row="3" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Grace Effect Duration" HorizontalAlignment="Left" Height="26" Margin="0.621,1.168,0,0" VerticalAlignment="Top" Width="123.112" Grid.Column="1" Foreground="Black" Grid.Row="1"/>
+                            <Label Content="Short Leave Duration" HorizontalAlignment="Left" Height="26" Margin="1,2,0,0" VerticalAlignment="Top" Width="121" Grid.Row="7" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Half Day Duration" HorizontalAlignment="Left" Height="26.668" Margin="1,0,0,0" VerticalAlignment="Top" Width="104" Grid.Row="9" Grid.Column="1" Foreground="Black"/>
+                            <Label Visibility="Collapsed" Content="Full Day Duration" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="105" Grid.Row="11" Grid.Column="1" Foreground="Black" Margin="1,1,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding LateGraceEffectDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" Margin="2.122,2.668,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="1"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding LateGraceTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" Margin="2.001,2.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="3"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding LateInTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" Margin="2.122,2.504,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="5"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding LateShotLeaveTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" Margin="2.334,2,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="7"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding LateHalfDayTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" Margin="1.834,1.668,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="9"/>
+                            <xctk:MaskedTextBox Visibility="Collapsed" Mask="00.00:00" Text="{Binding LateFullLeaveTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" Margin="1,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="11"/>
+                            <Label Content="{Binding LateGraceEffectTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="150" Grid.Column="2" Margin="213,3,0,0" Grid.Row="1" Grid.ColumnSpan="2" Background="#FFD1D1D1"/>
+                            <Label Content="{Binding LateGraceRemainTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="150" Grid.Column="2" Margin="213,3,0,0" Grid.Row="3" Grid.ColumnSpan="2" Background="#FFD1D1D1"/>
+                            <Label Content="{Binding LateInTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="150" Grid.Column="2" Margin="213,3,0,0" Grid.Row="5" Grid.ColumnSpan="2" Background="#FFD1D1D1"/>
+                            <Label Content="{Binding LateShortLeaveTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="150" Grid.Column="2" Margin="213,2,0,0" Grid.Row="7" Grid.ColumnSpan="2" Background="#FFD1D1D1" RenderTransformOrigin="0.5,0.5"/>
+                            <Label Content="{Binding LateHalfDayTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="150" Grid.Column="2" Margin="213,2,0,0" Grid.Row="9" Grid.ColumnSpan="2" Background="#FFD1D1D1"/>
+                        </Grid>
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+            <TabItem Header="Early Out Details" IsEnabled="{Binding IsBoolConvert}" >
+                <AdornerDecorator>
+                    <Grid Height="253.873" Width="650">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="0*"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="162*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="234" Margin="26,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="572">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="13*"/>
+                                <RowDefinition Height="28*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="28*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="28*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="28*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="28*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="29"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="27*"/>
+                                <ColumnDefinition Width="140*"/>
+                                <ColumnDefinition Width="240"/>
+                                <ColumnDefinition Width="165*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Early Out Duration" HorizontalAlignment="Left" Height="26" Margin="1,1,0,0" VerticalAlignment="Top" Width="116" Grid.Row="5" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Grace Remain" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="105" Grid.Row="3" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Grace Effect Duration" HorizontalAlignment="Left" Height="26" Margin="2,0,0,0" VerticalAlignment="Top" Width="121" Grid.Row="1" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Short Leave Duration" HorizontalAlignment="Left" Height="26" Margin="0,2,0,0" VerticalAlignment="Top" Width="121" Grid.Row="7" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Half Day Duration" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="105" Grid.Row="9" Grid.Column="1" Foreground="Black"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding EarlyGraceEffectDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="1" Margin="1,2,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding EarlyGraceTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="3" Margin="1,3,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding EarlyOutTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="5" Margin="1,3,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding EarlyShortLeaveTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" Margin="1,2,0,0"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="7"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding EarlyHalfDayTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" HorizontalAlignment="Left" Margin="1,3,0,0"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="9"/>
+                            <Label Content="{Binding EarlyGraceEffectTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="155" Grid.Column="3" Margin="0,2,0,0" Grid.Row="1" Background="#FFD1D1D1"/>
+                            <Label Content="{Binding EarlyGraceRemainTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="155" Grid.Column="3" Margin="0,3,0,0" Grid.Row="3" Background="#FFD1D1D1"/>
+                            <Label Content="{Binding EarlyOutTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="155" Grid.Column="3" Margin="0,3,0,0" Grid.Row="5" Background="#FFD1D1D1"/>
+                            <Label Content="{Binding EarlyShortLeaveTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="155" Grid.Column="3" Margin="0,2,0,0" Grid.Row="7" Background="#FFD1D1D1"/>
+                            <Label Content="{Binding EarlyHalfDayTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="155" Grid.Column="3" Margin="0,3,0,0" Grid.Row="9" Background="#FFD1D1D1"/>
+                        </Grid>
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+            <TabItem Header="Pre Over Time" Margin="4,0,-4,0" IsEnabled="{Binding IsBoolConvert}" >
+                <AdornerDecorator>
+                    <Grid Height="253.873" Width="650">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition Height="24*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="92*"/>
+                            <RowDefinition Height="0*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="27*"/>
+                            <ColumnDefinition Width="71*"/>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="161*"/>
+                            <ColumnDefinition Width="295*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="No OT Duration" Grid.Column="2" Margin="0.223,23.431,10,1.583" Grid.Row="1" Foreground="Black" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                        <CheckBox Content="" IsChecked="{Binding IsPReNoOtChecked, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Margin="7.276,6.1,7.724,5.886" Grid.Row="2" Visibility="Collapsed"/>
+                        <CheckBox Content="" IsChecked="{Binding IsPreSingleOtChecked, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Margin="7.276,6.119,7.724,5.868" Grid.Row="4" Visibility="Collapsed"/>
+                        <Label Content="Single OT Duration" Grid.Column="2" Margin="0,8.958,10,2.065" Grid.Row="3" Foreground="Black" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                        <CheckBox Content="" IsChecked="{Binding IsPreDoubleOtChecked, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Margin="7.276,5.637,7.724,6.349" Grid.Row="6" Visibility="Collapsed"/>
+                        <Label Content="Double OT Duration" Grid.Column="2" Margin="0,9.475,10,1.546" Grid.Row="5" Foreground="Black" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                        <CheckBox Content="" IsChecked="{Binding IsPreTripleOtChecked, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Margin="7.276,6.345,7.724,5.642" Grid.Row="8" Visibility="Collapsed"/>
+                        <Label Content="Triple OT Duration" Grid.Column="2" Margin="0,8.995,10,2.027" Grid.Row="7" Foreground="Black" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="1,2.5,0,0" TextWrapping="Wrap" Text="{Binding PreNoOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="6" Grid.Row="2"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="1,3,0,0" TextWrapping="Wrap" Text="{Binding PreSingleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="6" Grid.Row="4"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="0,2.5,0,0" TextWrapping="Wrap" Text="{Binding PreDoubleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="6" Grid.Row="6"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="1,3,0,0" TextWrapping="Wrap" Text="{Binding PreTripleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="6" Grid.Row="8"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="198.5,1.922,0,0" TextWrapping="Wrap" Text="{Binding PreSingleOtRound, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="39" Height="23" Grid.Column="7" Grid.Row="4"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="198.5,2.44,0,0" TextWrapping="Wrap" Text="{Binding PreDoubleOtRound, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="39" Height="23" Grid.Column="7" Grid.Row="6"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="198.5,2,0,0" TextWrapping="Wrap" Text="{Binding PreTripleOtRound, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="39" Height="23" Grid.Column="7" Grid.Row="8"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="198.5,2,0,0" TextWrapping="Wrap" Text="{Binding PreNonOtCompensate, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="39" Height="23" Grid.Column="7" Grid.Row="2"/>
+                        <Label Content="No OT Add Up Duration" Grid.Column="7" Margin="36.334,23.429,119.333,2.004" Grid.Row="1" Foreground="Black" Grid.RowSpan="2"/>
+                        <Label Content="Single OT Round-Up" Grid.Column="7" Margin="36.334,0.923,119.333,0" Grid.Row="4" Foreground="Black"/>
+                        <Label Content="Double OT Round-Up" Grid.Column="7" Margin="36.334,0.435,119.333,0" Grid.Row="6" Foreground="Black"/>
+                        <Label Content="Triple OT Round-Up" Grid.Column="7" Margin="36.334,9.889,140.833,0" Grid.Row="7" Foreground="Black" Grid.RowSpan="2"/>
+                        <Label Content="No OT Start" Grid.Column="2" Margin="10,24.013,43.333,41.982" Grid.Row="9" Foreground="Black" Grid.ColumnSpan="3"/>
+                        <Label Content="Single OT Start" Grid.Column="6" Margin="42,24.013,27,41.982" Grid.Row="9" Foreground="Black"/>
+                        <Label Content="Double OT Start" Grid.Column="7" Margin="36.334,24.013,162.666,41.982" Grid.Row="9" Foreground="Black"/>
+                        <Label Content="Triple OT Start" Grid.Column="7" Margin="208.334,24.013,0,41.982" Grid.Row="9" Foreground="Black"/>
+                        <Label Content="{Binding PreNoOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="1" Margin="10,54.972,0,0" Grid.Row="9" Background="#FFD1D1D1" Grid.ColumnSpan="4"/>
+                        <Label Content="{Binding PreSingleOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="6" Margin="9,54.972,0,0" Grid.Row="9" Background="#FFD1D1D1"/>
+                        <Label Content="{Binding PreDoubleOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="7" Margin="14.167,54.972,0,0" Grid.Row="9" Background="#FFD1D1D1"/>
+                        <Label Content="{Binding PreTripleOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="7" Margin="175,54.972,0,0" Grid.Row="9" Background="#FFD1D1D1" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+            <TabItem Header="Post Over Time" Margin="5,1,4,-1" IsEnabled="{Binding IsBoolConvert}" >
+                <AdornerDecorator>
+                    <Grid Height="253.873" Width="650">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition Height="24*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="92*"/>
+                            <RowDefinition Height="0*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="16*"/>
+                            <ColumnDefinition Width="22*"/>
+                            <ColumnDefinition Width="14*"/>
+                            <ColumnDefinition Width="109*"/>
+                            <ColumnDefinition Width="16*"/>
+                            <ColumnDefinition Width="13*"/>
+                            <ColumnDefinition Width="11*"/>
+                            <ColumnDefinition Width="19*"/>
+                            <ColumnDefinition Width="132*"/>
+                            <ColumnDefinition Width="269*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="No OT Duration" Grid.Column="4" Margin="0,9,9,16" Grid.Row="1" Foreground="Black" Grid.RowSpan="2"/>
+                        <CheckBox Content="" IsChecked="{Binding IsPostNoOtChecked, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Margin="7,6,1,6" Grid.Row="2" Visibility="Collapsed"/>
+                        <CheckBox Content="" IsChecked="{Binding IsPostSingleOtChecked, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Margin="7,6,1,6" Grid.Row="4" Visibility="Collapsed"/>
+                        <Label Content="Single OT Duration" Grid.Column="4" Margin="0,20,9,18" Grid.Row="2" Foreground="Black" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+                        <CheckBox Content="" IsChecked="{Binding IsPostDoubleOtChecked, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Margin="7,6,1,6" Grid.Row="6" Visibility="Collapsed"/>
+                        <Label Content="Double OT Duration" Grid.Column="4" Margin="0,14,3,24" Grid.Row="4" Foreground="Black" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+                        <CheckBox Content="" IsChecked="{Binding IsPostTripleOtChecked, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" Margin="7,6,1,6" Grid.Row="8" Visibility="Collapsed"/>
+                        <Label Content="Triple OT Duration" Grid.Column="4" Margin="0,9,11,2" Grid.Row="6" Foreground="Black" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="1,12,0,0" TextWrapping="Wrap" Text="{Binding PostNoOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="8" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="1,19,0,0" TextWrapping="Wrap" Text="{Binding PostSingleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="8" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="0,14,0,0" TextWrapping="Wrap" Text="{Binding PostDoubleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="8" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="0,12,0,0" TextWrapping="Wrap" Text="{Binding PostTripleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="8" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="185,19,0,0" TextWrapping="Wrap" Text="{Binding PostSingleOtRound, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="33" Height="23" Grid.Column="10" Grid.Row="2" Grid.RowSpan="3"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="185,14,0,0" TextWrapping="Wrap" Text="{Binding PostDoubleOtRound, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="33" Height="23" Grid.Column="10" Grid.Row="4" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="185,11,0,0" TextWrapping="Wrap" Text="{Binding PostTripleOtRound, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="33" Height="22" Grid.Column="10" Grid.Row="6" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="185,10,0,0" TextWrapping="Wrap" Text="{Binding PostNonOtCompensate, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="33" Height="24" Grid.Column="10" Grid.Row="1" Grid.RowSpan="2"/>
+                        <Label  Content="No OT Add Up Duration" Grid.Column="10" Margin="21,11,110,14" Grid.Row="1" Foreground="Black" Grid.RowSpan="2"/>
+                        <Label Content="Single OT Round-Up" Grid.Column="10" Margin="21,19,110,19" Grid.Row="2" Foreground="Black" Grid.RowSpan="3"/>
+                        <Label Content="Double OT Round-Up" Grid.Column="10" Margin="21,14,110,24" Grid.Row="4" Foreground="Black" Grid.RowSpan="3"/>
+                        <Label Content="Triple OT Round-Up" Grid.Column="10" Margin="21,11,110,0" Grid.Row="6" Foreground="Black" Grid.RowSpan="2"/>
+                        <Label Content="No OT&#xD;&#xA;End" Grid.Column="2" Margin="11,17,86,41" Grid.Row="9" Foreground="Black" Grid.ColumnSpan="3" FontSize="8"/>
+                        <Label Content="Single OT&#xD;&#xA;End" Grid.Column="9" Margin="18,14,59,44" Grid.Row="9" Foreground="Black" FontSize="8"/>
+                        <Label Content="Double OT&#xD;&#xA;End" Grid.Column="10" Margin="86,14,125,44" Grid.Row="9" Foreground="Black" FontSize="8"/>
+                        <Label Content="Triple OT&#xD;&#xA;End" Grid.Column="2" Margin="11,53,86,10" Grid.Row="9" Foreground="Black" FontSize="8" Grid.ColumnSpan="3"/>
+                        <Label Content="{Binding PostNoOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="4" Margin="28,22,0,0" Grid.Row="9" Background="#FFD1D1D1" Grid.ColumnSpan="5"/>
+                        <Label Content="{Binding PostSingleOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="9" Margin="73,22,0,0" Grid.Row="9" Background="#FFD1D1D1" Grid.ColumnSpan="2"/>
+                        <Label Content="{Binding PostDoubleOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="10" Margin="149,22,0,0" Grid.Row="9" Background="#FFD1D1D1" Grid.ColumnSpan="2"/>
+                        <Label Content="{Binding PostTripleOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="4" Margin="28,59,0,0" Grid.Row="9" Background="#FFD1D1D1" Grid.ColumnSpan="5"/>
+                        <Label Content="Poya OT Duration" Grid.Column="4" Margin="0,6,11,87" Grid.Row="8" Foreground="Black" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="10,7,0,0" TextWrapping="Wrap" Text="{Binding PostPoyaOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="140" Height="23" Grid.Column="7" Grid.Row="8" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                        <Label Content="Poya OT Round-Up" Grid.Column="10" Margin="21,5,110,88" Grid.Row="8" Foreground="Black" Grid.RowSpan="2"/>
+                        <xctk:MaskedTextBox Mask="###" HorizontalAlignment="Left" Margin="185,7,0,0" TextWrapping="Wrap" Text="{Binding PostPoyaOtRound, StringFormat=\{0:+##;-##;0\}, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="33" Height="22" Grid.Column="10" Grid.Row="8" Grid.RowSpan="2"/>
+                        <Label Content="Poya OT&#xA;End" Grid.Column="9" Margin="18,53,66,10" Grid.Row="9" Foreground="Black" FontSize="8"/>
+                        <Label Content="{Binding PostPoyaOtTime}" ContentStringFormat="yyyy/MM/dd hh:mm:ss tt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="140" Grid.Column="9" Margin="73,59,0,0" Grid.Row="9" Background="#FFD1D1D1" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+            <TabItem Header="Additional Day Details" Margin="2,1,27,-2" >
+                <AdornerDecorator>
+                    <Grid Height="253.873" Margin="0,2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="0*"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="162*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.ColumnSpan="3" Height="244" Margin="26,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="12*"/>
+                                <RowDefinition Height="31*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="27*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="26*"/>
+                                <RowDefinition Height="1"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0*"/>
+                                <ColumnDefinition Width="96*"/>
+                                <ColumnDefinition Width="131*"/>
+                                <ColumnDefinition Width="39*"/>
+                                <ColumnDefinition Width="122*"/>
+                                <ColumnDefinition Width="236*"/>
+                                <ColumnDefinition Width="0*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Days count" HorizontalAlignment="Left" Height="26" Margin="1,0,0,0" VerticalAlignment="Top" Width="93" Grid.Row="1" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="From" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="93" Grid.Row="3" Grid.Column="1" Foreground="Black" Margin="1,2,0,0"/>
+                            <Label Content="To" HorizontalAlignment="Left" Margin="1,0,0,2" Width="93" Grid.Row="5" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Start time" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="93" Grid.Row="7" Grid.Column="1" Foreground="Black" Margin="1,3,0,0"/>
+                            <Label Content="End time" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="93" Grid.Row="9" Grid.Column="1" Foreground="Black" Margin="1,2,0,0"/>
+                            <Label Content="Check with type" Height="25" VerticalAlignment="Top" Grid.Row="11" Grid.Column="1" Foreground="Black" Margin="0,1,0,0" HorizontalAlignment="Left" Width="94"/>
+                            <Label Content="Work time duration" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="116" Grid.Row="11" Grid.Column="4" Foreground="Black"/>
+                            <TextBox Text="{Binding AdditionalDayCount, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="1" Margin="2,0,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding AdditionalDayFromTime, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsCheckTypeNotWork}" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="3" Margin="2,0,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding AdditionalDayToTime, Mode=TwoWay, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsCheckTypeNotWork}" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="5" Margin="2,0,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding AdditionalDayWorkStartTime, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsCheckTypeWork}" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="7" Margin="2,0,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding AdditionalDayWorkEndTime, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsCheckTypeWork}" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="9" Margin="2,2,0,0"/>
+                            <ComboBox ItemsSource="{Binding CheckTypes}" DisplayMemberPath="Value" SelectedValuePath="Key" SelectedValue="{Binding CurrentCheckType, Mode=TwoWay}" Grid.Column="2" Grid.Row="11" Margin="2,1,0,3" HorizontalAlignment="Left" Width="117"/>
+                            <Label Content="Day" Height="29" VerticalAlignment="Top" Grid.Row="3" Grid.Column="3" Foreground="Black" Margin="0,1,0,0" HorizontalAlignment="Left" Width="39"/>
+                            <Label Content="Day" Height="26" VerticalAlignment="Top" Grid.Row="5" Grid.Column="3" Foreground="Black" Margin="0,2,0,0" HorizontalAlignment="Left" Width="39"/>
+                            <Label Content="Day" Height="26" VerticalAlignment="Top" Grid.Row="7" Grid.Column="3" Foreground="Black" Margin="0,3,0,0"/>
+                            <Label Content="Day" Height="26" VerticalAlignment="Top" Grid.Row="9" Grid.Column="3" Foreground="Black" Margin="0,2,0,0" Grid.RowSpan="2"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value" SelectedItem="{Binding AdditionalDayFromDay}" SelectedValue="{Binding AdditionalDayFromDayValue}" IsEnabled="{Binding IsCheckTypeNotWork}" Grid.Column="4" Margin="0,2,0,0" Grid.Row="3" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="116"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value" SelectedItem="{Binding AdditionalDayToDay}" SelectedValue="{Binding AdditionalDayToDayValue}" IsEnabled="{Binding IsCheckTypeNotWork}" Grid.Column="4" Margin="0,2,0,0" Grid.Row="5" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="116"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value" SelectedItem="{Binding AdditionalDayWorkStartDay}" SelectedValue="{Binding AdditionalDayWorkStartDayValue}" IsEnabled="{Binding IsCheckTypeWork}" Grid.Column="4" HorizontalAlignment="Left" Margin="0,3,0,0" Grid.Row="7" VerticalAlignment="Top" Width="116" Height="22"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value" SelectedItem="{Binding AdditionalDayWorkEndDay}" SelectedValue="{Binding AdditionalDayWorkEndDayValue}" IsEnabled="{Binding IsCheckTypeWork}" Grid.Column="4" HorizontalAlignment="Left" Margin="0,4,0,0" Grid.Row="9" VerticalAlignment="Top" Width="116" Height="22"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" Text="{Binding AdditionalDayWorkTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsCheckTypeWork}" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="5" Grid.Row="11" Margin="10,1,0,0"/>
+                            <Button Command="{Binding AdditionalDayAddButton}" Content="ADD" Grid.Column="5" HorizontalAlignment="Left" Margin="85,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                            <Button Command="{Binding AdditionalDayRemoveButton}" Content="REMOVE" Grid.Column="5" HorizontalAlignment="Left" Margin="159,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                            <DataGrid ItemsSource="{Binding AdditionalDays}" SelectedItem="{Binding CurrentAdditionalDay}" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="216" Height="147" Grid.RowSpan="7" >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding addition_day_description}" Width="*" Header="Additional day"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <TextBox Text="{Binding AdditionalDayDescription, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Height="24" Grid.Column="4" Grid.Row="1"/>
+                            <Label Content="Description" Height="26" VerticalAlignment="Top" Grid.Row="1" Grid.Column="3" Foreground="Black" HorizontalAlignment="Left" Width="39"/>
+                            <Button Command="{Binding AdditionalDayNewButton}" Content="NEW" Grid.Column="5" HorizontalAlignment="Left" Margin="10,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                        </Grid>
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+            <TabItem Header="Shift Break Details" Margin="-24,0,60,0" >
+                <AdornerDecorator>
+                    <Grid Height="253.873" Margin="0,2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="0*"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="162*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.ColumnSpan="3" Height="244" Margin="26,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="12*"/>
+                                <RowDefinition Height="31*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="27*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="26*"/>
+                                <RowDefinition Height="1"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0*"/>
+                                <ColumnDefinition Width="96*"/>
+                                <ColumnDefinition Width="131*"/>
+                                <ColumnDefinition Width="39*"/>
+                                <ColumnDefinition Width="122*"/>
+                                <ColumnDefinition Width="236*"/>
+                                <ColumnDefinition Width="0*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Description" Height="26" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Foreground="Black" HorizontalAlignment="Left" Width="94"/>
+                            <Label Content="break-on" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="93" Grid.Row="3" Grid.Column="1" Foreground="Black" Margin="1,2,0,0"/>
+                            <Label Content="break-off" HorizontalAlignment="Left" Margin="1,0,0,2" Width="93" Grid.Row="5" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="break in" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="93" Grid.Row="7" Grid.Column="1" Foreground="Black" Margin="1,3,0,0"/>
+                            <Label Content="break out" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="93" Grid.Row="9" Grid.Column="1" Foreground="Black" Margin="1,2,0,0"/>
+                            <Label Content="Day" Height="29" VerticalAlignment="Top" Grid.Row="3" Grid.Column="3" Foreground="Black" Margin="0,1,0,0" HorizontalAlignment="Left" Width="39"/>
+                            <Label Content="Day" Height="26" VerticalAlignment="Top" Grid.Row="5" Grid.Column="3" Foreground="Black" Margin="0,2,0,0" HorizontalAlignment="Left" Width="39"/>
+                            <Label Content="Day" Height="26" VerticalAlignment="Top" Grid.Row="7" Grid.Column="3" Foreground="Black" Margin="0,3,0,0"/>
+                            <Label Content="Day" Height="26" VerticalAlignment="Top" Grid.Row="9" Grid.Column="3" Foreground="Black" Margin="0,2,0,0" Grid.RowSpan="2"/>
+                            <TextBox Text="{Binding BreakDescription, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="1" Margin="2,0,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding BreakOnTime, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="3" Margin="2,0,0,0"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value"  SelectedValue="{Binding BreakOnDayValue}"  Grid.Column="4" Margin="0,2,0,0" Grid.Row="3" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="116"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding BreakOffTime, Mode=TwoWay, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="5" Margin="2,0,0,0"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value"  SelectedValue="{Binding BreakOffDayValue}"  Grid.Column="4" Margin="0,2,0,0" Grid.Row="5" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="116"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding BreakInTime, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="7" Margin="2,0,0,0"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value"  SelectedValue="{Binding BreakInDayValue}" Grid.Column="4" HorizontalAlignment="Left" Margin="0,3,0,0" Grid.Row="7" VerticalAlignment="Top" Width="116" Height="22"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding BreakOutTime, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="9" Margin="2,2,0,0"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value"  SelectedValue="{Binding BreakOutDayValue}"  Grid.Column="4" HorizontalAlignment="Left" Margin="0,4,0,0" Grid.Row="9" VerticalAlignment="Top" Width="116" Height="22"/>
+                            <Button Command="{Binding BreakAddButton}" Content="ADD" Grid.Column="5" HorizontalAlignment="Left" Margin="85,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                            <Button Command="{Binding BreakRemoveButton}" Content="REMOVE" Grid.Column="5" HorizontalAlignment="Left" Margin="158,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                            <DataGrid ItemsSource="{Binding ShiftBreaks}" SelectedItem="{Binding CurrentShiftBreak}" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="216" Height="147" Grid.RowSpan="7" >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding break_description}" Width="*" Header="Shift breaks"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <Button Command="{Binding BreakNewButton}" Content="NEW" Grid.Column="5" HorizontalAlignment="Left" Margin="10,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                        </Grid>
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+            <TabItem Header="Shift Covering Details" Margin="-54,0,85,0" Height="21" VerticalAlignment="Bottom" >
+                <AdornerDecorator>
+                    <Grid Height="253.873" Margin="0,2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="0*"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="162*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.ColumnSpan="3" Height="244" Margin="26,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="12*"/>
+                                <RowDefinition Height="31*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="27*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="26*"/>
+                                <RowDefinition Height="1"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0*"/>
+                                <ColumnDefinition Width="96*"/>
+                                <ColumnDefinition Width="131*"/>
+                                <ColumnDefinition Width="39*"/>
+                                <ColumnDefinition Width="122*"/>
+                                <ColumnDefinition Width="236*"/>
+                                <ColumnDefinition Width="0*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Description" Height="26" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Foreground="Black" HorizontalAlignment="Left" Width="94"/>
+                            <Label Content="Covering-on" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="93" Grid.Row="3" Grid.Column="1" Foreground="Black" Margin="1,2,0,0"/>
+                            <Label Content="Covering-off" HorizontalAlignment="Left" Margin="1,0,0,2" Width="93" Grid.Row="5" Grid.Column="1" Foreground="Black"/>
+                            <Label Content="Maximum late" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="93" Grid.Row="7" Grid.Column="1" Foreground="Black" Margin="1,3,0,0"/>
+                            <Label Content="Effect time" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="93" Grid.Row="9" Grid.Column="1" Foreground="Black" Margin="1,2,0,0"/>
+                            <Label Content="Day" Height="29" VerticalAlignment="Top" Grid.Row="3" Grid.Column="3" Foreground="Black" Margin="0,1,0,0" HorizontalAlignment="Left" Width="39"/>
+                            <Label Content="Day" Height="26" VerticalAlignment="Top" Grid.Row="5" Grid.Column="3" Foreground="Black" Margin="0,2,0,0" HorizontalAlignment="Left" Width="39"/>
+                            <TextBox Text="{Binding CoverDescription, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="1" Margin="2,0,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding CoverOnTime, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Height="24" Grid.Column="2" Grid.Row="3" Margin="2,0,0,0"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value"  SelectedValue="{Binding CoverOnDayValue}"  Grid.Column="4" Margin="0,2,0,0" Grid.Row="3" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="116"/>
+                            <xctk:MaskedTextBox ToolTip="HH:MM" Mask="00:00" Text="{Binding CoverOffTime, Mode=TwoWay, StringFormat=\{0:hh\':\'mm\}, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="5" Margin="2,0,0,0"/>
+                            <ComboBox ItemsSource="{Binding ShiftDayRanges}" DisplayMemberPath="day_description" SelectedValuePath="day_value"  SelectedValue="{Binding CoverOffDayValue}"  Grid.Column="4" Margin="0,2,0,0" Grid.Row="5" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="116"/>
+                            <Button Command="{Binding CoverAddButton}" Content="ADD" Grid.Column="5" HorizontalAlignment="Left" Margin="85,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                            <Button Command="{Binding CoverRemoveButton}" Content="REMOVE" Grid.Column="5" HorizontalAlignment="Left" Margin="158,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                            <DataGrid ItemsSource="{Binding ShiftCover}" SelectedItem="{Binding CurrentShiftCover}" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="216" Height="147" Grid.RowSpan="7" >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding covering_Description}" Width="*" Header="Shift Covering"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <Button Command="{Binding CoverNewButton}" Content="NEW" Grid.Column="5" HorizontalAlignment="Left" Margin="10,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="22"/>
+                            <TextBox Text="{Binding CoverMaxLate, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="7" Margin="2,3,0,0"/>
+                            <TextBox Text="{Binding CoverEffTime, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Height="24" Grid.Column="2" Grid.Row="9" Margin="2,0,0,0"/>
+                        </Grid>
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+            <TabItem Header="Open Shift Details" Margin="-82,0,110,0" >
+                <AdornerDecorator>
+                    <Grid Height="253.873" Margin="0,2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="0*"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="162*"/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.ColumnSpan="3" Height="244" Margin="10,10,16,0" Grid.RowSpan="2" VerticalAlignment="Top">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="12*"/>
+                                <RowDefinition Height="31*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="27*"/>
+                                <RowDefinition Height="11*"/>
+                                <RowDefinition Height="26*"/>
+                                <RowDefinition Height="1"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0*"/>
+                                <ColumnDefinition Width="96*"/>
+                                <ColumnDefinition Width="131*"/>
+                                <ColumnDefinition Width="39*"/>
+                                <ColumnDefinition Width="122*"/>
+                                <ColumnDefinition Width="236*"/>
+                                <ColumnDefinition Width="0*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Minimum work Duration" Height="29" VerticalAlignment="Top" Grid.Column="1" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="48,4,0,0" TextWrapping="Wrap" Text="{Binding OpenShiftMinWordDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShift}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="2" Grid.RowSpan="2"/>
+                            <CheckBox IsChecked="{Binding IsOpenShiftLate}" Content="Late Applicable" HorizontalAlignment="Left" Width="105" HorizontalContentAlignment="Center" Margin="45,8,0,0" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="3" />
+                            <CheckBox IsChecked="{Binding IsOpenShiftOT}" Content="OT Applicable" HorizontalAlignment="Left" Width="96" HorizontalContentAlignment="Center" Margin="10,8,0,0" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" />
+                            <Label Content="No OT Duration" Height="29" VerticalAlignment="Top" Grid.Column="1" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="39,2,0,0" Grid.Row="4"/>
+                            <Label Content="Single OT Duration" Height="29" VerticalAlignment="Top" Grid.Column="1" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="39,23,0,0" Grid.Row="5"/>
+                            <Label Content="Double OT Duration" Height="29" VerticalAlignment="Top" Grid.Column="1" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="39,10,0,0" Grid.Row="7"/>
+                            <Label Content="Triple OT Duration" Height="29" VerticalAlignment="Top" Grid.Column="1" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="39,2,0,0" Grid.Row="9"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="87,6,0,0" TextWrapping="Wrap" Text="{Binding OpenShiftNoOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShiftOT}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="2" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="2"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="87,26,0,0" TextWrapping="Wrap" Text="{Binding OpenShiftSingleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShiftOT}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="2" Grid.RowSpan="3" Grid.Row="5" Grid.ColumnSpan="2"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="87,12,0,0" TextWrapping="Wrap" Text="{Binding OpenShiftDoubleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShiftOT}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="87,2,0,0" TextWrapping="Wrap" Text="{Binding OpenShiftTripleOtDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShiftOT}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="2"/>
+                            <Label Content="Short Leave Duration" Height="29" VerticalAlignment="Top" Grid.Column="4" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="71,24,0,0" Grid.Row="5"/>
+                            <Label Content="Late Duration" Height="29" VerticalAlignment="Top" Grid.Column="4" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="71,5,0,0" Grid.Row="4"/>
+                            <Label Content="Half Day Duration" Height="29" VerticalAlignment="Top" Grid.Column="4" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="71,13,0,0" Grid.Row="7" RenderTransformOrigin="0.511,0.793"/>
+                            <Label Content="Full Day Duration" Height="29" VerticalAlignment="Top" Grid.Column="4" Foreground="Black" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="71,1,0,0" Grid.Row="9" RenderTransformOrigin="0.511,0.793"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding OpenShiftShotLeaveTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShiftLate}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="5" Grid.Row="5" Margin="123,27,0,0" Grid.RowSpan="3"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding OpenShiftLateDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShiftLate}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="5" Grid.Row="4" Margin="123,7,0,0" Grid.RowSpan="2"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding OpenShiftHalfDayTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShiftLate}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="5" Grid.RowSpan="2" Grid.Row="7" Margin="123,15,0,0"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding OpenShiftFullDayTimeDuration, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShiftLate}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="5" Grid.Row="9" Margin="123,2,0,0"/>
+                            <Label Content="Minimum work Duration for Week" Height="29" VerticalAlignment="Top" Grid.Column="4" Foreground="Black" HorizontalAlignment="Left" Width="195" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="45,0,0,0"/>
+                            <Label Content="Minimum work Duration for Month" Height="29" VerticalAlignment="Top" Grid.Column="4" Foreground="Black" HorizontalAlignment="Left" Width="200" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="45,12,0,0" Grid.Row="1"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="123,-1,0,0" TextWrapping="Wrap" Text="{Binding OpenShiftMinWordDurationforWeek, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShift}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="5" Grid.RowSpan="2"/>
+                            <xctk:MaskedTextBox ToolTip="DD.HH:MM" Mask="00.00:00" HorizontalAlignment="Left" Margin="123,12,0,0" TextWrapping="Wrap" Text="{Binding OpenShiftMinWordDurationforMonth, StringFormat=\{0:dd\'.\'hh\':\'mm\}, ValidatesOnDataErrors=True}" IsEnabled="{Binding IsOpenShift}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}" VerticalAlignment="Top" Width="83" Height="23" Grid.Column="5" Grid.RowSpan="2" Grid.Row="1"/>
+
+                        </Grid>
+                    </Grid>
+                </AdornerDecorator>
+            </TabItem>
+        </TabControl>
+        <Button Command="{Binding NewButton}" Content="New" HorizontalAlignment="Left" Margin="24,19,0,0" VerticalAlignment="Top" Width="65" Height="25" BorderBrush="{x:Null}" Grid.Row="6" Grid.Column="8" Foreground="Black" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+        <Button Command="{Binding SaveButton}" Content="Save" HorizontalAlignment="Left" Margin="27,19,0,0" VerticalAlignment="Top" Width="65" Height="25" BorderBrush="{x:Null}" Grid.Row="6" Grid.Column="10" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button Command="{Binding DeleteButton}" Content="Delete" Margin="26,19,0,6" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="65" Grid.Row="6" Grid.Column="11" Height="25" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <ComboBox ItemsSource="{Binding ShiftCategories}" SelectedItem="{Binding CurrentShiftCategory}" DisplayMemberPath="shift_category_name" SelectedValuePath="shift_category_id" Grid.Column="4" HorizontalAlignment="Left" Margin="0,4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="170" Height="23"/>
+        <Label Content="Shifts" Margin="41,1,0,2" FontSize="13.333" Foreground="White" Grid.Column="7" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <ComboBox ItemsSource="{Binding Shifts}" SelectedItem="{Binding CurrentShift}" DisplayMemberPath="shift_detail_name" SelectedValuePath="shift_detail_id" Grid.Column="9" HorizontalAlignment="Left" Margin="17,7,0,0" Grid.Row="2" VerticalAlignment="Top" Width="166" Height="23" Grid.ColumnSpan="4"/>
+    </Grid>
+</Window>

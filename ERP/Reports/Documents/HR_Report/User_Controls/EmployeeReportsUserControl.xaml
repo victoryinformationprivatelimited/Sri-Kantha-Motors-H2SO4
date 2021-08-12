@@ -1,0 +1,403 @@
+﻿<UserControl x:Class="ERP.Reports.Documents.HR_Report.User_Controls.EmployeeReportsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="474.297" Width="873.037">
+    <UserControl.Resources>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FFBDBCBC"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF0097FF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF017ACD"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FFBDBCBC"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FFBDBCBC"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF0D78C2"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF0D78C2"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFBDBCBC"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF5F5F5F"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.3" Value="Black"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF5F5F5F"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Width="65" VerticalAlignment="Top" StrokeThickness="1" Stroke="#FFBDBCBC" RadiusX="0" RadiusY="0" Height="25" HorizontalAlignment="Left">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.506,0.305" StartPoint="0.501,1.026">
+                                        <GradientStop Color="White" Offset="0"/>
+                                        <GradientStop Color="#FFE4E4E4" Offset="0.992"/>
+                                        <GradientStop Color="#FFEAE7E7"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle Width="61.398" VerticalAlignment="Stretch" StrokeThickness="2" Stroke="{x:Null}" RadiusX="2" RadiusY="2" Opacity="0.75" Margin="1.668,2.085,0,14.668" Height="Auto" HorizontalAlignment="Left" Fill="#FFFFF8F8"/>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                            <Label x:Name="label" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44.833" Margin="11.335,0,0,0" Foreground="#FF5F5F5F"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FFBDBCBC"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF0097FF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF017ACD"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FFBDBCBC"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FFBDBCBC"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF0D78C2"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF0D78C2"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFBDBCBC"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FF5F5F5F"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.3" Value="Black"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="label">
+                                    <EasingColorKeyFrame KeyTime="0" Value="Black"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF5F5F5F"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Width="65" VerticalAlignment="Top" StrokeThickness="1" Stroke="#FFBDBCBC" RadiusX="0" RadiusY="0" Height="25" HorizontalAlignment="Left">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.506,0.305" StartPoint="0.501,1.026">
+                                        <GradientStop Color="White" Offset="0"/>
+                                        <GradientStop Color="#FFE4E4E4" Offset="0.992"/>
+                                        <GradientStop Color="#FFEAE7E7"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle Width="61.398" VerticalAlignment="Stretch" StrokeThickness="2" Stroke="{x:Null}" RadiusX="2" RadiusY="2" Opacity="0.75" Margin="1.668,2.085,0,14.668" Height="Auto" HorizontalAlignment="Left" Fill="#FFFFF8F8"/>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                            <Label x:Name="label" Content="Print" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44.833" Margin="11.335,0,0,0" Foreground="#FF5F5F5F"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ImageStyle2" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.495"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="-2.497,-3.17,-2.497,-1.335">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Opacity="0" Stroke="White" Margin="-2.995,-3.083,-2.995,-3.006" Fill="{x:Null}" Width="Auto" Height="Auto"/>
+                            <Image x:Name="image" Margin="2.662,2.339,3.247,2.254" Source="/ERP;component/Images/appbar.close.png" Stretch="Fill" Width="Auto" Height="Auto" Style="{DynamicResource ImageStyle2}" OpacityMask="#FF010000" Opacity="0.5"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#FF233555" Margin="-1,7,10,-7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="302*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="225*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox IsEditable="True" ItemsSource="{Binding Depatments}" DisplayMemberPath="department_name" SelectedItem="{Binding CurrentDepatments}"
+			x:Name="Department" HorizontalAlignment="Left" Margin="104,1,0,0" VerticalAlignment="Top" Width="220" Height="23" Grid.Row="4" Grid.Column="2" Grid.RowSpan="2"/>
+        <ComboBox  ItemsSource="{Binding Section}" DisplayMemberPath="section_name" SelectedItem="{Binding CurrentSection}" IsEditable="True" x:Name="Section" VerticalAlignment="Top" Height="23" Margin="104,0,59,0" Grid.Row="6" Grid.Column="2"/>
+        <ComboBox  x:Name="designation" ItemsSource="{Binding Designations}" DisplayMemberPath="designation" SelectedItem="{Binding CurrentDesignations}" IsEditable="True" HorizontalAlignment="Right" Width="206" Margin="0,1,2.324,13" Grid.Row="2" Grid.Column="5"  Grid.RowSpan="2"/>
+        <ComboBox  x:Name="grade" ItemsSource="{Binding Grade}" SelectedItem="{Binding CurrentGrade}" DisplayMemberPath="grade" IsEditable="True" HorizontalAlignment="Right" VerticalAlignment="Top" Width="206" Height="23" Margin="0,0,2.324,0" Grid.Row="4" Grid.Column="5"/>
+        <Button Command="{Binding CleanButton}" x:Name="button1_Copy2" Content="Clear " Margin="171,1,0,0" Style="{DynamicResource ButtonStyle1}" Foreground="#FF5F5F5F" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold" HorizontalAlignment="Left" Width="67" Grid.Row="15" Grid.Column="5" Height="25" VerticalAlignment="Top" Grid.RowSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button  Command="{Binding PrintBTN}" Content="Print" x:Name="botton_print" Margin="261,1,0,0" Style="{DynamicResource ButtonStyle2}"  Foreground="#FF5F5F5F" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Semibold" HorizontalAlignment="Left" Width="66" Grid.Row="15" Grid.Column="5" Height="25" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <ComboBox  x:Name="gender"  ItemsSource="{Binding Gender}" SelectedItem="{Binding CurrentGender}" DisplayMemberPath="gender" IsEditable="True" VerticalAlignment="Top" Height="23" Margin="0,3,174,0" Grid.Row="10" Grid.Column="2" HorizontalAlignment="Right" Width="106" Grid.RowSpan="2"/>
+        <ComboBox x:Name="civil" ItemsSource="{Binding Civil}" SelectedItem="{Binding CurrentCivil}" DisplayMemberPath="civil_status" IsEditable="True" VerticalAlignment="Top" Height="23" Margin="104,3,172,0" Grid.Row="12" Grid.Column="2" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CompanyBranch" ItemsSource="{Binding Branch}" DisplayMemberPath="companyBranch_Name" SelectedItem="{Binding CurrentBranch}" IsEditable="True" HorizontalAlignment="Left" Width="219" Margin="104,1,0,13" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"/>
+        <Rectangle Grid.RowSpan="2" Grid.ColumnSpan="9" Height="42" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF18233A" Offset="0"/>
+                    <GradientStop Color="#FF18233A" Offset="0.996"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.518"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Employee Details" HorizontalAlignment="Left" Width="238" Height="32" VerticalAlignment="Top" FontSize="14.667" FontWeight="Bold" Foreground="White" Margin="21,6,0,0" Grid.RowSpan="2" Grid.Column="2">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="3" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <Image HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="40" Source="/ERP;component/Images/Pay_Sheet_reports.png" Stretch="Fill" Margin="2,4,0,0" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Rectangle Stroke="#FF4D85C3" Grid.Row="1" Margin="0,32,0,0" Grid.ColumnSpan="9" Height="12" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF81818B" Offset="0"/>
+                    <GradientStop Color="#FF81818B" Offset="1"/>
+                    <GradientStop Color="#FFC4C4D3" Offset="0.518"/>
+                    <GradientStop Color="#FFC4C4D3" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <ComboBox  ItemsSource="{Binding Religen}" SelectedItem="{Binding CurrentReligen}" DisplayMemberPath="religen_name"  IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Height="23" Margin="78,1,0,0" Grid.Row="12" Grid.Column="5"/>
+        <ComboBox ItemsSource="{Binding Payment}" SelectedItem="{Binding CurrentPayment}" DisplayMemberPath="payment_method" IsEditable="True"  HorizontalAlignment="Right" VerticalAlignment="Top" Width="145" Height="23" Margin="0,11,63,0" Grid.Row="9" Grid.Column="5" Grid.RowSpan="2"/>
+        <Button x:Name="button2" Content="Button"  Grid.Column="7" Margin="62,6,4,24" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="button2_Click_1" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Company" Grid.Column="1" HorizontalAlignment="Left" Margin="10,1,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="99" Height="26" Grid.RowSpan="2" Foreground="White"/>
+        <Label Content="Department" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,13" Grid.Row="4" Grid.ColumnSpan="2" Width="99" Grid.RowSpan="2" Foreground="White"/>
+        <Label Content="Section" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" Grid.ColumnSpan="2" Width="99" Foreground="White"/>
+        <Label Content="Gender" Grid.Column="1" HorizontalAlignment="Left" Margin="10,11,0,0" Grid.Row="9" Grid.ColumnSpan="2" Width="99" Grid.RowSpan="2" Foreground="White"/>
+        <Label Content="Civil Status" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,10" Grid.Row="12" Grid.ColumnSpan="2" Width="99" Grid.RowSpan="2" Foreground="White"/>
+        <Label Content="Religion" Grid.Column="2" HorizontalAlignment="Left" Margin="372,8,0,0" Grid.Row="11" Width="99" Grid.RowSpan="2" Grid.ColumnSpan="4" Foreground="White"/>
+        <Label Content="Pay Method" Grid.Column="2" HorizontalAlignment="Left" Margin="372,0,0,8" Grid.Row="10" Width="88" Grid.RowSpan="2" Grid.ColumnSpan="4" Foreground="White"/>
+        <Label Content="Designation" Grid.Column="2" HorizontalAlignment="Left" Margin="372,0,0,11" Grid.Row="2" Grid.ColumnSpan="4" Width="99" Grid.RowSpan="2" Foreground="White"/>
+        <Label Content="Grade" Grid.Column="2" HorizontalAlignment="Left" Margin="372,1,0,12" Grid.Row="4" Grid.ColumnSpan="4" Width="99" Grid.RowSpan="2" Foreground="White"/>
+        <Label Content="City" Grid.Column="2" HorizontalAlignment="Left" Margin="372,0,0,0" Grid.Row="6" Grid.ColumnSpan="4" Width="99" Height="26" VerticalAlignment="Top" Foreground="White"/>
+        <ComboBox  x:Name="grade_Copy" ItemsSource="{Binding City}" SelectedItem="{Binding CurrentCity}" DisplayMemberPath="city" IsEditable="True" HorizontalAlignment="Right" VerticalAlignment="Top" Width="206" Height="23" Margin="0,0,2,0" Grid.Row="6" Grid.Column="5"/>
+        <Label Content="Town" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,9" Grid.Row="8" Grid.ColumnSpan="2" Width="99" Grid.RowSpan="2" Foreground="White"/>
+        <ComboBox  x:Name="grade_Copy1" ItemsSource="{Binding Town}" SelectedItem="{Binding CurrentTown}" DisplayMemberPath="town_name" IsEditable="True" HorizontalAlignment="Right" VerticalAlignment="Top" Width="218" Height="23" Margin="0,0,62,0" Grid.Row="8" Grid.Column="2" Grid.RowSpan="2"/>
+        <RadioButton Content="Employee Personal Details" IsChecked="{Binding EPersonal}" Grid.Column="1" HorizontalAlignment="Left" Margin="19,2,0,0" Grid.Row="16" VerticalAlignment="Top" Width="163" RenderTransformOrigin="1.085,0.951" Grid.ColumnSpan="2" Foreground="White"/>
+        <RadioButton Content="Employee Company Details" IsChecked="{Binding ECompany}" Grid.Column="2" HorizontalAlignment="Left" Margin="223,2,0,0" Grid.Row="16" VerticalAlignment="Top" Width="163" RenderTransformOrigin="0.454,3.267" Grid.ColumnSpan="2" Foreground="White"/>
+        <Label Content="Sub department" Grid.Column="2" HorizontalAlignment="Left" Margin="372,10,0,0" Grid.Row="7" Grid.ColumnSpan="4" Width="99" Height="26" VerticalAlignment="Top" Grid.RowSpan="2" Foreground="White"/>
+        <ComboBox  x:Name="grade_Copy2" ItemsSource="{Binding SubDepartment}" SelectedItem="{Binding CurrentSubDepartment}" DisplayMemberPath="blood_type" IsEditable="True" VerticalAlignment="Top" Height="23" Margin="0,2,2,0" Grid.Row="8" Grid.Column="5" Grid.RowSpan="2" HorizontalAlignment="Right" Width="206"/>
+        <RadioButton Visibility="Collapsed" Content="Employee Simple Details" IsChecked="{Binding ESimplePersonal}" Grid.Column="1" HorizontalAlignment="Left" Margin="19,0,0,0" Grid.Row="14" VerticalAlignment="Top" Width="163" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</UserControl>

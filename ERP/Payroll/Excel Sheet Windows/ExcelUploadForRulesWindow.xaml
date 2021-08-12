@@ -1,0 +1,18 @@
+﻿<Window x:Class="ERP.Payroll.Excel_Sheet_Windows.ExcelUploadForRulesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ExcelUploadForRulesWindow" Height="350" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Payment Period" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="Rule Name" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="period_name" HorizontalAlignment="Left" Margin="127,54,0,0" VerticalAlignment="Top" Width="216"/>
+        <ComboBox ItemsSource="{Binding CompanyRules}" SelectedItem="{Binding CurrentCompanyRule}" DisplayMemberPath="rule_name" HorizontalAlignment="Left" Margin="127,93,0,0" VerticalAlignment="Top" Width="216"/>
+        <Button Command="{Binding BtnStart}" Content="Upload" HorizontalAlignment="Left" Margin="166,206,0,0" VerticalAlignment="Top" Width="86" Height="29"/>
+        <Label Content="Rule Name" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Path}" HorizontalAlignment="Left" Height="23" Margin="127,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"/>
+        <Button Command="{Binding BtnBrowse}" Content="Browse" HorizontalAlignment="Left" Margin="373,140,0,0" VerticalAlignment="Top" Width="86" Height="23"/>
+        <Button Command="{Binding BtnProcess}" Content="Process" HorizontalAlignment="Left" Margin="166,267,0,0" VerticalAlignment="Top" Width="86" Height="29"/>
+        <CheckBox IsChecked="{Binding IsEffectToPayee}" Content="Is Effect To Payee" HorizontalAlignment="Left" Margin="166,171,0,0" VerticalAlignment="Top" Height="19" Width="126"/>
+
+    </Grid>
+</Window>

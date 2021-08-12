@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="ERP.Leave.Holiday_Detail.HolidayUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="444.776" Width="652.239">
+    <Grid Background="#FF2B3D5D">
+        <Label Content="Holiday Date" HorizontalAlignment="Left" Margin="45,30,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <DatePicker SelectedDate="{Binding CurrentHoliday.holiday_Date}" HorizontalAlignment="Left" Margin="182,32,0,0" VerticalAlignment="Top" Width="148"/>
+        <Label Content="Holiday Description" HorizontalAlignment="Left" Margin="45,70,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox Text="{Binding CurrentHoliday.holiday_Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   HorizontalAlignment="Left" Height="23" Margin="182,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"/>
+        <Label Content="Public Holiday" HorizontalAlignment="Left" Margin="45,108,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox IsChecked="{Binding CurrentHoliday.isPublicHoliday}"  HorizontalAlignment="Left" Margin="182,119,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label Content="Bank Holiday" HorizontalAlignment="Left" Margin="45,148,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox  IsChecked="{Binding CurrentHoliday.isBankHoliday}" HorizontalAlignment="Left" Margin="182,159,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label Content="Mercantile Holiday" HorizontalAlignment="Left" Margin="438,108,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox IsChecked="{Binding CurrentHoliday.isMercantileHoliday}"   HorizontalAlignment="Left" Margin="575,119,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label Content="Poya Holiday" HorizontalAlignment="Left" Margin="257,108,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox IsChecked="{Binding CurrentHoliday.isPoyaHoliday}" HorizontalAlignment="Left" Margin="385,119,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label Content="Company Holiday" HorizontalAlignment="Left" Margin="257,148,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox IsChecked="{Binding CurrentHoliday.isCompanyHoliday}"  HorizontalAlignment="Left" Margin="385,148,0,0" VerticalAlignment="Top" Width="35"/>
+        <DataGrid SelectedItem="{Binding Path=CurrentHoliday}" AutoGenerateColumns="False" ItemsSource="{Binding Path=Holidays}"  HorizontalAlignment="Left" Margin="45,206,0,0" VerticalAlignment="Top" Height="146" Width="533">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Holiday Date" Binding="{Binding holiday_Date,StringFormat={}{0:dd/MM/yyyy}}" Width="*" />
+                <DataGridTextColumn Header="Description" Binding="{Binding holiday_Description}" Width="*" />
+                <DataGridCheckBoxColumn Header="Public" Binding="{Binding isPublicHoliday}" Width="*"/>
+                <DataGridCheckBoxColumn Header="Bank" Binding="{Binding isPublicHoliday}" Width="*"/>
+                <DataGridCheckBoxColumn Header="Mercantile" Binding="{Binding isMercantileHoliday}" Width="*"/>
+                <DataGridCheckBoxColumn Header="Poya" Binding="{Binding isPoyaHoliday}" Width="*"/>
+                <DataGridCheckBoxColumn Header="Company" Binding="{Binding isCompanyHoliday}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Command="{Binding Path=NewBtn}" Content="New" HorizontalAlignment="Left" Margin="376,357,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding SaveBtn}" Content="Save" HorizontalAlignment="Left" Margin="463,357,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding Path=DeleteBtn}" Content="Delete" HorizontalAlignment="Left" Margin="558,357,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="ERP.Reports.Documents.HR_Report.User_Controls.LoanCheckListReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoanCheckListReportWindow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="350" Width="400">
+    <Grid>
+        <Button Command="{Binding ButtonSearchEmployee}" Content="Search Employee" HorizontalAlignment="Left" Margin="262,10,-71,0" VerticalAlignment="Top" Width="101" Height="27"/>
+        <Label Content="Employee No" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label Content="Employee Name" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Width="98"/>
+        <TextBox Text="{Binding CurrentEmployees.emp_id}" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="163,58,-71,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox Text="{Binding CurrentEmployees.first_name}" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="163,86,-71,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Employee NIC" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" Width="98"/>
+        <TextBox Text="{Binding CurrentEmployees.nic}" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="163,114,-71,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Guarantor 1" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Width="113"/>
+        <ComboBox IsEditable="True" ItemsSource="{Binding Guarantor}" SelectedItem="{Binding CurrentGuarantor1}" DisplayMemberPath="emp_id" HorizontalAlignment="Left" Margin="163,147,0,0" VerticalAlignment="Top" Width="68"/>
+        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="243,146,0,0" TextWrapping="Wrap" Text="{Binding CurrentGuarantor1.first_name}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Guarantor 2" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Width="113"/>
+        <ComboBox IsEditable="True" ItemsSource="{Binding Guarantor}" SelectedItem="{Binding CurrentGuarantor2}" DisplayMemberPath="emp_id" HorizontalAlignment="Left" Margin="163,178,0,0" VerticalAlignment="Top" Width="68"/>
+        <TextBox IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="243,177,0,0" TextWrapping="Wrap" Text="{Binding CurrentGuarantor2.first_name}" VerticalAlignment="Top" Width="120"/>
+        <Button Command="{Binding Print}" Content="Print" HorizontalAlignment="Left" Margin="288,279,0,0" VerticalAlignment="Top" Width="75" Height="26"/>
+        <Label Content="Loan Amount" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="113"/>
+        <TextBox Text="{Binding LoanAmount}" HorizontalAlignment="Left" Height="23" Margin="163,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Loan Installments" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Width="113"/>
+        <TextBox Text="{Binding LoanInstallments}" HorizontalAlignment="Left" Height="23" Margin="163,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+
+    </Grid>
+</Window>

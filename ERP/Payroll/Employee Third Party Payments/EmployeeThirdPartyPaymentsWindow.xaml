@@ -1,0 +1,17 @@
+﻿<Window x:Class="ERP.Payroll.Employee_Third_Party_Payments.EmployeeThirdPartyPaymentsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EmployeeThirdPartyPaymentsWindow" Height="350" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Payment Category" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="137"/>
+        <ComboBox ItemsSource="{Binding ThirdPartyPaymentCategories}" SelectedItem="{Binding CurrentThirdPartyPaymentCategories}" DisplayMemberPath="category_name" HorizontalAlignment="Left" Margin="127,18,0,0" VerticalAlignment="Top" Width="216"/>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="118"/>
+        <DatePicker SelectedDate="{Binding Date}" HorizontalAlignment="Left" Margin="128,59,0,0" VerticalAlignment="Top" Width="148"/>
+        <Button Command="{Binding BtnProcess}" Content="Process" HorizontalAlignment="Left" Margin="201,251,0,0" VerticalAlignment="Top" Width="75" Height="44"/>
+        <Button Command="{Binding BtnStart}" Content="Upload" HorizontalAlignment="Left" Margin="139,156,0,0" VerticalAlignment="Top" Width="194" Height="33"/>
+        <Label Content="Rule Name" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Path}" HorizontalAlignment="Left" Height="23" Margin="127,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"/>
+        <Button Command="{Binding BtnBrowse}" Content="Browse" HorizontalAlignment="Left" Margin="372,108,0,0" VerticalAlignment="Top" Width="86" Height="23"/>
+
+    </Grid>
+</Window>

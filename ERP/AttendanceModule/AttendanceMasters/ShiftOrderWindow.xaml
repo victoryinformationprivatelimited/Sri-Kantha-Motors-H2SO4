@@ -1,0 +1,134 @@
+﻿<Window x:Class="ERP.AttendanceModule.AttendanceMasters.ShiftOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ShiftOrderWindow" Height="300" Width="407" AllowsTransparency="True" WindowStyle="None">
+    <Window.Resources>
+        <Style x:Key="ImageStyle2" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.495"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="-2.497,-3.17,-2.497,-1.335">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Opacity="0" Stroke="White" Margin="-2.995,-3.083,-2.995,-3.006" Fill="{x:Null}" Width="Auto" Height="Auto"/>
+                            <Image x:Name="image" Margin="3,0,2.994,1.505" Source="/ERP;component/AttendanceModule/Resources/Images/appbar.close.png" Stretch="Fill" Width="Auto" Height="21" Style="{DynamicResource ImageStyle2}" OpacityMask="#FF010000" Opacity="0.5" VerticalAlignment="Bottom"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Rectangle x:Name="shiftOrderTitleBar" MouseLeftButtonDown="shiftOrderTitleBar_MouseLeftButtonDown"  Height="31" VerticalAlignment="Top" Margin="0,0,-2,0" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF18233A" Offset="0"/>
+                    <GradientStop Color="#FF18233A" Offset="1"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.518"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="shiftOrderTitle" MouseLeftButtonDown="shiftOrderTitle_MouseLeftButtonDown"  TextWrapping="Wrap"  Text="Shift Order" Foreground="White" FontSize="14.667" FontFamily="Segoe UI Symbol" FontWeight="Bold" HorizontalAlignment="Left" Width="81" Height="22" VerticalAlignment="Top" Margin="10,5,0,0"/>
+        <Button x:Name="shiftOrderCloseBtn" Click="shiftOrderCloseBtn_Click"   Content="Button" Margin="0,5,2,0" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5" Height="19" VerticalAlignment="Top" HorizontalAlignment="Right" Width="23" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <DataGrid ItemsSource="{Binding Shifts}" SelectedItem="{Binding CurrentShift}" AutoGenerateColumns="False" IsReadOnly="True" GridLinesVisibility="Horizontal" HorizontalAlignment="Left" Height="242" Margin="20,48,0,0" VerticalAlignment="Top" Width="292">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Binding="{Binding shift_detail_name}" Foreground="#1197BD" FontSize="16" FontWeight="Bold" />
+                <DataGridTextColumn Width="40" Binding="{Binding dtl_ShiftOrder.order_number}" FontSize="20" FontWeight="Bold"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Command="{Binding UpButton}" HorizontalAlignment="Left" Margin="338.5,105.5,0,0" VerticalAlignment="Top" Width="44.5" Height="37" Background="#FF58A65C">
+            <Button.Content>
+                <Image Source="/ERP;component/AttendanceModule/Resources/Images/arrow_up_rounder_black.png" Stretch="Uniform"/>
+            </Button.Content>
+        </Button>
+        <Button Command="{Binding DownButton}"  HorizontalAlignment="Left" Margin="338.5,164.5,0,0" VerticalAlignment="Top" Width="44.5" Height="37" Background="#FFCB5858" >
+            <Button.Content>
+                <Image Source="..\Resources\Images\arrow_down_rounder_black.png" Stretch="Uniform"/>
+            </Button.Content>
+        </Button>
+        <Button Command="{Binding SaveButton}" Content="Save" HorizontalAlignment="Left" Margin="322,260,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+
+    </Grid>
+</Window>

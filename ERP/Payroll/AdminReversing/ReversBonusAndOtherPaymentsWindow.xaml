@@ -1,0 +1,10 @@
+﻿<Window x:Class="ERP.Payroll.AdminReversing.ReversBonusAndOtherPaymentsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ReversBonusAndOtherPaymentsWindow" Height="200" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Bonus/Oher Payment" HorizontalAlignment="Left" Margin="7,35,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="Bonus_Period_Name" HorizontalAlignment="Left" Margin="139,39,0,0" VerticalAlignment="Top" Width="198"/>
+        <Button Command="{Binding btnReverse}" Content="Reverse" HorizontalAlignment="Left" Margin="158,102,0,0" VerticalAlignment="Top" Width="75" Height="29"/>
+    </Grid>
+</Window>

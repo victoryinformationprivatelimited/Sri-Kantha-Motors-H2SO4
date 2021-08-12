@@ -1,0 +1,186 @@
+﻿<Window x:Class="ERP.Payroll.SlipTransfer.SlipTransferWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ERP"
+        Title="SlipTransferWindow" Height="434" Width="571.988" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="ImageStyle2" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.495"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="-2.497,-3.17,-2.497,-1.335">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Opacity="0" Stroke="White" Margin="-2.995,-3.083,-2.995,-3.006" Fill="{x:Null}" Width="Auto" Height="Auto"/>
+                            <Image x:Name="image" Margin="2.662,2.339,3.247,2.254" Source="/ERP;component/Images/appbar.close.png" Stretch="Fill" Width="Auto" Height="Auto" Style="{DynamicResource ImageStyle2}" OpacityMask="#FF010000" Opacity="0.5"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="-3,0,0,-4">
+        <Label Visibility="Hidden" Content="Bank" HorizontalAlignment="Left" Margin="24,114,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.44,1.73"/>
+        <ComboBox Visibility="Hidden" IsEnabled="{Binding Enable}" ItemsSource="{Binding BankName}" SelectedItem="{Binding CurrentBankName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  SelectedValue="{Binding SelectedBank.bank_id}" SelectedValuePath="bank_id" DisplayMemberPath="bank_name" HorizontalAlignment="Left" Margin="163,113,0,0" VerticalAlignment="Top" Width="135" Height="24"/>
+        <local:CustomDataGrid SelectedItemsList="{Binding SelectedSlipTransferGenerate, Mode=TwoWay}" IsEnabled="{Binding isEnable}" IsReadOnly="True" HorizontalAlignment="Left" ItemsSource="{Binding SlipTransfer,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" AutoGenerateColumns="False"  Margin="19,204,0,0" VerticalAlignment="Top" Height="168" Width="256">
+            <local:CustomDataGrid.Columns>
+                <DataGridTextColumn Header="Emp ID" Width="*" Binding="{Binding emp_id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="First Name" Width="*" Binding="{Binding first_name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Last Name" Width="*" Binding="{Binding second_name}"></DataGridTextColumn>
+            </local:CustomDataGrid.Columns>
+        </local:CustomDataGrid>
+        <Button Visibility="Collapsed" Content=">>" Command="{Binding AddAllButton}" HorizontalAlignment="Left" Margin="281,220,0,0" VerticalAlignment="Top" Width="32"/>
+        <Button Command="{Binding AddButton}" Content=">" HorizontalAlignment="Left" Margin="281,260,0,0" VerticalAlignment="Top" Width="32"/>
+        <Button Command="{Binding RemoveButton}" Content=">" HorizontalAlignment="Left" Margin="300,300,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="-0.8,0.4">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="65"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Visibility="Collapsed" Command="{Binding RemoveAllButton}"  Content=">>" HorizontalAlignment="Left" Margin="282,338,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <local:CustomDataGrid IsEnabled="{Binding isEnable}" ItemsSource="{Binding SelectedSlip}"  SelectedItemsList="{Binding SelectedSlipTransferRemove, Mode=TwoWay}" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Left" Margin="320,206,0,0" VerticalAlignment="Top" Height="166" Width="240">
+            <local:CustomDataGrid.Columns>
+                <DataGridTextColumn Header="Emp ID" Width="*" Binding="{Binding emp_id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="First Name" Width="*" Binding="{Binding first_name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Last Name" Width="*" Binding="{Binding second_name}"></DataGridTextColumn>
+            </local:CustomDataGrid.Columns>
+        </local:CustomDataGrid>
+        <Button Command="{Binding GenerateButton}" Content="Generate Slip" HorizontalAlignment="Left" Margin="19,377,0,0" VerticalAlignment="Top" Width="256" Height="25"/>
+        <Button x:Name="button2" Content="Button" Margin="540,5,0,395" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Rectangle Stroke="#FF9199B9" Height="43" VerticalAlignment="Top" Margin="3,0,-1,0" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown_1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF4D85C3" Offset="0"/>
+                    <GradientStop Color="#FF4D85C3" Offset="1"/>
+                    <GradientStop Color="#FF84B3EA" Offset="0.518"/>
+                    <GradientStop Color="#FF84B3EA" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Slip Transfer" Margin="54,9,0,0" HorizontalAlignment="Left" Width="168" Height="31" VerticalAlignment="Top" FontSize="14.667" FontWeight="Bold" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="3" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <Image HorizontalAlignment="Left" Height="35" Margin="7,5,0,0" VerticalAlignment="Top" Width="33" Stretch="Fill" Source="/ERP;component/Images/Payroll/Form/Payroll_Process.png"/>
+        <Button x:Name="button2_Copy" Content="Button" Margin="538,5,5,398" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5" Click="button2_Copy_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <CheckBox Visibility="Hidden" IsChecked="{Binding AllSelect,TargetNullValue=false,FallbackValue=true}" Content="All" HorizontalAlignment="Left" Margin="317,119,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding CompanyBranches}" SelectedItem="{Binding CurrentCompanyBranches}" SelectedValue="{Binding CurrentCompanyBranches.companyBranch_id}" SelectedValuePath="companyBranch_id" DisplayMemberPath="companyBranch_Name" HorizontalAlignment="Left" Margin="162,99,0,0" VerticalAlignment="Top" Width="173"/>
+        <Label Content="Company Branch" HorizontalAlignment="Left" Margin="21,99,0,0" VerticalAlignment="Top" Width="117"/>
+        <ComboBox  ItemsSource="{Binding Payperiod}" SelectedItem="{Binding CurrentPayperiod,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" SelectedValue="{Binding CurrentPayperiod.period_id }" SelectedValuePath="period_id" DisplayMemberPath="period_name" HorizontalAlignment="Left" Margin="163,130,0,0" VerticalAlignment="Top" Width="172"/>
+        <Label Content="Pay period" HorizontalAlignment="Left" Margin="22,130,0,0" VerticalAlignment="Top"/>
+        <DatePicker SelectedDate="{Binding SelectDate,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" Margin="162,166,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label Content="Transfer Date" HorizontalAlignment="Left" Margin="21,165,0,0" VerticalAlignment="Top" Width="117"/>
+        <Button IsEnabled="{Binding isEnable}" Command="{Binding ClearButton}" Content="Clear" HorizontalAlignment="Left" Margin="320,377,0,0" VerticalAlignment="Top" Width="240" Height="25"/>
+        <ProgressBar Foreground="{Binding Color}"  Value="{Binding Progress}" x:Name="main_progress" HorizontalAlignment="Left" Height="8" Margin="4,425,-1,0" VerticalAlignment="Top" Width="572" BorderBrush="{x:Null}"/>
+        <TextBlock x:Name="lblStatus" HorizontalAlignment="Left" Height="14" Margin="10,411,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" Foreground="#FFACACAC" Text="Status." FontSize="10"/>
+        <CheckBox IsChecked="{Binding Path=isEnable}" Content="Genarate Slip File" HorizontalAlignment="Left" Margin="320,59,0,0" VerticalAlignment="Top"/>
+        <Label Content="Check This Only When Generating The Slip Transfer" HorizontalAlignment="Left" Margin="21,53,0,0" VerticalAlignment="Top" Width="286"/>
+        <CheckBox IsChecked="{Binding notif_salarydeposited}" Content="Salary Deposited Notification" HorizontalAlignment="Left" Margin="383,175,0,0" VerticalAlignment="Top" Height="16" Width="177"/>
+        <CheckBox IsChecked="{Binding notif_salaryslip}" Content="Salary Slip EMail" HorizontalAlignment="Left" Margin="383,154,0,0" VerticalAlignment="Top" Height="16" Width="177"/>
+
+    </Grid>
+</Window>

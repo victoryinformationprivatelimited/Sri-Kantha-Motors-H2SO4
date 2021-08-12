@@ -1,0 +1,15 @@
+﻿<Window x:Class="ERP.Reports.Documents.PayrollReport.PayrollReportUserControl.EmployeeOtherPaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EmployeeOtherPaymentWindow" Height="300" Width="380" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Payment Period" HorizontalAlignment="Left" Margin="14,50,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="period_name" HorizontalAlignment="Left" Margin="121,54,0,0" VerticalAlignment="Top" Width="216"/>
+        <Button Command="{Binding PrintButton}" Content="Print" HorizontalAlignment="Left" Margin="155,195,0,0" VerticalAlignment="Top" Width="75" Height="42"/>
+        <RadioButton IsChecked="{Binding Report}" Content="Report" GroupName="Type" HorizontalAlignment="Left" Margin="24,117,0,0" VerticalAlignment="Top"/>
+        <RadioButton IsChecked="{Binding Slip}" Content="Slip" GroupName="Type" HorizontalAlignment="Left" Margin="235,117,0,0" VerticalAlignment="Top"/>
+        <RadioButton IsChecked="{Binding PayeeNotDeducted}" Content="Payee Not Deducted Employees" GroupName="Type" HorizontalAlignment="Left" Margin="24,148,0,0" VerticalAlignment="Top"/>
+        <RadioButton IsChecked="{Binding OverDue}" Content="OverDue Amounts" GroupName="Type" HorizontalAlignment="Left" Margin="235,148,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

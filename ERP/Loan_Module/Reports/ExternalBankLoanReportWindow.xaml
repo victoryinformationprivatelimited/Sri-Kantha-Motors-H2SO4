@@ -1,0 +1,70 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ERP="clr-namespace:ERP" x:Class="ERP.Loan_Module.Reports.ExternalBankLoanReportWindow"
+        Title="ExternalBankLoanReportWindow" Height="284.909" Width="732.136" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Foreground="{x:Null}" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Resources>
+        <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="{x:Type Button}">
+            <Grid>
+                <Image Grid.Column="0" Margin="0,-0.25,0,0.25" Source="/ERP;component/AttendanceModule/Resources/Images/appbar.close.png" Stretch="Fill"/>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid Height="223" VerticalAlignment="Top" Margin="33,40,0,0" HorizontalAlignment="Left" Width="676">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="209*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="109*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FF233555" Margin="-16,-17,0,0" RadiusY="4" RadiusX="4" Stroke="#7E191818" StrokeThickness="16" Height="240" VerticalAlignment="Bottom" Grid.RowSpan="5" Grid.ColumnSpan="6"/>
+        <Button Command="{Binding BTNPrint}" Content="Print" HorizontalAlignment="Left" Margin="58,38,0,0" VerticalAlignment="Top" Width="75" Grid.Row="4" Grid.Column="5"/>
+        <Label Visibility="{Binding EmpDetailsVisibility}" Content="Employee First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Grid.Row="1" Grid.Column="1" Margin="0,1,0,0" FontSize="10"/>
+        <Label Visibility="{Binding EmpDetailsVisibility}" Content="Employee Last Name" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Grid.Row="3" Grid.Column="1" Margin="0,1,0,0" FontSize="10"/>
+        <Label Visibility="{Binding EmpDetailsVisibility}" Content="Employee EPF" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Grid.Row="1" Grid.Column="4" FontSize="10" Margin="0,3,0,0"/>
+        <Label Visibility="{Binding EmpDetailsVisibility}" Content="Employee NIC" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Foreground="White" Grid.Row="3" Grid.Column="4" FontSize="10"/>
+        <TextBox Visibility="{Binding EmpDetailsVisibility}" HorizontalAlignment="Left" Height="25" Margin="0,1,0,0" TextWrapping="Wrap" Text="{Binding CurrentEmployees.first_name}" VerticalAlignment="Top" Width="180" Grid.Row="1" Grid.Column="2"/>
+        <TextBox Visibility="{Binding EmpDetailsVisibility}" HorizontalAlignment="Left" Height="25" Margin="0,2,0,0" TextWrapping="Wrap" Text="{Binding CurrentEmployees.surname}" VerticalAlignment="Top" Width="180" Grid.Row="3" Grid.Column="2"/>
+        <TextBox Visibility="{Binding EmpDetailsVisibility}" HorizontalAlignment="Left" Height="25" Margin="0,2,0,0" TextWrapping="Wrap" Text="{Binding CurrentEmployees.epf_no}" VerticalAlignment="Top" Width="180" Grid.Row="1" Grid.Column="5"/>
+        <TextBox Visibility="{Binding EmpDetailsVisibility}" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="{Binding CurrentEmployees.nic}" VerticalAlignment="Top" Width="180" Grid.Row="3" Grid.Column="5" Margin="0,1,0,0"/>
+        <Label Visibility="{Binding BankDetailsVisibility}" Content="Bank Name" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Grid.Row="1" FontSize="10" Grid.Column="1" Margin="0,3,0,0"/>
+        <Label Visibility="{Binding BankDetailsVisibility}" Content="Bank Branch Name" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Grid.Row="3" FontSize="10" Grid.Column="1" Margin="0,2,0,0"/>
+        <Label Visibility="{Binding BankDetailsVisibility}" Content="Pay Period" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Grid.Row="1" Grid.Column="4" Margin="0,1,0,0" FontSize="10"/>
+        <ComboBox Visibility="{Binding BankDetailsVisibility}" IsEditable="True" ItemsSource="{Binding Bank}" SelectedItem="{Binding CurrentBank}" DisplayMemberPath="bank_name" Margin="0,1,7,0" Grid.Column="2" Height="25" Grid.Row="1" VerticalAlignment="Top"/>
+        <ComboBox Visibility="{Binding BankDetailsVisibility}" IsEditable="True" ItemsSource="{Binding BankBranch}" SelectedItem="{Binding CurrentBankBranch}" DisplayMemberPath="name" Margin="0,2,9,0" Height="25" VerticalAlignment="Top" Grid.Row="3" Grid.Column="2" Width="180"/>
+        <ComboBox Visibility="{Binding BankDetailsVisibility}" ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="period_name" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Grid.Row="1" Grid.Column="5" Height="25" Margin="0,1,0,0"/>
+        <Rectangle Margin="0,22,16,0" Grid.ColumnSpan="6" Height="18" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF81818B" Offset="0"/>
+                    <GradientStop Color="#FF81818B" Offset="1"/>
+                    <GradientStop Color="#FFB2B2BD" Offset="0.655"/>
+                    <GradientStop Color="#FFC4C4D3" Offset="0.401"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="assignDailyShiftTitleBar" Margin="0,-2,16,0" Grid.ColumnSpan="6" Height="24" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF18233A" Offset="0"/>
+                    <GradientStop Color="#FF18233A" Offset="1"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.655"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.401"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="assignDailyShiftCloseBtn" Content="Button" Margin="166,2,23,0" Template="{DynamicResource ButtonControlTemplate1}" Width="20" Height="20" Grid.Column="5" Click="assignDailyShiftCloseBtn_Click" VerticalAlignment="Top"/>
+        <Label Content="Active External Bank Loan Employee Wise" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <Button Visibility="{Binding EmpDetailsVisibility}" Command="{Binding ButtonSearchEmployee}" Content="Search Employee" HorizontalAlignment="Left" Margin="22,22,0,0" VerticalAlignment="Top" Width="119" Grid.Column="5"/>
+
+    </Grid>
+</Window>

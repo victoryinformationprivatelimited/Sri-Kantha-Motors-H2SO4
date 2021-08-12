@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EntityObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StructuralObject">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q1:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityObject" nillable="true" type="tns:EntityObject" />
+  <xs:complexType name="StructuralObject">
+    <xs:sequence />
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="StructuralObject" nillable="true" type="tns:StructuralObject" />
+  <xs:complexType name="EntityReferenceOfmas_Employeea91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Employee" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_Employeea91SJDxh" nillable="true" type="tns:EntityReferenceOfmas_Employeea91SJDxh" />
+  <xs:complexType name="EntityReference">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RelatedEnd">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q2:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReference" nillable="true" type="tns:EntityReference" />
+  <xs:complexType name="RelatedEnd">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="RelatedEnd" nillable="true" type="tns:RelatedEnd" />
+  <xs:complexType name="EntityReferenceOfdtl_Shift_Mastera91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Shift_Master" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_Shift_Mastera91SJDxh" nillable="true" type="tns:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+  <xs:complexType name="EntityReferenceOfdtl_ShiftOrdera91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_ShiftOrder" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_ShiftOrdera91SJDxh" nillable="true" type="tns:EntityReferenceOfdtl_ShiftOrdera91SJDxh" />
+  <xs:complexType name="EntityReferenceOfdtl_Shift_Covering_Detailsa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Shift_Covering_Details" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_Shift_Covering_Detailsa91SJDxh" nillable="true" type="tns:EntityReferenceOfdtl_Shift_Covering_Detailsa91SJDxh" />
+  <xs:complexType name="EntityReferenceOfdtl_Shift_Detail_Basica91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Shift_Detail_Basic" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_Shift_Detail_Basica91SJDxh" nillable="true" type="tns:EntityReferenceOfdtl_Shift_Detail_Basica91SJDxh" />
+  <xs:complexType name="EntityReferenceOfdtl_Shift_Late_Configuration_Detailsa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Shift_Late_Configuration_Details" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_Shift_Late_Configuration_Detailsa91SJDxh" nillable="true" type="tns:EntityReferenceOfdtl_Shift_Late_Configuration_Detailsa91SJDxh" />
+  <xs:complexType name="EntityReferenceOfdtl_Shift_OT_Configuration_Detailsa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Shift_OT_Configuration_Details" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_Shift_OT_Configuration_Detailsa91SJDxh" nillable="true" type="tns:EntityReferenceOfdtl_Shift_OT_Configuration_Detailsa91SJDxh" />
+  <xs:complexType name="EntityReferenceOfz_ShiftTypea91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_ShiftType" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_ShiftTypea91SJDxh" nillable="true" type="tns:EntityReferenceOfz_ShiftTypea91SJDxh" />
+  <xs:complexType name="EntityReferenceOftrns_ShiftTypea91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_ShiftType" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_ShiftTypea91SJDxh" nillable="true" type="tns:EntityReferenceOftrns_ShiftTypea91SJDxh" />
+  <xs:complexType name="EntityReferenceOftrns_EmployeeDailyShiftDetailsa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_EmployeeDailyShiftDetails" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_EmployeeDailyShiftDetailsa91SJDxh" nillable="true" type="tns:EntityReferenceOftrns_EmployeeDailyShiftDetailsa91SJDxh" />
+  <xs:complexType name="EntityReferenceOftrns_EmployeeMaxOTDetailsa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_EmployeeMaxOTDetails" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_EmployeeMaxOTDetailsa91SJDxh" nillable="true" type="tns:EntityReferenceOftrns_EmployeeMaxOTDetailsa91SJDxh" />
+  <xs:complexType name="EntityReferenceOftrns_EmployeeShiftBreakStatusa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_EmployeeShiftBreakStatus" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_EmployeeShiftBreakStatusa91SJDxh" nillable="true" type="tns:EntityReferenceOftrns_EmployeeShiftBreakStatusa91SJDxh" />
+  <xs:complexType name="EntityReferenceOfz_AttendanceGroupa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_AttendanceGroup" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_AttendanceGroupa91SJDxh" nillable="true" type="tns:EntityReferenceOfz_AttendanceGroupa91SJDxh" />
+  <xs:complexType name="EntityReferenceOfdtl_AttendanceGroupa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_AttendanceGroup" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_AttendanceGroupa91SJDxh" nillable="true" type="tns:EntityReferenceOfdtl_AttendanceGroupa91SJDxh" />
+  <xs:complexType name="EntityReferenceOfdtl_Employeea91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Employee" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_Employeea91SJDxh" nillable="true" type="tns:EntityReferenceOfdtl_Employeea91SJDxh" />
+  <xs:complexType name="EntityReferenceOfz_LeaveCategorya91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_LeaveCategory" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LeaveCategorya91SJDxh" nillable="true" type="tns:EntityReferenceOfz_LeaveCategorya91SJDxh" />
+  <xs:complexType name="EntityReferenceOfz_LeaveTypea91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_LeaveType" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LeaveTypea91SJDxh" nillable="true" type="tns:EntityReferenceOfz_LeaveTypea91SJDxh" />
+  <xs:complexType name="EntityReferenceOfz_HolidayDataa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_HolidayData" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_HolidayDataa91SJDxh" nillable="true" type="tns:EntityReferenceOfz_HolidayDataa91SJDxh" />
+  <xs:complexType name="EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_ProcessedEmployeeAttendance" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh" nillable="true" type="tns:EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh" />
+  <xs:complexType name="EntityReferenceOfz_EmployeeAttendStatusa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_EmployeeAttendStatus" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_EmployeeAttendStatusa91SJDxh" nillable="true" type="tns:EntityReferenceOfz_EmployeeAttendStatusa91SJDxh" />
+  <xs:complexType name="EntityReferenceOftrns_ProcessedEmployeeMaxOTa91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_ProcessedEmployeeMaxOT" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_ProcessedEmployeeMaxOTa91SJDxh" nillable="true" type="tns:EntityReferenceOftrns_ProcessedEmployeeMaxOTa91SJDxh" />
+  <xs:complexType name="EntityReferenceOfz_Perioda91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Period" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_Perioda91SJDxh" nillable="true" type="tns:EntityReferenceOfz_Perioda91SJDxh" />
+  <xs:complexType name="EntityReferenceOfz_ShiftWeeka91SJDxh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_ShiftWeek" Namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_ShiftWeeka91SJDxh" nillable="true" type="tns:EntityReferenceOfz_ShiftWeeka91SJDxh" />
+</xs:schema>

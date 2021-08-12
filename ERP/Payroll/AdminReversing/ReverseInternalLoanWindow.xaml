@@ -1,0 +1,10 @@
+﻿<Window x:Class="ERP.Payroll.AdminReversing.ReverseInternalLoanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ReverseInternalLoanWindow" Height="200" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Pay Period" HorizontalAlignment="Left" Margin="7,35,0,0" VerticalAlignment="Top" Width="79"/>
+        <ComboBox ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="period_name" HorizontalAlignment="Left" Margin="91,39,0,0" VerticalAlignment="Top" Width="246"/>
+        <Button Command="{Binding btnReverse}" Content="Reverse" HorizontalAlignment="Left" Margin="158,102,0,0" VerticalAlignment="Top" Width="75" Height="29"/>
+    </Grid>
+</Window>

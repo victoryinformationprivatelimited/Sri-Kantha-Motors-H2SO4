@@ -1,0 +1,158 @@
+﻿<Window x:Class="ERP.AttendanceModule.AttendanceMasters.EmployeeAttendanceGroupAssignWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EmployeeAttendanceGroupAssignWindow" Height="373" Width="509" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <Style x:Key="ImageStyle2" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnMouseEnter1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave1">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave2">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseEnter3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnMouseLeave3">
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.495"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="grid" Margin="-2.497,-3.17,-2.497,-1.335">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="InvalidFocused"/>
+                                    <VisualState x:Name="InvalidUnfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Opacity="0" Stroke="White" Margin="-2.995,-3.083,-2.995,-3.006" Fill="{x:Null}" Width="Auto" Height="Auto"/>
+                            <Image x:Name="image" Margin="3,0,2.994,1.505" Source="/ERP;component/AttendanceModule/Resources/Images/appbar.close.png" Stretch="Fill" Width="Auto" Height="21" Style="{DynamicResource ImageStyle2}" OpacityMask="#FF010000" Opacity="0.5" VerticalAlignment="Bottom"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave3_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter3_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter3}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseLeave2_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                            <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="grid">
+                                <BeginStoryboard x:Name="OnMouseEnter2_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter2}"/>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="White">
+        <Rectangle x:Name="empAttendanceGroupsAssignTitleBar" MouseLeftButtonDown="empAttendanceGroupsAssignTitleBar_MouseLeftButtonDown" Height="31" VerticalAlignment="Top" Margin="0,0,-2,0" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF18233A" Offset="0"/>
+                    <GradientStop Color="#FF18233A" Offset="1"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.518"/>
+                    <GradientStop Color="#FF4C5691" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="empAttendanceGroupsAssignTitle" MouseLeftButtonDown="empAttendanceGroupsAssignTitle_MouseLeftButtonDown" Margin="10,0,324,347" TextWrapping="Wrap" Text="Attendance Group Assign" Foreground="White" FontSize="14.667" FontFamily="Segoe UI Symbol" FontWeight="Bold"/>
+        <Button x:Name="empAttendanceGroupsAssignCloseBtn" Click="empAttendanceGroupsAssignCloseBtn_Click" Content="Button" Margin="484,6,1,348" Style="{DynamicResource ButtonStyle23}" RenderTransformOrigin="0.5,0.5" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Attendance Group" HorizontalAlignment="Left" Margin="9,39,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding AttendanceGroups}" DisplayMemberPath="attendance_group_name" SelectedValuePath="attendance_group_id" SelectedItem="{Binding CurrentAttendanceGroup}" HorizontalAlignment="Left" Margin="118,41,0,0" VerticalAlignment="Top" Width="148"/>
+        <DataGrid VirtualizingStackPanel.IsVirtualizing="False" SelectionUnit="FullRow" Name="_empGrpGrid"  ItemsSource="{Binding DatagridList}" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Left" Margin="7,83,0,0" VerticalAlignment="Top" Height="127" Width="325" >
+            <DataGrid.Resources>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsExist}" Value="true">
+                            <Setter Property="Background" Value="#70A3E6"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsAssigned}" Value="true">
+                            <Setter Property="Background" Value="#BA94E0" />
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding EmpID}" Header="Emp ID" Width="*" />
+                <DataGridTextColumn Binding="{Binding FullName}" Header="Name" Width="*" />
+                <DataGridTextColumn Binding="{Binding GroupName}" Header="Is Assigned" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Command="{Binding GetEmployeeButton}" Content="Get Employees" HorizontalAlignment="Left" Margin="382,83,0,0" VerticalAlignment="Top" Width="117"/>
+        <Button Command="{Binding AssignButton}" Content="Assign" HorizontalAlignment="Left" Margin="379,190,0,0" VerticalAlignment="Top" Width="117"/>
+        <DataGrid  ItemsSource="{Binding AttendanceGroupEmployees}" SelectedItem="{Binding CurrentGroupEmployee}" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Left" Margin="7,229,0,0" VerticalAlignment="Top" Height="134" Width="492" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding emp_id}" Header="Emp ID" Width="*" />
+                <DataGridTextColumn Binding="{Binding first_name}" Header="First Name" Width="*" />
+                <DataGridTextColumn Binding="{Binding second_name}" Header="Second Name" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Emp ID" HorizontalAlignment="Left" Margin="283,38,0,0" VerticalAlignment="Top" Height="28" Width="49" Visibility="Collapsed"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="332,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
+        <Button HorizontalAlignment="Left" Margin="460,41,0,0" VerticalAlignment="Top" Width="36" Height="22" Visibility="Collapsed" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Images/search_button.png" Height="Auto" Width="32" Visibility="Collapsed" />
+            </StackPanel>
+        </Button>
+        <Button Command="{Binding CheckAvailableButton}" Content="Check Availability" HorizontalAlignment="Left" Margin="382,117,0,0" VerticalAlignment="Top" Width="117"/>
+
+    </Grid>
+</Window>

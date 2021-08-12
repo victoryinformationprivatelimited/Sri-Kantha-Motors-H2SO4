@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ERP.AttendanceModule.AttendanceMainUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                       mc:Ignorable="d" 
+             BorderBrush="#FF2C2727" BorderThickness="3"  d:DesignWidth="2033.4" d:DesignHeight="900" Loaded="UserControl_Loaded" >
+    <Grid Background="#FF232831">
+        <Label Content="Attendance Module" HorizontalAlignment="Right" Width="763" Foreground="#FFE4E6EC" FontSize="72" FlowDirection="RightToLeft" Height="114" VerticalAlignment="Top" FontWeight="Bold" Opacity="0.1" Margin="0,298,103,0">
+            <Label.Effect>
+                <BlurEffect Radius="1.5" RenderingBias="Quality"/>
+            </Label.Effect>
+        </Label>
+        <Image HorizontalAlignment="Right" Height="293" VerticalAlignment="Top" Width="297" Opacity="0.1" Stretch="Fill" Margin="0,298,871,0" Source="/ERP;component/Images/Attendence_Logo.png"/>
+
+
+        <Rectangle Height="36" VerticalAlignment="Top" Stroke="#FF9199B9" Margin="-4,-55,-8,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+                    <GradientStop Color="#FF4D85C3" Offset="0"/>
+                    <GradientStop Color="#FF4D85C3" Offset="1"/>
+                    <GradientStop Color="#FF84B3EA" Offset="0.518"/>
+                    <GradientStop Color="#FF84B3EA" Offset="0.455"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Attendance Module" HorizontalAlignment="Right" Width="144" Foreground="White" FontSize="14.667" Margin="0,-48,34,0" FlowDirection="RightToLeft" Height="26" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Segoe UI Semibold">
+            <Label.Effect>
+                <BlurEffect Radius="1.5"/>
+            </Label.Effect>
+        </Label>
+        <Image Height="29" Margin="0,-48,183,0" VerticalAlignment="Top" Source="/ERP;component/Images/MAsters_data_Main.png" RenderTransformOrigin="0.072,0.552" HorizontalAlignment="Right" Width="28"/>
+        <WrapPanel x:Name="Mdiwrappanel" RenderTransformOrigin="0.5,0.5" Height="340" VerticalAlignment="Top" Margin="0,0,-6,0">
+            <WrapPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </WrapPanel.RenderTransform>
+        </WrapPanel>
+        <WrapPanel x:Name="Mdi" RenderTransformOrigin="0.5,0.5" MaxHeight="1200" MaxWidth="2000" MinHeight="900" MinWidth="1400" Margin="0,0,11,-6"/>
+        <Rectangle x:Name="Employee_Masters_Button" Fill="White" RadiusY="1" RadiusX="1" Stroke="#FF7689D4" Margin="-4,-19,-8,0" Height="15" VerticalAlignment="Top"/>
+        <WrapPanel x:Name="Mdiwrappanel_Copy" RenderTransformOrigin="0.5,0.5" Height="560" VerticalAlignment="Top" Margin="0,0,-6,0">
+            <WrapPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </WrapPanel.RenderTransform>
+        </WrapPanel>
+
+    </Grid>
+</UserControl>

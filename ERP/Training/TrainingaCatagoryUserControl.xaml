@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="ERP.Training.TrainingaCatagoryUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="499.684" Width="561.233">
+    <Grid Background="#FF233555" Height="378.684" VerticalAlignment="Center" HorizontalAlignment="Center" Width="443.233">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="0*"/>
+    		<ColumnDefinition Width="15*"/>
+    		<ColumnDefinition Width="116*"/>
+    		<ColumnDefinition Width="300*"/>
+    		<ColumnDefinition Width="12*"/>
+    		<ColumnDefinition Width="0*"/>
+    	</Grid.ColumnDefinitions>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="0*"/>
+    		<RowDefinition Height="85*"/>
+    		<RowDefinition Height="27*"/>
+    		<RowDefinition Height="10*"/>
+    		<RowDefinition Height="27*"/>
+    		<RowDefinition Height="64*"/>
+    		<RowDefinition Height="20*"/>
+    		<RowDefinition Height="10*"/>
+    		<RowDefinition Height="103*"/>
+    		<RowDefinition Height="32*"/>
+    		<RowDefinition/>
+    	</Grid.RowDefinitions>
+        <Rectangle Fill="#FF233555" Margin="-15.93,-16.071,-16.365,-15.879" RadiusY="4" RadiusX="4" Stroke="#7E191818" StrokeThickness="16" Grid.ColumnSpan="6" Grid.RowSpan="11" Height="410.635" VerticalAlignment="Top" HorizontalAlignment="Left" Width="475.528"/>
+
+        <DataGrid ItemsSource="{Binding TrainingCatagory}" AutoGenerateColumns="False" SelectedItem="{Binding CurrentTrainingCatagory}" HorizontalAlignment="Left" Margin="13.959,0.254,0,0" VerticalAlignment="Top" Height="94" Width="415" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Catagaory Name" Width="*"  Binding="{Binding catagory_name}"/>
+                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding description}"/>
+                <DataGridCheckBoxColumn Header="Active" Width="*" Binding="{Binding is_active}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Traning Category" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="25.96" Width="101.363" Grid.Row="2" Grid.Column="2" Margin="0,0.666,0,0"/>
+        <TextBox Text="{Binding CurrentTrainingCatagory.catagory_name}" HorizontalAlignment="Left" Height="23" Margin="0.66,1.991,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210" Grid.Row="2" Grid.Column="3"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="0.319,0.279,0,0" VerticalAlignment="Top" Width="87.667" Foreground="White" Height="25.96" Grid.Row="4" Grid.Column="2"/>
+        <TextBox Text="{Binding CurrentTrainingCatagory.description}" HorizontalAlignment="Left" Height="80" Margin="0.341,0.094,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210" Grid.Row="4" Grid.Column="3" Grid.RowSpan="2"/>
+        <CheckBox IsChecked="{Binding CurrentTrainingCatagory.is_active, FallbackValue=False}" Content="Is Active" HorizontalAlignment="Left" Margin="0.341,2.41,0,0" VerticalAlignment="Top" Foreground="White" Height="15.098" Width="63.828" Grid.Row="6" Grid.Column="3"/>
+        <Button Command="{Binding NewBtn}" Content="New" HorizontalAlignment="Left" Margin="67.341,0.008,0,0" VerticalAlignment="Top" Width="65" Height="25" Grid.Row="9" Grid.Column="3"/>
+        <Button Command="{Binding SaveBtn}" Content="Save" HorizontalAlignment="Left" Margin="147.341,0.005,0,0" VerticalAlignment="Top" Width="65" Height="25" Grid.Row="9" Grid.Column="3"/>
+        <Button Command="{Binding DeleteBtn}" Content="Delete" HorizontalAlignment="Left" Margin="227.341,0.008,0,0" VerticalAlignment="Top" Width="65" Height="25" Grid.Row="9" Grid.Column="3"/>
+        <Rectangle Height="30" VerticalAlignment="Top" Grid.ColumnSpan="4" Grid.Row="1" Grid.Column="1">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+        			<GradientStop Color="#FF18233A" Offset="0"/>
+        			<GradientStop Color="#FF18233A" Offset="1"/>
+        			<GradientStop Color="#FF4C5691" Offset="0.518"/>
+        			<GradientStop Color="#FF4C5691" Offset="0.455"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Margin="0,29.931,0,0" Height="25" VerticalAlignment="Top" Grid.ColumnSpan="4" Grid.Row="1" Grid.Column="1">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.645,0.387" StartPoint="0.309,0.509">
+        			<GradientStop Color="#FF81818B" Offset="0"/>
+        			<GradientStop Color="#FF81818B" Offset="1"/>
+        			<GradientStop Color="#FFC4C4D3" Offset="0.518"/>
+        			<GradientStop Color="#FFC4C4D3" Offset="0.455"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Search" HorizontalAlignment="Left" Margin="114.18,30.153,0,0" VerticalAlignment="Top" Foreground="White" Height="24.778" Width="45.263" Grid.Column="3" Grid.Row="1"/>
+        <TextBox Text="{Binding Search}" HorizontalAlignment="Left" Height="23" Margin="168.841,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="130" SelectionBrush="{x:Null}" Grid.Column="3" Grid.Row="1"/>
+        <Label Content="Training Catagory" HorizontalAlignment="Left" Height="29.931" Margin="0.319,0,0,0" VerticalAlignment="Top" Width="134.022" FontFamily="Segoe UI Semibold" Foreground="White" Grid.ColumnSpan="2" Grid.Column="2" Grid.RowSpan="2" FontSize="14.667"/>
+
+    </Grid>
+</UserControl>

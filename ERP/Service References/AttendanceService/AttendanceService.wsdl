@@ -1,0 +1,1676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AttendanceService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AttendanceData" />
+      <xsd:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AttendanceService_GetExecutiveDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExecutiveDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetExecutiveDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExecutiveDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetExecutiveDetailsFirst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExecutiveDetailsFirst" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetExecutiveDetailsFirst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExecutiveDetailsFirstResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeLeiuLeaveDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeLeiuLeaveDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeLeiuLeaveDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeLeiuLeaveDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateExecutiveDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExecutiveDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateExecutiveDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExecutiveDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateEmployeeLeiuLeaveDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeLeiuLeaveDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateEmployeeLeiuLeaveDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeLeiuLeaveDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetApprovedLeiuLeavePoolDataByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprovedLeiuLeavePoolDataByDate" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetApprovedLeiuLeavePoolDataByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprovedLeiuLeavePoolDataByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_ModifyApprovedLeiuLeaves_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyApprovedLeiuLeaves" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_ModifyApprovedLeiuLeaves_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyApprovedLeiuLeavesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetExecutivePaymentDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExecutivePaymentDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetExecutivePaymentDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExecutivePaymentDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveLeiuLeavePayments_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLeiuLeavePayments" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveLeiuLeavePayments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLeiuLeavePaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_BeginAttendanceDataMigration_InputMessage">
+    <wsdl:part name="parameters" element="tns:BeginAttendanceDataMigration" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_BeginAttendanceDataMigration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BeginAttendanceDataMigrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftDetailsByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftDetailsByDate" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftDetailsByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftDetailsByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftDetailsByDateNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftDetailsByDateNew" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftDetailsByDateNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftDetailsByDateNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UploadAttendanceToDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadAttendanceToDatabase" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UploadAttendanceToDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadAttendanceToDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_AddAttendanceFromAPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAttendanceFromAPI" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_AddAttendanceFromAPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAttendanceFromAPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_getLastDataDownloadDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLastDataDownloadDate" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_getLastDataDownloadDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLastDataDownloadDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetSMSAttendance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSAttendance" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetSMSAttendance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSAttendanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateSMSAttendance_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSMSAttendance" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateSMSAttendance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSMSAttendanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeShifts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeShifts" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeShifts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeShiftsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeAttendanceData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAttendanceData" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeAttendanceData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAttendanceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveEmployeeAttendanceData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeAttendanceData" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveEmployeeAttendanceData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeAttendanceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeAttendanceSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAttendanceSummary" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeAttendanceSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAttendanceSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteAttendanceProcessEmployeeAndAttendDayWise_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttendanceProcessEmployeeAndAttendDayWise" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteAttendanceProcessEmployeeAndAttendDayWise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttendanceProcessEmployeeAndAttendDayWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveAttendanceGroupEmployees_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAttendanceGroupEmployees" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveAttendanceGroupEmployees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAttendanceGroupEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftMasterDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftMasterDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftMasterDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftMasterDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftMasterDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftMasterDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftMasterDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftMasterDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftMasterDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftMasterDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftMasterDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftMasterDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftWithCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftWithCategories" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftWithCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftWithCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftNames" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAdditionalDaysByShift_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdditionalDaysByShift" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAdditionalDaysByShift_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdditionalDaysByShiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftAdditionalDays_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftAdditionalDays" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftAdditionalDays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftAdditionalDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftAdditionalDays_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftAdditionalDays" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftAdditionalDays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftAdditionalDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftBreaksByShift_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftBreaksByShift" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftBreaksByShift_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftBreaksByShiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftBreakDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftBreakDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftBreakDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftBreakDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftConvering_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftConvering" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftConvering_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftConveringResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftCoveringDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftCoveringDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftCoveringDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftCoveringDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftCoveringDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftCoveringDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftCoveringDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftCoveringDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftCategoryDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftCategoryDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftCategoryDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftCategoryDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftCategory" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftCategory" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftCategory" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftWeeks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftWeeks" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftWeeks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftWeeksResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftWeeksDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftWeeksDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveShiftWeeksDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftWeeksDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftWeekDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftWeekDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftWeekDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftWeekDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftWeekDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftWeekDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftWeekDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftWeekDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetDayRangeDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDayRangeDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetDayRangeDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDayRangeDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftTypes" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceGroups" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveAttendanceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAttendanceGroup" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveAttendanceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAttendanceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteAttendanceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttendanceGroup" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteAttendanceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttendanceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetHolidayTypesBasicDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayTypesBasicDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetHolidayTypesBasicDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayTypesBasicDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveHolidayType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHolidayType" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveHolidayType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHolidayTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteHolidayType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHolidayType" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteHolidayType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHolidayTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetHolidayBasicDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayBasicDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetHolidayBasicDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayBasicDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveHolidayData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHolidayData" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveHolidayData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHolidayDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveBulkHolidayData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBulkHolidayData" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveBulkHolidayData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBulkHolidayDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateHolidayData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHolidayData" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateHolidayData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHolidayDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteHolidayData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHolidayData" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteHolidayData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHolidayDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetHolidayYears_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayYears" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetHolidayYears_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayYearsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetHolidaysBasicDetailsByYear_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidaysBasicDetailsByYear" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetHolidaysBasicDetailsByYear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidaysBasicDetailsByYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveEmployeeDailyShiftDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeDailyShiftDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveEmployeeDailyShiftDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeDailyShiftDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeDailyShiftDetailsWithOT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDailyShiftDetailsWithOT" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeDailyShiftDetailsWithOT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDailyShiftDetailsWithOTResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteAssignedShift_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedShift" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteAssignedShift_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAssignedShiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftBreakOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftBreakOptions" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftBreakOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftBreakOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeHolidayDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeHolidayDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeHolidayDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeHolidayDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeHolidayDetailsByEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeHolidayDetailsByEmployee" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeHolidayDetailsByEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeHolidayDetailsByEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_AssignEmployeeHolidayDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignEmployeeHolidayDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_AssignEmployeeHolidayDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignEmployeeHolidayDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_RemoveEmployeeHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEmployeeHoliday" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_RemoveEmployeeHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEmployeeHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_RemoveIndividualEmployeeHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveIndividualEmployeeHoliday" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_RemoveIndividualEmployeeHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveIndividualEmployeeHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveEmployeeMaxOtDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeMaxOtDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_SaveEmployeeMaxOtDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeMaxOtDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteEmployeeMaxOtDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeMaxOtDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteEmployeeMaxOtDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeMaxOtDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftType" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_UpdateShiftType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShiftTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftType" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_DeleteShiftType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceGroupsDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceGroupsDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceGroupsDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceGroupsDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceGroupWithEmployeesDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceGroupWithEmployeesDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceGroupWithEmployeesDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceGroupWithEmployeesDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceGroupEmployeeIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceGroupEmployeeIDs" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceGroupEmployeeIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceGroupEmployeeIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAssignedGroupEmployees_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignedGroupEmployees" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAssignedGroupEmployees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignedGroupEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeShiftCalendarDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeShiftCalendarDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeShiftCalendarDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeShiftCalendarDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceEmployeeSummaryDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceEmployeeSummaryDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendanceEmployeeSummaryDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceEmployeeSummaryDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendancePeriodDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendancePeriodDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetAttendancePeriodDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendancePeriodDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftMasterDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftMasterDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftMasterDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftMasterDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftAllDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftAllDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftAllDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftAllDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftWeekWithDaysDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftWeekWithDaysDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftWeekWithDaysDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftWeekWithDaysDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftWeekWithDaysByWeek_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftWeekWithDaysByWeek" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetShiftWeekWithDaysByWeek_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftWeekWithDaysByWeekResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeAssignedShiftDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAssignedShiftDetails" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_GetEmployeeAssignedShiftDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAssignedShiftDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_BeginAttendanceProcess_InputMessage">
+    <wsdl:part name="parameters" element="tns:BeginAttendanceProcess" />
+  </wsdl:message>
+  <wsdl:message name="AttendanceService_BeginAttendanceProcess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BeginAttendanceProcessResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AttendanceService">
+    <wsdl:operation name="GetExecutiveDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetExecutiveDetails" message="tns:AttendanceService_GetExecutiveDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetExecutiveDetailsResponse" message="tns:AttendanceService_GetExecutiveDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExecutiveDetailsFirst">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetExecutiveDetailsFirst" message="tns:AttendanceService_GetExecutiveDetailsFirst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetExecutiveDetailsFirstResponse" message="tns:AttendanceService_GetExecutiveDetailsFirst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeLeiuLeaveDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeLeiuLeaveDetails" message="tns:AttendanceService_GetEmployeeLeiuLeaveDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeLeiuLeaveDetailsResponse" message="tns:AttendanceService_GetEmployeeLeiuLeaveDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExecutiveDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateExecutiveDetails" message="tns:AttendanceService_UpdateExecutiveDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateExecutiveDetailsResponse" message="tns:AttendanceService_UpdateExecutiveDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeLeiuLeaveDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateEmployeeLeiuLeaveDetails" message="tns:AttendanceService_UpdateEmployeeLeiuLeaveDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateEmployeeLeiuLeaveDetailsResponse" message="tns:AttendanceService_UpdateEmployeeLeiuLeaveDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovedLeiuLeavePoolDataByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetApprovedLeiuLeavePoolDataByDate" message="tns:AttendanceService_GetApprovedLeiuLeavePoolDataByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetApprovedLeiuLeavePoolDataByDateResponse" message="tns:AttendanceService_GetApprovedLeiuLeavePoolDataByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyApprovedLeiuLeaves">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/ModifyApprovedLeiuLeaves" message="tns:AttendanceService_ModifyApprovedLeiuLeaves_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/ModifyApprovedLeiuLeavesResponse" message="tns:AttendanceService_ModifyApprovedLeiuLeaves_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExecutivePaymentDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetExecutivePaymentDetails" message="tns:AttendanceService_GetExecutivePaymentDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetExecutivePaymentDetailsResponse" message="tns:AttendanceService_GetExecutivePaymentDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLeiuLeavePayments">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveLeiuLeavePayments" message="tns:AttendanceService_SaveLeiuLeavePayments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveLeiuLeavePaymentsResponse" message="tns:AttendanceService_SaveLeiuLeavePayments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginAttendanceDataMigration">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/BeginAttendanceDataMigration" message="tns:AttendanceService_BeginAttendanceDataMigration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/BeginAttendanceDataMigrationResponse" message="tns:AttendanceService_BeginAttendanceDataMigration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftDetailsByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftDetailsByDate" message="tns:AttendanceService_GetShiftDetailsByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftDetailsByDateResponse" message="tns:AttendanceService_GetShiftDetailsByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftDetailsByDateNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftDetailsByDateNew" message="tns:AttendanceService_GetShiftDetailsByDateNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftDetailsByDateNewResponse" message="tns:AttendanceService_GetShiftDetailsByDateNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAttendanceToDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UploadAttendanceToDatabase" message="tns:AttendanceService_UploadAttendanceToDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UploadAttendanceToDatabaseResponse" message="tns:AttendanceService_UploadAttendanceToDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAttendanceFromAPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/AddAttendanceFromAPI" message="tns:AttendanceService_AddAttendanceFromAPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/AddAttendanceFromAPIResponse" message="tns:AttendanceService_AddAttendanceFromAPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLastDataDownloadDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/getLastDataDownloadDate" message="tns:AttendanceService_getLastDataDownloadDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/getLastDataDownloadDateResponse" message="tns:AttendanceService_getLastDataDownloadDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSAttendance">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetSMSAttendance" message="tns:AttendanceService_GetSMSAttendance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetSMSAttendanceResponse" message="tns:AttendanceService_GetSMSAttendance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSMSAttendance">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateSMSAttendance" message="tns:AttendanceService_UpdateSMSAttendance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateSMSAttendanceResponse" message="tns:AttendanceService_UpdateSMSAttendance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeShifts">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeShifts" message="tns:AttendanceService_GetEmployeeShifts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeShiftsResponse" message="tns:AttendanceService_GetEmployeeShifts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAttendanceData">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeAttendanceData" message="tns:AttendanceService_GetEmployeeAttendanceData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeAttendanceDataResponse" message="tns:AttendanceService_GetEmployeeAttendanceData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeAttendanceData">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveEmployeeAttendanceData" message="tns:AttendanceService_SaveEmployeeAttendanceData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveEmployeeAttendanceDataResponse" message="tns:AttendanceService_SaveEmployeeAttendanceData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAttendanceSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeAttendanceSummary" message="tns:AttendanceService_GetEmployeeAttendanceSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeAttendanceSummaryResponse" message="tns:AttendanceService_GetEmployeeAttendanceSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttendanceProcessEmployeeAndAttendDayWise">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteAttendanceProcessEmployeeAndAttendDayWise" message="tns:AttendanceService_DeleteAttendanceProcessEmployeeAndAttendDayWise_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteAttendanceProcessEmployeeAndAttendDayWiseResponse" message="tns:AttendanceService_DeleteAttendanceProcessEmployeeAndAttendDayWise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAttendanceGroupEmployees">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveAttendanceGroupEmployees" message="tns:AttendanceService_SaveAttendanceGroupEmployees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveAttendanceGroupEmployeesResponse" message="tns:AttendanceService_SaveAttendanceGroupEmployees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftMasterDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftMasterDetails" message="tns:AttendanceService_SaveShiftMasterDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftMasterDetailsResponse" message="tns:AttendanceService_SaveShiftMasterDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftMasterDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftMasterDetails" message="tns:AttendanceService_UpdateShiftMasterDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftMasterDetailsResponse" message="tns:AttendanceService_UpdateShiftMasterDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftMasterDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftMasterDetails" message="tns:AttendanceService_DeleteShiftMasterDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftMasterDetailsResponse" message="tns:AttendanceService_DeleteShiftMasterDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftWithCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftWithCategories" message="tns:AttendanceService_GetShiftWithCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftWithCategoriesResponse" message="tns:AttendanceService_GetShiftWithCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftNames" message="tns:AttendanceService_GetShiftNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftNamesResponse" message="tns:AttendanceService_GetShiftNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdditionalDaysByShift">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetAdditionalDaysByShift" message="tns:AttendanceService_GetAdditionalDaysByShift_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetAdditionalDaysByShiftResponse" message="tns:AttendanceService_GetAdditionalDaysByShift_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftAdditionalDays">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftAdditionalDays" message="tns:AttendanceService_SaveShiftAdditionalDays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftAdditionalDaysResponse" message="tns:AttendanceService_SaveShiftAdditionalDays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftAdditionalDays">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftAdditionalDays" message="tns:AttendanceService_DeleteShiftAdditionalDays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftAdditionalDaysResponse" message="tns:AttendanceService_DeleteShiftAdditionalDays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftBreaksByShift">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftBreaksByShift" message="tns:AttendanceService_GetShiftBreaksByShift_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftBreaksByShiftResponse" message="tns:AttendanceService_GetShiftBreaksByShift_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftBreakDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftBreakDetails" message="tns:AttendanceService_DeleteShiftBreakDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftBreakDetailsResponse" message="tns:AttendanceService_DeleteShiftBreakDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftConvering">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftConvering" message="tns:AttendanceService_GetShiftConvering_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftConveringResponse" message="tns:AttendanceService_GetShiftConvering_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftCoveringDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftCoveringDetails" message="tns:AttendanceService_SaveShiftCoveringDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftCoveringDetailsResponse" message="tns:AttendanceService_SaveShiftCoveringDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftCoveringDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftCoveringDetails" message="tns:AttendanceService_DeleteShiftCoveringDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftCoveringDetailsResponse" message="tns:AttendanceService_DeleteShiftCoveringDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftOrderDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftOrderDetails" message="tns:AttendanceService_GetShiftOrderDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftOrderDetailsResponse" message="tns:AttendanceService_GetShiftOrderDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftOrderDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftOrderDetails" message="tns:AttendanceService_UpdateShiftOrderDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftOrderDetailsResponse" message="tns:AttendanceService_UpdateShiftOrderDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftCategoryDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftCategoryDetails" message="tns:AttendanceService_GetShiftCategoryDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftCategoryDetailsResponse" message="tns:AttendanceService_GetShiftCategoryDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftCategory" message="tns:AttendanceService_SaveShiftCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftCategoryResponse" message="tns:AttendanceService_SaveShiftCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftCategory" message="tns:AttendanceService_UpdateShiftCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftCategoryResponse" message="tns:AttendanceService_UpdateShiftCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftCategory" message="tns:AttendanceService_DeleteShiftCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftCategoryResponse" message="tns:AttendanceService_DeleteShiftCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftWeeks">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftWeeks" message="tns:AttendanceService_GetShiftWeeks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftWeeksResponse" message="tns:AttendanceService_GetShiftWeeks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftWeeksDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftWeeksDetails" message="tns:AttendanceService_SaveShiftWeeksDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveShiftWeeksDetailsResponse" message="tns:AttendanceService_SaveShiftWeeksDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftWeekDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftWeekDetails" message="tns:AttendanceService_UpdateShiftWeekDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftWeekDetailsResponse" message="tns:AttendanceService_UpdateShiftWeekDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftWeekDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftWeekDetails" message="tns:AttendanceService_DeleteShiftWeekDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftWeekDetailsResponse" message="tns:AttendanceService_DeleteShiftWeekDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDayRangeDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetDayRangeDetails" message="tns:AttendanceService_GetDayRangeDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetDayRangeDetailsResponse" message="tns:AttendanceService_GetDayRangeDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftTypes" message="tns:AttendanceService_GetShiftTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftTypesResponse" message="tns:AttendanceService_GetShiftTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceGroups" message="tns:AttendanceService_GetAttendanceGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceGroupsResponse" message="tns:AttendanceService_GetAttendanceGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAttendanceGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveAttendanceGroup" message="tns:AttendanceService_SaveAttendanceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveAttendanceGroupResponse" message="tns:AttendanceService_SaveAttendanceGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttendanceGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteAttendanceGroup" message="tns:AttendanceService_DeleteAttendanceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteAttendanceGroupResponse" message="tns:AttendanceService_DeleteAttendanceGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayTypesBasicDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetHolidayTypesBasicDetails" message="tns:AttendanceService_GetHolidayTypesBasicDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetHolidayTypesBasicDetailsResponse" message="tns:AttendanceService_GetHolidayTypesBasicDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveHolidayType">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveHolidayType" message="tns:AttendanceService_SaveHolidayType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveHolidayTypeResponse" message="tns:AttendanceService_SaveHolidayType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHolidayType">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteHolidayType" message="tns:AttendanceService_DeleteHolidayType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteHolidayTypeResponse" message="tns:AttendanceService_DeleteHolidayType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayBasicDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetHolidayBasicDetails" message="tns:AttendanceService_GetHolidayBasicDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetHolidayBasicDetailsResponse" message="tns:AttendanceService_GetHolidayBasicDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveHolidayData">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveHolidayData" message="tns:AttendanceService_SaveHolidayData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveHolidayDataResponse" message="tns:AttendanceService_SaveHolidayData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBulkHolidayData">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveBulkHolidayData" message="tns:AttendanceService_SaveBulkHolidayData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveBulkHolidayDataResponse" message="tns:AttendanceService_SaveBulkHolidayData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHolidayData">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateHolidayData" message="tns:AttendanceService_UpdateHolidayData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateHolidayDataResponse" message="tns:AttendanceService_UpdateHolidayData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHolidayData">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteHolidayData" message="tns:AttendanceService_DeleteHolidayData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteHolidayDataResponse" message="tns:AttendanceService_DeleteHolidayData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayYears">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetHolidayYears" message="tns:AttendanceService_GetHolidayYears_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetHolidayYearsResponse" message="tns:AttendanceService_GetHolidayYears_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysBasicDetailsByYear">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetHolidaysBasicDetailsByYear" message="tns:AttendanceService_GetHolidaysBasicDetailsByYear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetHolidaysBasicDetailsByYearResponse" message="tns:AttendanceService_GetHolidaysBasicDetailsByYear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeDailyShiftDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveEmployeeDailyShiftDetails" message="tns:AttendanceService_SaveEmployeeDailyShiftDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveEmployeeDailyShiftDetailsResponse" message="tns:AttendanceService_SaveEmployeeDailyShiftDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDailyShiftDetailsWithOT">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeDailyShiftDetailsWithOT" message="tns:AttendanceService_GetEmployeeDailyShiftDetailsWithOT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeDailyShiftDetailsWithOTResponse" message="tns:AttendanceService_GetEmployeeDailyShiftDetailsWithOT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedShift">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteAssignedShift" message="tns:AttendanceService_DeleteAssignedShift_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteAssignedShiftResponse" message="tns:AttendanceService_DeleteAssignedShift_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftBreakOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftBreakOptions" message="tns:AttendanceService_UpdateShiftBreakOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftBreakOptionsResponse" message="tns:AttendanceService_UpdateShiftBreakOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeHolidayDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeHolidayDetails" message="tns:AttendanceService_GetEmployeeHolidayDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeHolidayDetailsResponse" message="tns:AttendanceService_GetEmployeeHolidayDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeHolidayDetailsByEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeHolidayDetailsByEmployee" message="tns:AttendanceService_GetEmployeeHolidayDetailsByEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeHolidayDetailsByEmployeeResponse" message="tns:AttendanceService_GetEmployeeHolidayDetailsByEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignEmployeeHolidayDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/AssignEmployeeHolidayDetails" message="tns:AttendanceService_AssignEmployeeHolidayDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/AssignEmployeeHolidayDetailsResponse" message="tns:AttendanceService_AssignEmployeeHolidayDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEmployeeHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/RemoveEmployeeHoliday" message="tns:AttendanceService_RemoveEmployeeHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/RemoveEmployeeHolidayResponse" message="tns:AttendanceService_RemoveEmployeeHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveIndividualEmployeeHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/RemoveIndividualEmployeeHoliday" message="tns:AttendanceService_RemoveIndividualEmployeeHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/RemoveIndividualEmployeeHolidayResponse" message="tns:AttendanceService_RemoveIndividualEmployeeHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeMaxOtDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/SaveEmployeeMaxOtDetails" message="tns:AttendanceService_SaveEmployeeMaxOtDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/SaveEmployeeMaxOtDetailsResponse" message="tns:AttendanceService_SaveEmployeeMaxOtDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeMaxOtDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteEmployeeMaxOtDetails" message="tns:AttendanceService_DeleteEmployeeMaxOtDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteEmployeeMaxOtDetailsResponse" message="tns:AttendanceService_DeleteEmployeeMaxOtDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftType">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftType" message="tns:AttendanceService_UpdateShiftType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/UpdateShiftTypeResponse" message="tns:AttendanceService_UpdateShiftType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftType">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftType" message="tns:AttendanceService_DeleteShiftType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/DeleteShiftTypeResponse" message="tns:AttendanceService_DeleteShiftType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceGroupsDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceGroupsDetails" message="tns:AttendanceService_GetAttendanceGroupsDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceGroupsDetailsResponse" message="tns:AttendanceService_GetAttendanceGroupsDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceGroupWithEmployeesDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceGroupWithEmployeesDetails" message="tns:AttendanceService_GetAttendanceGroupWithEmployeesDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceGroupWithEmployeesDetailsResponse" message="tns:AttendanceService_GetAttendanceGroupWithEmployeesDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceGroupEmployeeIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceGroupEmployeeIDs" message="tns:AttendanceService_GetAttendanceGroupEmployeeIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceGroupEmployeeIDsResponse" message="tns:AttendanceService_GetAttendanceGroupEmployeeIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedGroupEmployees">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetAssignedGroupEmployees" message="tns:AttendanceService_GetAssignedGroupEmployees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetAssignedGroupEmployeesResponse" message="tns:AttendanceService_GetAssignedGroupEmployees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeShiftCalendarDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeShiftCalendarDetails" message="tns:AttendanceService_GetEmployeeShiftCalendarDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeShiftCalendarDetailsResponse" message="tns:AttendanceService_GetEmployeeShiftCalendarDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceEmployeeSummaryDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceEmployeeSummaryDetails" message="tns:AttendanceService_GetAttendanceEmployeeSummaryDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetAttendanceEmployeeSummaryDetailsResponse" message="tns:AttendanceService_GetAttendanceEmployeeSummaryDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendancePeriodDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetAttendancePeriodDetails" message="tns:AttendanceService_GetAttendancePeriodDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetAttendancePeriodDetailsResponse" message="tns:AttendanceService_GetAttendancePeriodDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftMasterDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftMasterDetails" message="tns:AttendanceService_GetShiftMasterDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftMasterDetailsResponse" message="tns:AttendanceService_GetShiftMasterDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftAllDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftAllDetails" message="tns:AttendanceService_GetShiftAllDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftAllDetailsResponse" message="tns:AttendanceService_GetShiftAllDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftWeekWithDaysDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftWeekWithDaysDetails" message="tns:AttendanceService_GetShiftWeekWithDaysDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftWeekWithDaysDetailsResponse" message="tns:AttendanceService_GetShiftWeekWithDaysDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftWeekWithDaysByWeek">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetShiftWeekWithDaysByWeek" message="tns:AttendanceService_GetShiftWeekWithDaysByWeek_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetShiftWeekWithDaysByWeekResponse" message="tns:AttendanceService_GetShiftWeekWithDaysByWeek_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAssignedShiftDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeAssignedShiftDetails" message="tns:AttendanceService_GetEmployeeAssignedShiftDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/GetEmployeeAssignedShiftDetailsResponse" message="tns:AttendanceService_GetEmployeeAssignedShiftDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginAttendanceProcess">
+      <wsdl:input wsaw:Action="http://tempuri.org/AttendanceService/BeginAttendanceProcess" message="tns:AttendanceService_BeginAttendanceProcess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AttendanceService/BeginAttendanceProcessResponse" message="tns:AttendanceService_BeginAttendanceProcess_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_AttendanceService" type="tns:AttendanceService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetExecutiveDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetExecutiveDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExecutiveDetailsFirst">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetExecutiveDetailsFirst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeLeiuLeaveDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeLeiuLeaveDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExecutiveDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateExecutiveDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeLeiuLeaveDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateEmployeeLeiuLeaveDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovedLeiuLeavePoolDataByDate">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetApprovedLeiuLeavePoolDataByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyApprovedLeiuLeaves">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/ModifyApprovedLeiuLeaves" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExecutivePaymentDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetExecutivePaymentDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLeiuLeavePayments">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveLeiuLeavePayments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginAttendanceDataMigration">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/BeginAttendanceDataMigration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftDetailsByDate">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftDetailsByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftDetailsByDateNew">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftDetailsByDateNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAttendanceToDatabase">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UploadAttendanceToDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAttendanceFromAPI">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/AddAttendanceFromAPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastDataDownloadDate">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/getLastDataDownloadDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSAttendance">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetSMSAttendance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSMSAttendance">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateSMSAttendance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeShifts">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeShifts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAttendanceData">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeAttendanceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeAttendanceData">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveEmployeeAttendanceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAttendanceSummary">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeAttendanceSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttendanceProcessEmployeeAndAttendDayWise">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteAttendanceProcessEmployeeAndAttendDayWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAttendanceGroupEmployees">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveAttendanceGroupEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftMasterDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveShiftMasterDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftMasterDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateShiftMasterDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftMasterDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteShiftMasterDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftWithCategories">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftWithCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftNames">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdditionalDaysByShift">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetAdditionalDaysByShift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftAdditionalDays">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveShiftAdditionalDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftAdditionalDays">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteShiftAdditionalDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftBreaksByShift">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftBreaksByShift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftBreakDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteShiftBreakDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftConvering">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftConvering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftCoveringDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveShiftCoveringDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftCoveringDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteShiftCoveringDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateShiftOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftCategoryDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftCategoryDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftCategory">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveShiftCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftCategory">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateShiftCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftCategory">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteShiftCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftWeeks">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftWeeks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftWeeksDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveShiftWeeksDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftWeekDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateShiftWeekDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftWeekDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteShiftWeekDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDayRangeDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetDayRangeDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftTypes">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceGroups">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetAttendanceGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAttendanceGroup">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveAttendanceGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttendanceGroup">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteAttendanceGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayTypesBasicDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetHolidayTypesBasicDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveHolidayType">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveHolidayType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHolidayType">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteHolidayType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayBasicDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetHolidayBasicDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveHolidayData">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveHolidayData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBulkHolidayData">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveBulkHolidayData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHolidayData">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateHolidayData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHolidayData">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteHolidayData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayYears">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetHolidayYears" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysBasicDetailsByYear">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetHolidaysBasicDetailsByYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeDailyShiftDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveEmployeeDailyShiftDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDailyShiftDetailsWithOT">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeDailyShiftDetailsWithOT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssignedShift">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteAssignedShift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftBreakOptions">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateShiftBreakOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeHolidayDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeHolidayDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeHolidayDetailsByEmployee">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeHolidayDetailsByEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignEmployeeHolidayDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/AssignEmployeeHolidayDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEmployeeHoliday">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/RemoveEmployeeHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveIndividualEmployeeHoliday">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/RemoveIndividualEmployeeHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeMaxOtDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/SaveEmployeeMaxOtDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeMaxOtDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteEmployeeMaxOtDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShiftType">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/UpdateShiftType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftType">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/DeleteShiftType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceGroupsDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetAttendanceGroupsDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceGroupWithEmployeesDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetAttendanceGroupWithEmployeesDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceGroupEmployeeIDs">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetAttendanceGroupEmployeeIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedGroupEmployees">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetAssignedGroupEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeShiftCalendarDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeShiftCalendarDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceEmployeeSummaryDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetAttendanceEmployeeSummaryDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendancePeriodDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetAttendancePeriodDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftMasterDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftMasterDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftAllDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftAllDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftWeekWithDaysDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftWeekWithDaysDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftWeekWithDaysByWeek">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetShiftWeekWithDaysByWeek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAssignedShiftDetails">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/GetEmployeeAssignedShiftDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginAttendanceProcess">
+      <soap:operation soapAction="http://tempuri.org/AttendanceService/BeginAttendanceProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AttendanceService">
+    <wsdl:port name="BasicHttpBinding_AttendanceService" binding="tns:BasicHttpBinding_AttendanceService">
+      <soap:address location="http://localhost:11651/AttendanceService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

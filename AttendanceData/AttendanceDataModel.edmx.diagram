@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9cc2c6eb74d04adba65e107c994a72b5" Name="Diagram1" ZoomLevel="43">
+        <EntityTypeShape EntityType="AtttendanceModel.z_Shift_Category" Width="1.875" PointX="0.625" PointY="0.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_ShiftDayRange" Width="1.5" PointX="5" PointY="0.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_Shift_Break_Details" Width="1.5" PointX="2.875" PointY="22.875" />
+        <EntityTypeShape EntityType="AtttendanceModel.EmployeeShiftCalendarDetailView" Width="2.5" PointX="7.5" PointY="7.125" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_AttendanceGroup" PointX="17.375" PointY="6" Width="2.125" />
+        <EntityTypeShape EntityType="AtttendanceModel.AttendanceGroupDetailsView" Width="1.5" PointX="7.375" PointY="10.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.AttendanceGroupWithEmployee" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_AttendanceData" Width="1.5" PointX="9.375" PointY="11.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_Period" Width="1.5" PointX="11.375" PointY="11.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.AttendancePeriodView" Width="1.875" PointX="13.5" PointY="5.125" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_ShiftWeek" Width="1.5" PointX="2.875" PointY="34.375" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_ShiftWeek" Width="1.5" PointX="5.125" PointY="30.875" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_ShiftWeek_z_ShiftWeek" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_EmployeeAttendance" Width="2.625" PointX="5.375" PointY="14.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_LeaveType" Width="2.25" PointX="0.5" PointY="22.125" />
+        <EntityTypeShape EntityType="AtttendanceModel.ShiftWeekWithDaysView" Width="1.5" PointX="13.375" PointY="12.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_EmployeeAttendStatus" Width="2" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_HolidayType" Width="1.5" PointX="15.375" PointY="10.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_HolidayData" Width="2" PointX="15.375" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_HolidayData" Width="2.25" PointX="20.375" PointY="15.875" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_HolidayData_z_HolidayData" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_AttendanceGroup" Width="2.125" PointX="13.25" PointY="19" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_AttendanceGroup_z_AttendanceGroup1" />
+        <EntityTypeShape EntityType="AtttendanceModel.mas_Employee" Width="1.5" PointX="0.75" PointY="15" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_AttendanceGroup_mas_Employee" />
+        <EntityTypeShape EntityType="AtttendanceModel.EmployeeLeaveShiftDetailsView" Width="1.5" PointX="3.375" PointY="8.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.EmployeeShiftDetailView" Width="1.5" PointX="18.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ProcessedAttendanceStatus" Width="1.5" PointX="9.375" PointY="26.875" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ProcessedAttendanceStatus_z_EmployeeAttendStatus" />
+        <AssociationConnector Association="AtttendanceModel.trns_EmployeeHoliday" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ProcessedEmployeeHolidayStatus" Width="1.5" PointX="18.125" PointY="26.875" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ProcessedEmployeeHolidayStatus_z_HolidayData" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ProcessedLeaveStatus" Width="4.625" PointX="9.125" PointY="36.625" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_EmployeeMaxOTDetails" Width="2" PointX="10.875" PointY="6.375" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_EmployeeDailyShiftDetails" Width="2.5" PointX="20.25" PointY="19" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_EmployeeDailyShiftDetails_mas_Employee" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_EmployeeDailyShiftDetails_z_AttendanceGroup" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_EmployeeMaxOTDetails_trns_EmployeeDailyShiftDetails" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ProcessedEmployeeMaxOT" Width="1.5" PointX="9.125" PointY="40.5" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_EmployeeRule" Width="1.5" PointX="18.375" PointY="10.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.EmployeeAssignedShiftsView" Width="2.75" PointX="20.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_ShiftType" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ShiftType" Width="1.5" PointX="12.625" PointY="23.125" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ShiftType_z_ShiftType" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_ShiftOrder" Width="1.5" PointX="5.125" PointY="27.875" />
+        <EntityTypeShape EntityType="AtttendanceModel.ShiftMasterDetailsView" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_EmployeeShiftBreakStatus" Width="1.5" PointX="23.5" PointY="19.625" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_EmployeeShiftBreakStatus_trns_EmployeeDailyShiftDetails" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ProcessedEmployeeBreakStatus" Width="1.5" PointX="9.125" PointY="33" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_LeaveCategory" Width="1.5" PointX="23.375" PointY="16" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_AttendanceBonus" Width="1.5" PointX="23.375" PointY="22.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.z_Datamigration_Configuration" Width="1.5" PointX="13.375" PointY="7.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_Shift_Covering_Details" Width="1.5" PointX="5.125" PointY="56.25" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ProcessedEmployeeLeiuleaveStatus" Width="1.5" PointX="9.125" PointY="44.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.ExecutiveOptionView" Width="1.5" PointX="20.375" PointY="6.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ProcessedEmployeeLeiuLeaveStatus_Permanent_" Width="1.5" PointX="20.375" PointY="11.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.EmployeeLeiuLeaveView" Width="1.5" PointX="15.375" PointY="24.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.PendingLeiuLeavesForSupervisorApproval" Width="1.5" PointX="25.375" PointY="22.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.usr_UserEmployee" Width="1.5" PointX="3" PointY="60.875" />
+        <AssociationConnector Association="AtttendanceModel.FK_usr_UserEmployee_mas_Employee" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_EmployeePeriodQunatity" Width="1.5" PointX="16.625" PointY="20.125" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_EmployeePeriodQunatity_mas_Employee" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_EmployeePeriodQunatity_z_Period" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_LeiuLeavePayment" Width="1.5" PointX="22.375" PointY="12.75" />
+        <AssociationConnector Association="AtttendanceModel.trns_EmployeePeriodQunatitymas_Employee" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_LeavePool" Width="1.5" PointX="29.625" PointY="18.5" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_LeavePool_mas_Employee" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_LeavePool_z_LeaveCategory" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_LeavePool_z_LeaveType" />
+        <AssociationConnector Association="AtttendanceModel.trns_LeavePoolmas_Employee" />
+        <AssociationConnector Association="AtttendanceModel.trns_LeavePoolmas_Employee1" />
+        <EntityTypeShape EntityType="AtttendanceModel.PendingLeiuLeavesView" Width="1.5" PointX="9.375" PointY="17.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.SMS_IN" Width="1.5" PointX="24.375" PointY="12.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.PendingLeavesView" Width="1.5" PointX="11.375" PointY="25.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.EmployeeLeaveShiftDetailsNewView" Width="1.5" PointX="26.375" PointY="12.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_EmployeeAttendanceData" Width="1.5" PointX="26.375" PointY="17.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.EmployeeShiftView" Width="1.5" PointX="27.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_EmployeeLeave" Width="1.5" PointX="3" PointY="63.375" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_EmployeeLeave_mas_Employee" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_EmployeeAutoLeaveGenerate" Width="1.5" PointX="22.375" PointY="26.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_Shift_Additional_Day" Width="1.5" PointX="3.375" PointY="72.25" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_Shift_Detail_Basic" Width="1.5" PointX="3" PointY="37.375" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_EmployeeAttendanceSumarry" Width="1.5" PointX="28.375" PointY="4.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.trns_ProcessedEmployeeAttendance" Width="1.5" PointX="6.875" PointY="34.125" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ProcessedAttendanceStatus_trns_ProcessedEmployeeAttendance" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ProcessedEmployeeBreakStatus_trns_ProcessedEmployeeAttendance" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ProcessedEmployeeHolidayStatus_trns_ProcessedEmployeeAttendance" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ProcessedEmployeeLeiuleaveStatus_trns_ProcessedEmployeeAttendance" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ProcessedEmployeeMaxOT_trns_ProcessedEmployeeAttendance" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ProcessedLeaveStatus_trns_ProcessedEmployeeAttendance" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_Shift_Late_Configuration_Details" Width="1.5" PointX="3" PointY="16.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_Shift_OT_Configuration_Details" Width="1.5" PointX="3" PointY="42.25" />
+        <EntityTypeShape EntityType="AtttendanceModel.AttendEmployeeSummaryView" Width="1.5" PointX="22.375" PointY="6.75" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_Employee" Width="1.5" PointX="3.375" PointY="78.125" />
+        <EntityTypeShape EntityType="AtttendanceModel.AttendanceEmployeeDataView" Width="1.5" PointX="0.75" PointY="4.75" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_Employee_mas_Employee" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_EmployeeRule_dtl_Employee" />
+        <EntityTypeShape EntityType="AtttendanceModel.dtl_Shift_Master" Width="1.5" PointX="0.75" PointY="42.5" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_Shift_Additional_Day_dtl_Shift_Master" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_Shift_Break_Details_dtl_Shift_Master" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_Shift_Covering_Details_dtl_Shift_Master" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_Shift_Detail_Basic_dtl_Shift_Master" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_Shift_Late_Configuration_Details_dtl_Shift_Master" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_Shift_OT_Configuration_Details_dtl_Shift_Master" />
+        <AssociationConnector Association="AtttendanceModel.FK_dtl_ShiftOrder_dtl_Shift_Master" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_EmployeeDailyShiftDetails_dtl_Shift_Master" />
+        <AssociationConnector Association="AtttendanceModel.FK_trns_ShiftType_dtl_Shift_Master" />
+        <EntityTypeShape EntityType="AtttendanceModel.ShiftDetailAllView" Width="1.5" PointX="27.375" PointY="24.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

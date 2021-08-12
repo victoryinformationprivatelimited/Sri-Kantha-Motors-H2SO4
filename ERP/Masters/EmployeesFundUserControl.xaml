@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="ERP.Masters.EmployeesFundUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="180" Width="279">
+    <Grid Background="#FFB7BFE0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="64*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FFF4F4F5" Stroke="Black" Grid.ColumnSpan="5" Grid.RowSpan="3" Height="40" VerticalAlignment="Top"/>
+        <Label Content="Employees Fund Master" Margin="0.036,0.667,0,1.262" Background="{x:Null}" HorizontalAlignment="Left" Width="142" Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="   ETF" HorizontalAlignment="Left" Margin="0.036,0.145,0,0" Grid.Row="3" VerticalAlignment="Top" Width="58" FontSize="16" Background="{x:Null}" Height="28" Grid.RowSpan="2" Grid.Column="1"/>
+        <TextBox Grid.Row="3" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" Grid.Column="3" HorizontalAlignment="Left" Width="130.468"/>
+        <Label Content="%" Grid.Column="4" Margin="0,0.145,31.23,0" Grid.Row="3" FontSize="14" Background="{x:Null}" HorizontalAlignment="Right" Width="23" Height="27.003" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Label Content="   EPF" HorizontalAlignment="Left" Margin="1,0.623,0,0" Grid.Row="5" VerticalAlignment="Top" Width="58" FontSize="16" Background="{x:Null}" Height="28.69" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBox Grid.Row="5" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" Grid.Column="3"/>
+        <Label Content="%" Grid.Column="4" Margin="0,3.313,27.668,0" Grid.Row="5" FontSize="14" Background="{x:Null}" HorizontalAlignment="Right" Width="23" Height="26" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Button Content="Save" Margin="65.468,4.466,64.229,-0.001" Grid.Row="9" Grid.Column="3" Width="65" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="20"/>
+        <Label Content="Payee Tax" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="7" VerticalAlignment="Top" Height="25.96" Width="64.266" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="0.468,0,0,0" Grid.Row="7" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="130"/>
+
+    </Grid>
+</UserControl>

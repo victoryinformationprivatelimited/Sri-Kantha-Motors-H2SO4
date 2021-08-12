@@ -1,0 +1,13 @@
+﻿<Window x:Class="ERP.Payroll.Excel_Sheet_Windows.ExcelGenerateForRulesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ExcelGenerateForRulesWindow" Height="250" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Payment Period" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding Periods}" SelectedItem="{Binding CurrentPeriod}" DisplayMemberPath="period_name" HorizontalAlignment="Left" Margin="121,85,0,0" VerticalAlignment="Top" Width="199"/>
+        <Label Content="Company Rule" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding Rules}" SelectedItem="{Binding CurrentRule}" DisplayMemberPath="rule_name" HorizontalAlignment="Left" Margin="121,31,0,0" VerticalAlignment="Top" Width="199"/>
+        <Button Command="{Binding GenerateButton}" Content="Generate Button" HorizontalAlignment="Left" Margin="108,170,0,0" VerticalAlignment="Top" Width="127" Height="30"/>
+
+    </Grid>
+</Window>

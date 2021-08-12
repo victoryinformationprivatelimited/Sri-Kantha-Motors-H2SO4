@@ -1,0 +1,1972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/AttendanceData" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AttendanceData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:11651/AttendanceService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfExecutiveOptionView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExecutiveOptionView" nillable="true" type="tns:ExecutiveOptionView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExecutiveOptionView" nillable="true" type="tns:ArrayOfExecutiveOptionView" />
+  <xs:complexType name="ExecutiveOptionView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="attend_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="attendance_group_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="attendance_group_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="expire_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_active" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_expire" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_leiu_leave" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_paid" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_pay" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_use_status" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="pay_period_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="second_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_attend_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExecutiveOptionView" nillable="true" type="tns:ExecutiveOptionView" />
+  <xs:complexType name="ArrayOfAttendEmployeeSummaryView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttendEmployeeSummaryView" nillable="true" type="tns:AttendEmployeeSummaryView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttendEmployeeSummaryView" nillable="true" type="tns:ArrayOfAttendEmployeeSummaryView" />
+  <xs:complexType name="AttendEmployeeSummaryView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="companyBranch_Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="companyBranch_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="department_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="department_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="designation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="designation_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="epf_no" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="etf_no" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="grade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="grade_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="isActive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isdelete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="second_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttendEmployeeSummaryView" nillable="true" type="tns:AttendEmployeeSummaryView" />
+  <xs:complexType name="ArrayOfEmployeeLeiuLeaveView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeLeiuLeaveView" nillable="true" type="tns:EmployeeLeiuLeaveView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeLeiuLeaveView" nillable="true" type="tns:ArrayOfEmployeeLeiuLeaveView" />
+  <xs:complexType name="EmployeeLeiuLeaveView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="attend_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="expire_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_expire" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_leiu_leave" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_paid" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_pay" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_use_status" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="leiu_pay_id" type="xs:int" />
+          <xs:element minOccurs="0" name="pay_period_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="second_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeLeiuLeaveView" nillable="true" type="tns:EmployeeLeiuLeaveView" />
+  <xs:complexType name="ArrayOfPendingLeiuLeavesView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PendingLeiuLeavesView" nillable="true" type="tns:PendingLeiuLeavesView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPendingLeiuLeavesView" nillable="true" type="tns:ArrayOfPendingLeiuLeavesView" />
+  <xs:complexType name="PendingLeiuLeavesView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Employee_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Leave_type_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="apply_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="approved_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_approved" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_pending_for_approval" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_rejected" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="leave_category_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="leave_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="leave_detail_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="leave_type_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pool_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="used_leiu_leave_date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="value" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PendingLeiuLeavesView" nillable="true" type="tns:PendingLeiuLeavesView" />
+  <xs:complexType name="ArrayOftrns_LeiuLeavePayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_LeiuLeavePayment" nillable="true" type="tns:trns_LeiuLeavePayment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_LeiuLeavePayment" nillable="true" type="tns:ArrayOftrns_LeiuLeavePayment" />
+  <xs:complexType name="trns_LeiuLeavePayment">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="attend_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="employee_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="period_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="trns_pay_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_LeiuLeavePayment" nillable="true" type="tns:trns_LeiuLeavePayment" />
+  <xs:complexType name="ArrayOfAttendanceEmployeeDataView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttendanceEmployeeDataView" nillable="true" type="tns:AttendanceEmployeeDataView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttendanceEmployeeDataView" nillable="true" type="tns:ArrayOfAttendanceEmployeeDataView" />
+  <xs:complexType name="AttendanceEmployeeDataView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="fingerprint_device_ID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="join_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="leave_end_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="prmernant_active_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="second_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttendanceEmployeeDataView" nillable="true" type="tns:AttendanceEmployeeDataView" />
+  <xs:complexType name="z_Period">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="end_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="is_proceed" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isdelete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="late_base" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="nopay_base" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="period_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="period_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="start_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="trns_EmployeePeriodQunatity" nillable="true" type="tns:ArrayOftrns_EmployeePeriodQunatity" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_Period" nillable="true" type="tns:z_Period" />
+  <xs:complexType name="ArrayOftrns_EmployeePeriodQunatity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_EmployeePeriodQunatity" nillable="true" type="tns:trns_EmployeePeriodQunatity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_EmployeePeriodQunatity" nillable="true" type="tns:ArrayOftrns_EmployeePeriodQunatity" />
+  <xs:complexType name="trns_EmployeePeriodQunatity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="is_proceed" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isdelete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_EmployeeReference" nillable="true" type="q8:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="period_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="rule_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="z_Period" nillable="true" type="tns:z_Period" />
+          <xs:element minOccurs="0" name="z_PeriodReference" nillable="true" type="q8:EntityReferenceOfz_Perioda91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_EmployeePeriodQunatity" nillable="true" type="tns:trns_EmployeePeriodQunatity" />
+  <xs:complexType name="mas_Employee">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address_01" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="address_02" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="address_03" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="birthday" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="city_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="civil_status_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="dtl_AttendanceGroup" nillable="true" type="tns:dtl_AttendanceGroup" />
+          <xs:element minOccurs="0" name="dtl_AttendanceGroupReference" nillable="true" type="q9:EntityReferenceOfdtl_AttendanceGroupa91SJDxh" />
+          <xs:element minOccurs="0" name="dtl_Employee" nillable="true" type="tns:dtl_Employee" />
+          <xs:element minOccurs="0" name="dtl_EmployeeLeave" nillable="true" type="tns:ArrayOfdtl_EmployeeLeave" />
+          <xs:element minOccurs="0" name="dtl_EmployeeReference" nillable="true" type="q9:EntityReferenceOfdtl_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="emg_contact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="epf_no" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="etf_no" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gender_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="initials" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="isdelete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="nic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="office_email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="office_mobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="portalImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="religen_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="second_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="telephone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="title_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="town_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="trns_EmployeeDailyShiftDetails" nillable="true" type="tns:ArrayOftrns_EmployeeDailyShiftDetails" />
+          <xs:element minOccurs="0" name="trns_EmployeePeriodQunatity" nillable="true" type="tns:ArrayOftrns_EmployeePeriodQunatity" />
+          <xs:element minOccurs="0" name="trns_LeavePool" nillable="true" type="tns:ArrayOftrns_LeavePool" />
+          <xs:element minOccurs="0" name="trns_LeavePool1" nillable="true" type="tns:ArrayOftrns_LeavePool" />
+          <xs:element minOccurs="0" name="trns_LeavePool2" nillable="true" type="tns:ArrayOftrns_LeavePool" />
+          <xs:element minOccurs="0" name="usr_UserEmployee" nillable="true" type="tns:ArrayOfusr_UserEmployee" />
+          <xs:element minOccurs="0" name="z_HolidayData" nillable="true" type="tns:ArrayOfz_HolidayData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+  <xs:complexType name="dtl_AttendanceGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attendance_group_id" type="xs:int" />
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="is_active" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_delete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_EmployeeReference" nillable="true" type="q10:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="saved_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="saved_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="z_AttendanceGroup" nillable="true" type="tns:z_AttendanceGroup" />
+          <xs:element minOccurs="0" name="z_AttendanceGroupReference" nillable="true" type="q10:EntityReferenceOfz_AttendanceGroupa91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_AttendanceGroup" nillable="true" type="tns:dtl_AttendanceGroup" />
+  <xs:complexType name="z_AttendanceGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attendance_group_id" type="xs:int" />
+          <xs:element minOccurs="0" name="attendance_group_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="dtl_AttendanceGroup" nillable="true" type="tns:ArrayOfdtl_AttendanceGroup" />
+          <xs:element minOccurs="0" name="is_active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_delete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_roster_group" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_shift_group" type="xs:boolean" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="trns_EmployeeDailyShiftDetails" nillable="true" type="tns:ArrayOftrns_EmployeeDailyShiftDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_AttendanceGroup" nillable="true" type="tns:z_AttendanceGroup" />
+  <xs:complexType name="ArrayOfdtl_AttendanceGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_AttendanceGroup" nillable="true" type="tns:dtl_AttendanceGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_AttendanceGroup" nillable="true" type="tns:ArrayOfdtl_AttendanceGroup" />
+  <xs:complexType name="ArrayOftrns_EmployeeDailyShiftDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_EmployeeDailyShiftDetails" nillable="true" type="tns:trns_EmployeeDailyShiftDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_EmployeeDailyShiftDetails" nillable="true" type="tns:ArrayOftrns_EmployeeDailyShiftDetails" />
+  <xs:complexType name="trns_EmployeeDailyShiftDetails">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q12:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attendance_group_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="day_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q12:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_EmployeeReference" nillable="true" type="q12:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="trns_EmployeeMaxOTDetails" nillable="true" type="tns:trns_EmployeeMaxOTDetails" />
+          <xs:element minOccurs="0" name="trns_EmployeeMaxOTDetailsReference" nillable="true" type="q12:EntityReferenceOftrns_EmployeeMaxOTDetailsa91SJDxh" />
+          <xs:element minOccurs="0" name="trns_EmployeeShiftBreakStatus" nillable="true" type="tns:trns_EmployeeShiftBreakStatus" />
+          <xs:element minOccurs="0" name="trns_EmployeeShiftBreakStatusReference" nillable="true" type="q12:EntityReferenceOftrns_EmployeeShiftBreakStatusa91SJDxh" />
+          <xs:element minOccurs="0" name="trns_id" type="xs:int" />
+          <xs:element minOccurs="0" name="z_AttendanceGroup" nillable="true" type="tns:z_AttendanceGroup" />
+          <xs:element minOccurs="0" name="z_AttendanceGroupReference" nillable="true" type="q12:EntityReferenceOfz_AttendanceGroupa91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_EmployeeDailyShiftDetails" nillable="true" type="tns:trns_EmployeeDailyShiftDetails" />
+  <xs:complexType name="dtl_Shift_Master">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q13:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="dtl_ShiftOrder" nillable="true" type="tns:dtl_ShiftOrder" />
+          <xs:element minOccurs="0" name="dtl_ShiftOrderReference" nillable="true" type="q13:EntityReferenceOfdtl_ShiftOrdera91SJDxh" />
+          <xs:element minOccurs="0" name="dtl_Shift_Additional_Day" nillable="true" type="tns:ArrayOfdtl_Shift_Additional_Day" />
+          <xs:element minOccurs="0" name="dtl_Shift_Break_Details" nillable="true" type="tns:ArrayOfdtl_Shift_Break_Details" />
+          <xs:element minOccurs="0" name="dtl_Shift_Covering_Details" nillable="true" type="tns:dtl_Shift_Covering_Details" />
+          <xs:element minOccurs="0" name="dtl_Shift_Covering_DetailsReference" nillable="true" type="q13:EntityReferenceOfdtl_Shift_Covering_Detailsa91SJDxh" />
+          <xs:element minOccurs="0" name="dtl_Shift_Detail_Basic" nillable="true" type="tns:dtl_Shift_Detail_Basic" />
+          <xs:element minOccurs="0" name="dtl_Shift_Detail_BasicReference" nillable="true" type="q13:EntityReferenceOfdtl_Shift_Detail_Basica91SJDxh" />
+          <xs:element minOccurs="0" name="dtl_Shift_Late_Configuration_Details" nillable="true" type="tns:dtl_Shift_Late_Configuration_Details" />
+          <xs:element minOccurs="0" name="dtl_Shift_Late_Configuration_DetailsReference" nillable="true" type="q13:EntityReferenceOfdtl_Shift_Late_Configuration_Detailsa91SJDxh" />
+          <xs:element minOccurs="0" name="dtl_Shift_OT_Configuration_Details" nillable="true" type="tns:dtl_Shift_OT_Configuration_Details" />
+          <xs:element minOccurs="0" name="dtl_Shift_OT_Configuration_DetailsReference" nillable="true" type="q13:EntityReferenceOfdtl_Shift_OT_Configuration_Detailsa91SJDxh" />
+          <xs:element minOccurs="0" name="is_daily_shift" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_delete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_entitle_leiu_leave" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_executive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_halfday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_late_deduc" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_mor_inc" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_multiple" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_nonexecutive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_open_shift" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_open_shift_late" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_open_shift_ot" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_ot_shift" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_roster" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_security" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_single" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_split_shift" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_stores_executive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_stores_nonexecutive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="shift_category_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_EmployeeDailyShiftDetails" nillable="true" type="tns:ArrayOftrns_EmployeeDailyShiftDetails" />
+          <xs:element minOccurs="0" name="trns_ShiftType" nillable="true" type="tns:trns_ShiftType" />
+          <xs:element minOccurs="0" name="trns_ShiftTypeReference" nillable="true" type="q13:EntityReferenceOftrns_ShiftTypea91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+  <xs:complexType name="dtl_ShiftOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q14:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q14:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_ShiftOrder" nillable="true" type="tns:dtl_ShiftOrder" />
+  <xs:complexType name="ArrayOfdtl_Shift_Additional_Day">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_Shift_Additional_Day" nillable="true" type="tns:dtl_Shift_Additional_Day" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_Shift_Additional_Day" nillable="true" type="tns:ArrayOfdtl_Shift_Additional_Day" />
+  <xs:complexType name="dtl_Shift_Additional_Day">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q15:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="addition_day_count" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="addition_day_description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="addition_day_id" type="xs:int" />
+          <xs:element minOccurs="0" name="check_type" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q15:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="from_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="from_time_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="is_delete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="to_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="to_time_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="worktime_duration" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="worktime_end" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="worktime_end_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="worktime_start" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="worktime_start_day_value" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_Shift_Additional_Day" nillable="true" type="tns:dtl_Shift_Additional_Day" />
+  <xs:complexType name="ArrayOfdtl_Shift_Break_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_Shift_Break_Details" nillable="true" type="tns:dtl_Shift_Break_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_Shift_Break_Details" nillable="true" type="tns:ArrayOfdtl_Shift_Break_Details" />
+  <xs:complexType name="dtl_Shift_Break_Details">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q16:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="break_description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="break_id" type="xs:int" />
+          <xs:element minOccurs="0" name="break_in_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="break_in_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="break_off_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="break_off_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="break_on_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="break_on_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="break_out_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="break_out_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q16:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="is_delete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_Shift_Break_Details" nillable="true" type="tns:dtl_Shift_Break_Details" />
+  <xs:complexType name="dtl_Shift_Covering_Details">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q17:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="covering_Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="covering_effect_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="covering_off_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="covering_off_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="covering_on_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="covering_on_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q17:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="is_delete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="maximum_late_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_Shift_Covering_Details" nillable="true" type="tns:dtl_Shift_Covering_Details" />
+  <xs:complexType name="dtl_Shift_Detail_Basic">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q18:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q18:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="open_min_word_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_min_word_time_month" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_min_word_time_week" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_in_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_in_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="shift_off_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_on_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_out_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_out_time" nillable="true" type="ser:duration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_Shift_Detail_Basic" nillable="true" type="tns:dtl_Shift_Detail_Basic" />
+  <xs:complexType name="dtl_Shift_Late_Configuration_Details">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q19:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q19:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="early_grace_effect_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="early_grace_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="early_out" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="evening_halfday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="evening_short_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="fullday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="late_grace_effect_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="late_grace_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="late_in" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="morning_halfday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="morning_short_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_fullday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_halfday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_late" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_short_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_Shift_Late_Configuration_Details" nillable="true" type="tns:dtl_Shift_Late_Configuration_Details" />
+  <xs:complexType name="dtl_Shift_OT_Configuration_Details">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q20:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q20:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="open_double_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_non_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_single_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_triple_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_double_ot" type="xs:int" />
+          <xs:element minOccurs="0" name="post_double_ot_roundup" type="xs:int" />
+          <xs:element minOccurs="0" name="post_non_ot" type="xs:int" />
+          <xs:element minOccurs="0" name="post_non_ot_compensate" type="xs:int" />
+          <xs:element minOccurs="0" name="post_single_ot" type="xs:int" />
+          <xs:element minOccurs="0" name="post_single_ot_roundup" type="xs:int" />
+          <xs:element minOccurs="0" name="post_triple_ot" type="xs:int" />
+          <xs:element minOccurs="0" name="post_triple_ot_roundup" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_double_ot" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_double_ot_roundup" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_non_ot" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_non_ot_compensate" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_single_ot" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_single_ot_roundup" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_triple_ot" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_triple_ot_roundup" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_Shift_OT_Configuration_Details" nillable="true" type="tns:dtl_Shift_OT_Configuration_Details" />
+  <xs:complexType name="trns_ShiftType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q21:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+          <xs:element minOccurs="0" name="dtl_Shift_MasterReference" nillable="true" type="q21:EntityReferenceOfdtl_Shift_Mastera91SJDxh" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_type_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="z_ShiftType" nillable="true" type="tns:z_ShiftType" />
+          <xs:element minOccurs="0" name="z_ShiftTypeReference" nillable="true" type="q21:EntityReferenceOfz_ShiftTypea91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_ShiftType" nillable="true" type="tns:trns_ShiftType" />
+  <xs:complexType name="z_ShiftType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q22:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="shift_type_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_type_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_ShiftType" nillable="true" type="tns:ArrayOftrns_ShiftType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_ShiftType" nillable="true" type="tns:z_ShiftType" />
+  <xs:complexType name="ArrayOftrns_ShiftType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_ShiftType" nillable="true" type="tns:trns_ShiftType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_ShiftType" nillable="true" type="tns:ArrayOftrns_ShiftType" />
+  <xs:complexType name="trns_EmployeeMaxOTDetails">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q23:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="evening_ot_limit" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="morning_ot_limit" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_assigned_id" type="xs:int" />
+          <xs:element minOccurs="0" name="trns_EmployeeDailyShiftDetails" nillable="true" type="tns:trns_EmployeeDailyShiftDetails" />
+          <xs:element minOccurs="0" name="trns_EmployeeDailyShiftDetailsReference" nillable="true" type="q23:EntityReferenceOftrns_EmployeeDailyShiftDetailsa91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_EmployeeMaxOTDetails" nillable="true" type="tns:trns_EmployeeMaxOTDetails" />
+  <xs:complexType name="trns_EmployeeShiftBreakStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q24:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="is_free_break" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_no_break" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_shift_break" type="xs:boolean" />
+          <xs:element minOccurs="0" name="trns_EmployeeDailyShiftDetails" nillable="true" type="tns:trns_EmployeeDailyShiftDetails" />
+          <xs:element minOccurs="0" name="trns_EmployeeDailyShiftDetailsReference" nillable="true" type="q24:EntityReferenceOftrns_EmployeeDailyShiftDetailsa91SJDxh" />
+          <xs:element minOccurs="0" name="trns_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_EmployeeShiftBreakStatus" nillable="true" type="tns:trns_EmployeeShiftBreakStatus" />
+  <xs:complexType name="dtl_Employee">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q25:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="auto_ot" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="basic_salary" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="branch_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="cost_center_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="department_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="designation_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="division_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="dtl_EmployeeRule" nillable="true" type="tns:ArrayOfdtl_EmployeeRule" />
+          <xs:element minOccurs="0" name="dust_amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="grade_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="isActive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isEPF_applicable" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isETF_applicable" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isExecutive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isOT_applicable" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isdelete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="join_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="leave_end_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_EmployeeReference" nillable="true" type="q25:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="payment_methord_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="prmernant_active_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="resign_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="salary_scale_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="section_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="tea_amount" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_Employee" nillable="true" type="tns:dtl_Employee" />
+  <xs:complexType name="ArrayOfdtl_EmployeeRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_EmployeeRule" nillable="true" type="tns:dtl_EmployeeRule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_EmployeeRule" nillable="true" type="tns:ArrayOfdtl_EmployeeRule" />
+  <xs:complexType name="dtl_EmployeeRule">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q26:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="dtl_Employee" nillable="true" type="tns:dtl_Employee" />
+          <xs:element minOccurs="0" name="dtl_EmployeeReference" nillable="true" type="q26:EntityReferenceOfdtl_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="is_special" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isactive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isdelete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="rule_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="special_amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_EmployeeRule" nillable="true" type="tns:dtl_EmployeeRule" />
+  <xs:complexType name="ArrayOfdtl_EmployeeLeave">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_EmployeeLeave" nillable="true" type="tns:dtl_EmployeeLeave" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_EmployeeLeave" nillable="true" type="tns:ArrayOfdtl_EmployeeLeave" />
+  <xs:complexType name="dtl_EmployeeLeave">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q27:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="emp_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="is_automate" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_probation" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_special" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="leave_detail_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_EmployeeReference" nillable="true" type="q27:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="maximum_leaves" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="number_of_days" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="remaining_days" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_EmployeeLeave" nillable="true" type="tns:dtl_EmployeeLeave" />
+  <xs:complexType name="ArrayOftrns_LeavePool">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_LeavePool" nillable="true" type="tns:trns_LeavePool" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_LeavePool" nillable="true" type="tns:ArrayOftrns_LeavePool" />
+  <xs:complexType name="trns_LeavePool">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q28:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="apply_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="approved_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="is_approved" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_pending_for_approval" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_rejected" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="leave_category_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="leave_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="leave_detail_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="leave_type_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_Employee1" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_Employee1Reference" nillable="true" type="q28:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="mas_Employee2" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_Employee2Reference" nillable="true" type="q28:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="mas_EmployeeReference" nillable="true" type="q28:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="pool_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_detail_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="used_leiu_leave_date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="z_LeaveCategory" nillable="true" type="tns:z_LeaveCategory" />
+          <xs:element minOccurs="0" name="z_LeaveCategoryReference" nillable="true" type="q28:EntityReferenceOfz_LeaveCategorya91SJDxh" />
+          <xs:element minOccurs="0" name="z_LeaveType" nillable="true" type="tns:z_LeaveType" />
+          <xs:element minOccurs="0" name="z_LeaveTypeReference" nillable="true" type="q28:EntityReferenceOfz_LeaveTypea91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_LeavePool" nillable="true" type="tns:trns_LeavePool" />
+  <xs:complexType name="z_LeaveCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q29:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_active" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_official" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="leave_code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="leave_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_LeavePool" nillable="true" type="tns:ArrayOftrns_LeavePool" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_LeaveCategory" nillable="true" type="tns:z_LeaveCategory" />
+  <xs:complexType name="z_LeaveType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q30:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="leave_type_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_LeavePool" nillable="true" type="tns:ArrayOftrns_LeavePool" />
+          <xs:element minOccurs="0" name="value" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_LeaveType" nillable="true" type="tns:z_LeaveType" />
+  <xs:complexType name="ArrayOfusr_UserEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usr_UserEmployee" nillable="true" type="tns:usr_UserEmployee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusr_UserEmployee" nillable="true" type="tns:ArrayOfusr_UserEmployee" />
+  <xs:complexType name="usr_UserEmployee">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q31:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="employee_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+          <xs:element minOccurs="0" name="mas_EmployeeReference" nillable="true" type="q31:EntityReferenceOfmas_Employeea91SJDxh" />
+          <xs:element minOccurs="0" name="user_id" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="usr_UserEmployee" nillable="true" type="tns:usr_UserEmployee" />
+  <xs:complexType name="ArrayOfz_HolidayData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="z_HolidayData" nillable="true" type="tns:z_HolidayData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfz_HolidayData" nillable="true" type="tns:ArrayOfz_HolidayData" />
+  <xs:complexType name="z_HolidayData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q32:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="holiday_end" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="holiday_id" type="xs:int" />
+          <xs:element minOccurs="0" name="holiday_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="holiday_start" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="is_active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_delete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="mas_Employee" nillable="true" type="tns:ArrayOfmas_Employee" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="trns_HolidayData" nillable="true" type="tns:ArrayOftrns_HolidayData" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeHolidayStatus" nillable="true" type="tns:ArrayOftrns_ProcessedEmployeeHolidayStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_HolidayData" nillable="true" type="tns:z_HolidayData" />
+  <xs:complexType name="ArrayOfmas_Employee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="mas_Employee" nillable="true" type="tns:mas_Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfmas_Employee" nillable="true" type="tns:ArrayOfmas_Employee" />
+  <xs:complexType name="ArrayOftrns_HolidayData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_HolidayData" nillable="true" type="tns:trns_HolidayData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_HolidayData" nillable="true" type="tns:ArrayOftrns_HolidayData" />
+  <xs:complexType name="trns_HolidayData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q33:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="holiday_id" type="xs:int" />
+          <xs:element minOccurs="0" name="holiday_trans_id" type="xs:int" />
+          <xs:element minOccurs="0" name="holiday_type_id" type="xs:int" />
+          <xs:element minOccurs="0" name="z_HolidayData" nillable="true" type="tns:z_HolidayData" />
+          <xs:element minOccurs="0" name="z_HolidayDataReference" nillable="true" type="q33:EntityReferenceOfz_HolidayDataa91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_HolidayData" nillable="true" type="tns:trns_HolidayData" />
+  <xs:complexType name="ArrayOftrns_ProcessedEmployeeHolidayStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_ProcessedEmployeeHolidayStatus" nillable="true" type="tns:trns_ProcessedEmployeeHolidayStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_ProcessedEmployeeHolidayStatus" nillable="true" type="tns:ArrayOftrns_ProcessedEmployeeHolidayStatus" />
+  <xs:complexType name="trns_ProcessedEmployeeHolidayStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q34:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="holiday_id" type="xs:int" />
+          <xs:element minOccurs="0" name="holiday_status" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendance" nillable="true" type="tns:trns_ProcessedEmployeeAttendance" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendanceReference" nillable="true" type="q34:EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh" />
+          <xs:element minOccurs="0" name="trns_attend_id" type="xs:int" />
+          <xs:element minOccurs="0" name="z_HolidayData" nillable="true" type="tns:z_HolidayData" />
+          <xs:element minOccurs="0" name="z_HolidayDataReference" nillable="true" type="q34:EntityReferenceOfz_HolidayDataa91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_ProcessedEmployeeHolidayStatus" nillable="true" type="tns:trns_ProcessedEmployeeHolidayStatus" />
+  <xs:complexType name="trns_ProcessedEmployeeAttendance">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q35:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actual_total_work_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="attend_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ealry_in_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="early_out_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="employee_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="grace_in_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="grace_out_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="in_time" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="is_early_in" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_early_out" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_grace_in" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_grace_out" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_late_deduc" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_late_in" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_late_out" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_mor_inc" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="late_in_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="late_out_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ot_in_time" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ot_out_time" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="out_time" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="post_double_ot_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_single_ot_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_triple_ot_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_double_ot_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_single_ot_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_triple_ot_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="total_late_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="total_minimum_work_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="total_work_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="trns_ProcessedAttendanceStatus" nillable="true" type="tns:ArrayOftrns_ProcessedAttendanceStatus" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeBreakStatus" nillable="true" type="tns:ArrayOftrns_ProcessedEmployeeBreakStatus" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeHolidayStatus" nillable="true" type="tns:ArrayOftrns_ProcessedEmployeeHolidayStatus" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeLeiuleaveStatus" nillable="true" type="tns:ArrayOftrns_ProcessedEmployeeLeiuleaveStatus" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeMaxOT" nillable="true" type="tns:trns_ProcessedEmployeeMaxOT" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeMaxOTReference" nillable="true" type="q35:EntityReferenceOftrns_ProcessedEmployeeMaxOTa91SJDxh" />
+          <xs:element minOccurs="0" name="trns_ProcessedLeaveStatus" nillable="true" type="tns:ArrayOftrns_ProcessedLeaveStatus" />
+          <xs:element minOccurs="0" name="trns_attend_id" type="xs:int" />
+          <xs:element minOccurs="0" name="work_early_out_duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="work_late_in_duration" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_ProcessedEmployeeAttendance" nillable="true" type="tns:trns_ProcessedEmployeeAttendance" />
+  <xs:complexType name="ArrayOftrns_ProcessedAttendanceStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_ProcessedAttendanceStatus" nillable="true" type="tns:trns_ProcessedAttendanceStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_ProcessedAttendanceStatus" nillable="true" type="tns:ArrayOftrns_ProcessedAttendanceStatus" />
+  <xs:complexType name="trns_ProcessedAttendanceStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q36:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attend_status" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="attend_status_id" type="tns:AttendStatus" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendance" nillable="true" type="tns:trns_ProcessedEmployeeAttendance" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendanceReference" nillable="true" type="q36:EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh" />
+          <xs:element minOccurs="0" name="trns_attend_id" type="xs:int" />
+          <xs:element minOccurs="0" name="z_EmployeeAttendStatus" nillable="true" type="tns:z_EmployeeAttendStatus" />
+          <xs:element minOccurs="0" name="z_EmployeeAttendStatusReference" nillable="true" type="q36:EntityReferenceOfz_EmployeeAttendStatusa91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_ProcessedAttendanceStatus" nillable="true" type="tns:trns_ProcessedAttendanceStatus" />
+  <xs:simpleType name="AttendStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ATTEND">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ABSENT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALID">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NOPAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_SHORT_LEAVE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_HALFDAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_FULLDAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_SHORT_LEAVE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_HALFDAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_FULLDAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UNAUTHORIZED_LEAVE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PRE_SINGLE_OT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PRE_DOUBLE_OT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PRE_TRIPLE_OT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="POST_SINGLE_OT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="POST_DOUBLE_OT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="POST_TRIPLE_OT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_SHORT_LEAVE_NOPAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_HALFDAY_NOPAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_FULLDAY_NOPAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_SHORT_LEAVE_NOPAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_HALFDAY_NOPAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_FULLDAY_NOPAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_SHORT_LEAVE_UNAUTHORIZED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_HALFDAY_UNAUTHORIZED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MORNING_FULLDAY_UNAUTHORIZED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_SHORT_LEAVE_UNAUTHORIZED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_HALFDAY_UNAUTHORIZED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENING_FULLDAY_UNAUTHORIZED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HOLIDAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LATE_IN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EARLY_OUT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GRACE_IN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GRACE_OUT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AUTHORIZED_LEAVE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UNOFFICIAL_LEAVE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LATE_COVERING">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">37</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ATTEND_HALFDAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ABSENT_HALFDAY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AttendStatus" nillable="true" type="tns:AttendStatus" />
+  <xs:complexType name="z_EmployeeAttendStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q37:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attend_status_code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="attend_status_id" type="tns:AttendStatus" />
+          <xs:element minOccurs="0" name="status_description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_ProcessedAttendanceStatus" nillable="true" type="tns:ArrayOftrns_ProcessedAttendanceStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_EmployeeAttendStatus" nillable="true" type="tns:z_EmployeeAttendStatus" />
+  <xs:complexType name="ArrayOftrns_ProcessedEmployeeBreakStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_ProcessedEmployeeBreakStatus" nillable="true" type="tns:trns_ProcessedEmployeeBreakStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_ProcessedEmployeeBreakStatus" nillable="true" type="tns:ArrayOftrns_ProcessedEmployeeBreakStatus" />
+  <xs:complexType name="trns_ProcessedEmployeeBreakStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q38:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="break_duration" type="xs:int" />
+          <xs:element minOccurs="0" name="break_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="break_in" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="break_out" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="is_break_invalid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_free_break" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_shift_break" type="xs:boolean" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendance" nillable="true" type="tns:trns_ProcessedEmployeeAttendance" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendanceReference" nillable="true" type="q38:EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh" />
+          <xs:element minOccurs="0" name="trns_attend_id" type="xs:int" />
+          <xs:element minOccurs="0" name="trns_break_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_ProcessedEmployeeBreakStatus" nillable="true" type="tns:trns_ProcessedEmployeeBreakStatus" />
+  <xs:complexType name="ArrayOftrns_ProcessedEmployeeLeiuleaveStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_ProcessedEmployeeLeiuleaveStatus" nillable="true" type="tns:trns_ProcessedEmployeeLeiuleaveStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_ProcessedEmployeeLeiuleaveStatus" nillable="true" type="tns:ArrayOftrns_ProcessedEmployeeLeiuleaveStatus" />
+  <xs:complexType name="trns_ProcessedEmployeeLeiuleaveStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q39:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="attend_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="expire_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="is_expire" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_leiu_leave" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_paid" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_pay" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_use_status" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="pay_period_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendance" nillable="true" type="tns:trns_ProcessedEmployeeAttendance" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendanceReference" nillable="true" type="q39:EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh" />
+          <xs:element minOccurs="0" name="trns_attend_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_ProcessedEmployeeLeiuleaveStatus" nillable="true" type="tns:trns_ProcessedEmployeeLeiuleaveStatus" />
+  <xs:complexType name="trns_ProcessedEmployeeMaxOT">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q40:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actual_in_time" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="actual_out_time" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="post_extra_double_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_extra_single_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_extra_triple_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_extra_double_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_extra_single_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_extra_triple_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendance" nillable="true" type="tns:trns_ProcessedEmployeeAttendance" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendanceReference" nillable="true" type="q40:EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh" />
+          <xs:element minOccurs="0" name="trns_attend_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_ProcessedEmployeeMaxOT" nillable="true" type="tns:trns_ProcessedEmployeeMaxOT" />
+  <xs:complexType name="ArrayOftrns_ProcessedLeaveStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_ProcessedLeaveStatus" nillable="true" type="tns:trns_ProcessedLeaveStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_ProcessedLeaveStatus" nillable="true" type="tns:ArrayOftrns_ProcessedLeaveStatus" />
+  <xs:complexType name="trns_ProcessedLeaveStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q41:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="is_approved" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_official_leave" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="leave_status" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="leave_type_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="pool_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendance" nillable="true" type="tns:trns_ProcessedEmployeeAttendance" />
+          <xs:element minOccurs="0" name="trns_ProcessedEmployeeAttendanceReference" nillable="true" type="q41:EntityReferenceOftrns_ProcessedEmployeeAttendancea91SJDxh" />
+          <xs:element minOccurs="0" name="trns_attend_id" type="xs:int" />
+          <xs:element minOccurs="0" name="trns_leave_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="trns_ProcessedLeaveStatus" nillable="true" type="tns:trns_ProcessedLeaveStatus" />
+  <xs:complexType name="ArrayOfEmployeeLeaveShiftDetailsView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeLeaveShiftDetailsView" nillable="true" type="tns:EmployeeLeaveShiftDetailsView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeLeaveShiftDetailsView" nillable="true" type="tns:ArrayOfEmployeeLeaveShiftDetailsView" />
+  <xs:complexType name="EmployeeLeaveShiftDetailsView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q42:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="leave_type_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_category_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeLeaveShiftDetailsView" nillable="true" type="tns:EmployeeLeaveShiftDetailsView" />
+  <xs:complexType name="ArrayOfEmployeeLeaveShiftDetailsNewView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeLeaveShiftDetailsNewView" nillable="true" type="tns:EmployeeLeaveShiftDetailsNewView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeLeaveShiftDetailsNewView" nillable="true" type="tns:ArrayOfEmployeeLeaveShiftDetailsNewView" />
+  <xs:complexType name="EmployeeLeaveShiftDetailsNewView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q43:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LeaveTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="leave_category_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="leave_detail_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="leave_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="leave_type_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_category_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeLeaveShiftDetailsNewView" nillable="true" type="tns:EmployeeLeaveShiftDetailsNewView" />
+  <xs:complexType name="ArrayOfdtl_AttendanceData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_AttendanceData" nillable="true" type="tns:dtl_AttendanceData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_AttendanceData" nillable="true" type="tns:ArrayOfdtl_AttendanceData" />
+  <xs:complexType name="dtl_AttendanceData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q44:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attend_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="attend_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="attend_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="attendance_data_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="day" type="xs:int" />
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="device_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="hour" type="xs:int" />
+          <xs:element minOccurs="0" name="is_manual" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isdelete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="minute" type="xs:int" />
+          <xs:element minOccurs="0" name="mode_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="month" type="xs:int" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="second" type="xs:int" />
+          <xs:element minOccurs="0" name="verify_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="year" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_AttendanceData" nillable="true" type="tns:dtl_AttendanceData" />
+  <xs:complexType name="ArrayOfSMS_IN">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SMS_IN" nillable="true" type="tns:SMS_IN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSMS_IN" nillable="true" type="tns:ArrayOfSMS_IN" />
+  <xs:complexType name="SMS_IN">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q45="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q45:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="SENDER_NUMBER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENT_DT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SMS_TEXT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TS" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="is_delete" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SMS_IN" nillable="true" type="tns:SMS_IN" />
+  <xs:complexType name="ArrayOfEmployeeShiftView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeShiftView" nillable="true" type="tns:EmployeeShiftView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeShiftView" nillable="true" type="tns:ArrayOfEmployeeShiftView" />
+  <xs:complexType name="EmployeeShiftView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q46="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q46:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="in_time" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="out_time" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeShiftView" nillable="true" type="tns:EmployeeShiftView" />
+  <xs:complexType name="ArrayOfdtl_Shift_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_Shift_Master" nillable="true" type="tns:dtl_Shift_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_Shift_Master" nillable="true" type="tns:ArrayOfdtl_Shift_Master" />
+  <xs:complexType name="ArrayOfdtl_Shift_Covering_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_Shift_Covering_Details" nillable="true" type="tns:dtl_Shift_Covering_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_Shift_Covering_Details" nillable="true" type="tns:ArrayOfdtl_Shift_Covering_Details" />
+  <xs:complexType name="ArrayOfz_Shift_Category">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="z_Shift_Category" nillable="true" type="tns:z_Shift_Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfz_Shift_Category" nillable="true" type="tns:ArrayOfz_Shift_Category" />
+  <xs:complexType name="z_Shift_Category">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q47="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q47:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_active" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_delete" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="shift_category_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_category_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_Shift_Category" nillable="true" type="tns:z_Shift_Category" />
+  <xs:complexType name="ArrayOfz_ShiftWeek">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="z_ShiftWeek" nillable="true" type="tns:z_ShiftWeek" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfz_ShiftWeek" nillable="true" type="tns:ArrayOfz_ShiftWeek" />
+  <xs:complexType name="z_ShiftWeek">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q48="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q48:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtl_ShiftWeek" nillable="true" type="tns:ArrayOfdtl_ShiftWeek" />
+          <xs:element minOccurs="0" name="week_description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="week_id" type="xs:int" />
+          <xs:element minOccurs="0" name="week_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_ShiftWeek" nillable="true" type="tns:z_ShiftWeek" />
+  <xs:complexType name="ArrayOfdtl_ShiftWeek">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtl_ShiftWeek" nillable="true" type="tns:dtl_ShiftWeek" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtl_ShiftWeek" nillable="true" type="tns:ArrayOfdtl_ShiftWeek" />
+  <xs:complexType name="dtl_ShiftWeek">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q49="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q49:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="day_id" type="tns:Days" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="trans_id" type="xs:int" />
+          <xs:element minOccurs="0" name="week_id" type="xs:int" />
+          <xs:element minOccurs="0" name="z_ShiftWeek" nillable="true" type="tns:z_ShiftWeek" />
+          <xs:element minOccurs="0" name="z_ShiftWeekReference" nillable="true" type="q49:EntityReferenceOfz_ShiftWeeka91SJDxh" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="dtl_ShiftWeek" nillable="true" type="tns:dtl_ShiftWeek" />
+  <xs:simpleType name="Days">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Monday">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Tuesday">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Wednesday">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Thursday">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Friday">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Saturday">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sunday">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Days" nillable="true" type="tns:Days" />
+  <xs:complexType name="ArrayOfz_ShiftDayRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="z_ShiftDayRange" nillable="true" type="tns:z_ShiftDayRange" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfz_ShiftDayRange" nillable="true" type="tns:ArrayOfz_ShiftDayRange" />
+  <xs:complexType name="z_ShiftDayRange">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q50="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q50:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="day_description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="range_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_ShiftDayRange" nillable="true" type="tns:z_ShiftDayRange" />
+  <xs:complexType name="ArrayOfz_ShiftType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="z_ShiftType" nillable="true" type="tns:z_ShiftType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfz_ShiftType" nillable="true" type="tns:ArrayOfz_ShiftType" />
+  <xs:complexType name="ArrayOfz_AttendanceGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="z_AttendanceGroup" nillable="true" type="tns:z_AttendanceGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfz_AttendanceGroup" nillable="true" type="tns:ArrayOfz_AttendanceGroup" />
+  <xs:complexType name="ArrayOfz_HolidayType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="z_HolidayType" nillable="true" type="tns:z_HolidayType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfz_HolidayType" nillable="true" type="tns:ArrayOfz_HolidayType" />
+  <xs:complexType name="z_HolidayType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q51="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q51:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delete_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="delete_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="holiday_type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="holiday_type_id" type="xs:int" />
+          <xs:element minOccurs="0" name="is_active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_delete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="modified_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modified_user_id" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="save_datetime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="save_user_id" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="z_HolidayType" nillable="true" type="tns:z_HolidayType" />
+  <xs:complexType name="ArrayOftrns_EmployeeShiftBreakStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_EmployeeShiftBreakStatus" nillable="true" type="tns:trns_EmployeeShiftBreakStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_EmployeeShiftBreakStatus" nillable="true" type="tns:ArrayOftrns_EmployeeShiftBreakStatus" />
+  <xs:complexType name="ArrayOftrns_EmployeeMaxOTDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="trns_EmployeeMaxOTDetails" nillable="true" type="tns:trns_EmployeeMaxOTDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftrns_EmployeeMaxOTDetails" nillable="true" type="tns:ArrayOftrns_EmployeeMaxOTDetails" />
+  <xs:complexType name="ArrayOfAttendanceGroupDetailsView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttendanceGroupDetailsView" nillable="true" type="tns:AttendanceGroupDetailsView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttendanceGroupDetailsView" nillable="true" type="tns:ArrayOfAttendanceGroupDetailsView" />
+  <xs:complexType name="AttendanceGroupDetailsView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q52="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q52:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attendance_group_id" type="xs:int" />
+          <xs:element minOccurs="0" name="attendance_group_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_roster_group" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_shift_group" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttendanceGroupDetailsView" nillable="true" type="tns:AttendanceGroupDetailsView" />
+  <xs:complexType name="ArrayOfAttendanceGroupWithEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttendanceGroupWithEmployee" nillable="true" type="tns:AttendanceGroupWithEmployee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttendanceGroupWithEmployee" nillable="true" type="tns:ArrayOfAttendanceGroupWithEmployee" />
+  <xs:complexType name="AttendanceGroupWithEmployee">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q53="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q53:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attendance_group_id" type="xs:int" />
+          <xs:element minOccurs="0" name="attendance_group_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_active" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="second_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttendanceGroupWithEmployee" nillable="true" type="tns:AttendanceGroupWithEmployee" />
+  <xs:complexType name="ArrayOfEmployeeShiftCalendarDetailView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeShiftCalendarDetailView" nillable="true" type="tns:EmployeeShiftCalendarDetailView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeShiftCalendarDetailView" nillable="true" type="tns:ArrayOfEmployeeShiftCalendarDetailView" />
+  <xs:complexType name="EmployeeShiftCalendarDetailView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q54="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q54:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="day_id" nillable="true" type="tns:Days" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="is_daily_shift" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_roster" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="shift_category_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_category_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeShiftCalendarDetailView" nillable="true" type="tns:EmployeeShiftCalendarDetailView" />
+  <xs:complexType name="ArrayOfAttendancePeriodView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttendancePeriodView" nillable="true" type="tns:AttendancePeriodView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttendancePeriodView" nillable="true" type="tns:ArrayOfAttendancePeriodView" />
+  <xs:complexType name="AttendancePeriodView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q55="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q55:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="end_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="period_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="period_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="start_date" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttendancePeriodView" nillable="true" type="tns:AttendancePeriodView" />
+  <xs:complexType name="ArrayOfShiftMasterDetailsView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShiftMasterDetailsView" nillable="true" type="tns:ShiftMasterDetailsView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShiftMasterDetailsView" nillable="true" type="tns:ArrayOfShiftMasterDetailsView" />
+  <xs:complexType name="ShiftMasterDetailsView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q56="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q56:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_daily_shift" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_roster" type="xs:boolean" />
+          <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_category_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_category_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShiftMasterDetailsView" nillable="true" type="tns:ShiftMasterDetailsView" />
+  <xs:complexType name="ArrayOfShiftDetailAllView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShiftDetailAllView" nillable="true" type="tns:ShiftDetailAllView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShiftDetailAllView" nillable="true" type="tns:ArrayOfShiftDetailAllView" />
+  <xs:complexType name="ShiftDetailAllView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q57="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q57:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="early_grace_effect_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="early_grace_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="early_out" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="evening_halfday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="evening_short_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="fullday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="is_daily_shift" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_delete" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_entitle_leiu_leave" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_executive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_halfday" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_late_deduc" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_mor_inc" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_multiple" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_nonexecutive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_open_shift" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_open_shift_late" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_open_shift_ot" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_ot_shift" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_roster" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_security" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_single" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_split_shift" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_stores_executive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_stores_nonexecutive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="late_grace_effect_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="late_grace_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="late_in" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="morning_halfday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="morning_short_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_double_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_fullday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_halfday_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_late" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_min_word_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_min_word_time_month" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_min_word_time_week" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_non_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_short_leave" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_single_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="open_triple_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="order_number" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_double_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_double_ot_roundup" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_non_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_non_ot_compensate" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_single_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_single_ot_roundup" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_triple_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="post_triple_ot_roundup" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_double_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_double_ot_roundup" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_non_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_non_ot_compensate" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_single_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_single_ot_roundup" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_triple_ot" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="pre_triple_ot_roundup" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_category_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_in_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_in_time" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="shift_off_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_on_time" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_out_day_value" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_out_time" nillable="true" type="ser:duration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShiftDetailAllView" nillable="true" type="tns:ShiftDetailAllView" />
+  <xs:complexType name="ArrayOfShiftWeekWithDaysView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShiftWeekWithDaysView" nillable="true" type="tns:ShiftWeekWithDaysView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShiftWeekWithDaysView" nillable="true" type="tns:ArrayOfShiftWeekWithDaysView" />
+  <xs:complexType name="ShiftWeekWithDaysView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q58="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q58:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="day_id" type="tns:Days" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_daily_shift" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_roster" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="shift_category_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_category_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_detail_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trans_id" type="xs:int" />
+          <xs:element minOccurs="0" name="week_description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="week_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="week_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShiftWeekWithDaysView" nillable="true" type="tns:ShiftWeekWithDaysView" />
+  <xs:complexType name="ArrayOfEmployeeAssignedShiftsView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeAssignedShiftsView" nillable="true" type="tns:EmployeeAssignedShiftsView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeAssignedShiftsView" nillable="true" type="tns:ArrayOfEmployeeAssignedShiftsView" />
+  <xs:complexType name="EmployeeAssignedShiftsView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q59="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q59:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attendance_group_id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="attendance_group_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="emp_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="employee_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="epf_no" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="etf_no" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="initials" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_free_break" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_no_break" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_shift_break" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="second_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="shift_detail_id" type="xs:int" />
+          <xs:element minOccurs="0" name="shift_detail_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="trns_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeAssignedShiftsView" nillable="true" type="tns:EmployeeAssignedShiftsView" />
+</xs:schema>

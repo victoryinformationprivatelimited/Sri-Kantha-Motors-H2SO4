@@ -1,0 +1,1828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:16630/ERPService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:import schemaLocation="http://localhost:16630/ERPService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EntityObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StructuralObject">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q1:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityObject" nillable="true" type="tns:EntityObject" />
+  <xs:complexType name="StructuralObject">
+    <xs:sequence />
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="StructuralObject" nillable="true" type="tns:StructuralObject" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Employee" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeedzUvNUS" />
+  <xs:complexType name="EntityReference">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RelatedEnd">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q2:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReference" nillable="true" type="tns:EntityReference" />
+  <xs:complexType name="RelatedEnd">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="RelatedEnd" nillable="true" type="tns:RelatedEnd" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeAllowanceedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeAllowance" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeAllowanceedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeAllowanceedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_AllowanceedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Allowance" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_AllowanceedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_AllowanceedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_EmployeeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Employee" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_EmployeeedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_EmployeeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_SchoolGradeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_SchoolGrade" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_SchoolGradeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_SchoolGradeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_SchoolQualificationTypeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_SchoolQualificationType" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_SchoolQualificationTypeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_SchoolQualificationTypeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_SchoolQualificationSubjectedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_SchoolQualificationSubject" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_SchoolQualificationSubjectedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_SchoolQualificationSubjectedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeBankedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeBank" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeBankedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeBankedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_PeriodedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Period" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_PeriodedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_PeriodedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_CompanyRuleedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_CompanyRule" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_CompanyRuleedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_CompanyRuleedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_ChequeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Cheque" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_ChequeedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_ChequeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeChequeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeCheque" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeChequeedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeChequeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfusr_UseredzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="usr_User" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfusr_UseredzUvNUS" nillable="true" type="tns:EntityReferenceOfusr_UseredzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_DeviceModeledzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_DeviceModel" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_DeviceModeledzUvNUS" nillable="true" type="tns:EntityReferenceOfz_DeviceModeledzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_LoanedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Loan" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LoanedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_LoanedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_LoanCatergoriesedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_LoanCatergories" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LoanCatergoriesedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_LoanCatergoriesedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeLoansedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeLoans" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeLoansedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeLoansedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_LoanPaymentedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_LoanPayment" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LoanPaymentedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_LoanPaymentedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_ShiftedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Shift" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_ShiftedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_ShiftedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_BasicDayedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_BasicDay" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_BasicDayedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_BasicDayedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_ShiftCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_ShiftCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_ShiftCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_ShiftCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_OTCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_OTCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_OTCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_OTCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_RosterCalenderHeaderedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_RosterCalenderHeader" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_RosterCalenderHeaderedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_RosterCalenderHeaderedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_RosterDaysedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_RosterDays" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_RosterDaysedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_RosterDaysedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_RosterDetailedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_RosterDetail" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_RosterDetailedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_RosterDetailedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_RosterGroupedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_RosterGroup" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_RosterGroupedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_RosterGroupedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_VisitoredzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Visitor" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_VisitoredzUvNUS" nillable="true" type="tns:EntityReferenceOfz_VisitoredzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_BenifitedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Benifit" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_BenifitedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_BenifitedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_DeductionedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Deduction" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_DeductionedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_DeductionedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfusr_UserEmployeeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="usr_UserEmployee" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfusr_UserEmployeeedzUvNUS" nillable="true" type="tns:EntityReferenceOfusr_UserEmployeeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_Permission_GroupedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Permission_Group" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_Permission_GroupedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_Permission_GroupedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_PermissionedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Permission" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_PermissionedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_PermissionedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfusr_UserLeveledzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="usr_UserLevel" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfusr_UserLeveledzUvNUS" nillable="true" type="tns:EntityReferenceOfusr_UserLeveledzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_OTApprovalLeveledzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_OTApprovalLevel" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_OTApprovalLeveledzUvNUS" nillable="true" type="tns:EntityReferenceOfz_OTApprovalLeveledzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_SupervisorLeveledzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_SupervisorLevel" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_SupervisorLeveledzUvNUS" nillable="true" type="tns:EntityReferenceOfz_SupervisorLeveledzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_moduleedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_module" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_moduleedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_moduleedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfrpt_catagoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="rpt_catagory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfrpt_catagoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfrpt_catagoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfrpt_permissionedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="rpt_permission" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfrpt_permissionedzUvNUS" nillable="true" type="tns:EntityReferenceOfrpt_permissionedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_BankBranchedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_BankBranch" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_BankBranchedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_BankBranchedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_ChequeCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_ChequeCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_ChequeCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_ChequeCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_BankedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Bank" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_BankedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_BankedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_CompanyBranchesedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_CompanyBranches" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_CompanyBranchesedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_CompanyBranchesedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_ExtraCurricularActivitiesedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_ExtraCurricularActivities" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_ExtraCurricularActivitiesedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_ExtraCurricularActivitiesedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_InterestFieldedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_InterestField" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_InterestFieldedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_InterestFieldedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_LeaveDetailedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_LeaveDetail" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_LeaveDetailedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_LeaveDetailedzUvNUS" />
+  <xs:complexType name="EntityReferenceOftrns_LeavePooledzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_LeavePool" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_LeavePooledzUvNUS" nillable="true" type="tns:EntityReferenceOftrns_LeavePooledzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_LeaveCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_LeaveCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LeaveCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_LeaveCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_LeaveTypeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_LeaveType" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LeaveTypeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_LeaveTypeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_LeavePeriodedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_LeavePeriod" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LeavePeriodedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_LeavePeriodedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeLoginedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeLogin" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeLoginedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeLoginedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeOtherBasicDetailsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeOtherBasicDetails" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeOtherBasicDetailsedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeOtherBasicDetailsedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeOtherOfficialDetailsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeOtherOfficialDetails" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeOtherOfficialDetailsedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeOtherOfficialDetailsedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_SkillTypeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_SkillType" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_SkillTypeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_SkillTypeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_SocialMediaedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_SocialMedia" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_SocialMediaedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_SocialMediaedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_WarningLetteredzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_WarningLetter" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_WarningLetteredzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_WarningLetteredzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeWorkexperienceDetailsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeWorkexperienceDetails" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeWorkexperienceDetailsedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeWorkexperienceDetailsedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_Blood_Group_TypeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Blood_Group_Type" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_Blood_Group_TypeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_Blood_Group_TypeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_Employee_ContactDetailsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Employee_ContactDetails" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_Employee_ContactDetailsedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_Employee_ContactDetailsedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_HealthTypeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_HealthType" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_HealthTypeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_HealthTypeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_Life_InsuranceedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Life_Insurance" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_Life_InsuranceedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_Life_InsuranceedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_UnivercityNameedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_UnivercityName" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_UnivercityNameedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_UnivercityNameedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_UnivercityDigreeTypeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_UnivercityDigreeType" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_UnivercityDigreeTypeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_UnivercityDigreeTypeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_UnivercityDigreeNamesedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_UnivercityDigreeNames" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_UnivercityDigreeNamesedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_UnivercityDigreeNamesedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_UniversityGradeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_UniversityGrade" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_UniversityGradeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_UniversityGradeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_MedicalCategoryAllocationedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_MedicalCategoryAllocation" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_MedicalCategoryAllocationedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_MedicalCategoryAllocationedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_MedicalPeriodedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_MedicalPeriod" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_MedicalPeriodedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_MedicalPeriodedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_MedicalCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_MedicalCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_MedicalCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_MedicalCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_TrainingProgramedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_TrainingProgram" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_TrainingProgramedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_TrainingProgramedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_TraningEmployeeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_TraningEmployee" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_TraningEmployeeedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_TraningEmployeeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_TraineredzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Trainer" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_TraineredzUvNUS" nillable="true" type="tns:EntityReferenceOfz_TraineredzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_TrainingCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_TrainingCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_TrainingCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_TrainingCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_blood_typeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_blood_type" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_blood_typeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_blood_typeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_blood_typeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_blood_type" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_blood_typeedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_blood_typeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_NationalityedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Nationality" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_NationalityedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_NationalityedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_election_centeredzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_election_center" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_election_centeredzUvNUS" nillable="true" type="tns:EntityReferenceOfz_election_centeredzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_electorial_divisionedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_electorial_division" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_electorial_divisionedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_electorial_divisionedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_grama_niladhari_divitionedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_grama_niladhari_divition" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_grama_niladhari_divitionedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_grama_niladhari_divitionedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_nearest_police_stationedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_nearest_police_station" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_nearest_police_stationedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_nearest_police_stationedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_raceedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_race" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_raceedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_raceedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_employee_Additional_detailsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_employee_Additional_details" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_employee_Additional_detailsedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_employee_Additional_detailsedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfhis_CategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="his_Category" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfhis_CategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfhis_CategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfhis_Sub_CategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="his_Sub_Category" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfhis_Sub_CategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfhis_Sub_CategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_EvaluationCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_EvaluationCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_EvaluationCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_EvaluationCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_EvaluationRateGoupedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_EvaluationRateGoup" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_EvaluationRateGoupedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_EvaluationRateGoupedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_SubTasksedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_SubTasks" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_SubTasksedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_SubTasksedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeSubTasksedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeSubTasks" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeSubTasksedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeSubTasksedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_TaskCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_TaskCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_TaskCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_TaskCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_TaskSubCategoryedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_TaskSubCategory" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_TaskSubCategoryedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_TaskSubCategoryedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_TasksedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Tasks" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_TasksedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_TasksedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_TaskPriorityedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_TaskPriority" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_TaskPriorityedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_TaskPriorityedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EvaluationCriteriaedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EvaluationCriteria" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EvaluationCriteriaedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EvaluationCriteriaedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_EvaluationedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_Evaluation" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_EvaluationedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_EvaluationedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_EvaluationPeriodedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_EvaluationPeriod" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_EvaluationPeriodedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_EvaluationPeriodedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_CityedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_City" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_CityedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_CityedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_CivilStateedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_CivilState" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_CivilStateedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_CivilStateedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_UniformedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Uniform" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_UniformedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_UniformedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_UniformedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_Uniform" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_UniformedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_UniformedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_EmployeeUniformOrdersedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_EmployeeUniformOrders" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_EmployeeUniformOrdersedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_EmployeeUniformOrdersedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_GenderedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Gender" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_GenderedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_GenderedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_TitleedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Title" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_TitleedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_TitleedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_TownedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Town" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_TownedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_TownedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_CompanyVariableedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_CompanyVariable" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_CompanyVariableedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_CompanyVariableedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_CompanyedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Company" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_CompanyedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_CompanyedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_DepartmentedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Department" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_DepartmentedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_DepartmentedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_EmployeeGrativityedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_EmployeeGrativity" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_EmployeeGrativityedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_EmployeeGrativityedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_LocationedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Location" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_LocationedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_LocationedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfdtl_member_statusedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="dtl_member_status" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfdtl_member_statusedzUvNUS" nillable="true" type="tns:EntityReferenceOfdtl_member_statusedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_DesignationedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Designation" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_DesignationedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_DesignationedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_GradeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Grade" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_GradeedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_GradeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_PaymentMethodedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_PaymentMethod" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_PaymentMethodedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_PaymentMethodedzUvNUS" />
+  <xs:complexType name="EntityReferenceOftrns_OT_ApprovalsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_OT_Approvals" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_OT_ApprovalsedzUvNUS" nillable="true" type="tns:EntityReferenceOftrns_OT_ApprovalsedzUvNUS" />
+  <xs:complexType name="ComplexObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StructuralObject">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ComplexObject" nillable="true" type="tns:ComplexObject" />
+  <xs:complexType name="EntityReferenceOfz_BonusPeriodedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_BonusPeriod" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_BonusPeriodedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_BonusPeriodedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_ExtBankLoanedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_ExtBankLoan" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_ExtBankLoanedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_ExtBankLoanedzUvNUS" />
+  <xs:complexType name="EntityReferenceOftrns_EmployeeAttendTimeedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_EmployeeAttendTime" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_EmployeeAttendTimeedzUvNUS" nillable="true" type="tns:EntityReferenceOftrns_EmployeeAttendTimeedzUvNUS" />
+  <xs:complexType name="EntityReferenceOftrns_EmployeeAttendanceedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="trns_EmployeeAttendance" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOftrns_EmployeeAttendanceedzUvNUS" nillable="true" type="tns:EntityReferenceOftrns_EmployeeAttendanceedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_EventsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Events" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_EventsedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_EventsedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_MeetingsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_Meetings" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_MeetingsedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_MeetingsedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfmas_InternalLoanDetailsedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="mas_InternalLoanDetails" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfmas_InternalLoanDetailsedzUvNUS" nillable="true" type="tns:EntityReferenceOfmas_InternalLoanDetailsedzUvNUS" />
+  <xs:complexType name="EntityReferenceOfz_EmployeeActedzUvNUS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="z_EmployeeAct" Namespace="http://schemas.datacontract.org/2004/07/ERPData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfz_EmployeeActedzUvNUS" nillable="true" type="tns:EntityReferenceOfz_EmployeeActedzUvNUS" />
+</xs:schema>
